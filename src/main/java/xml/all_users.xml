@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<usersWrapper>
+    <users id="1">
+        <id_personal>1</id_personal>
+        <userPersonal id="1">
+            <first_name>Дмитрий</first_name>
+            <last_name>Юркин</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>dimasta</login>
+        <password>12345</password>
+    </users>
+    <users id="2">
+        <id_personal>2</id_personal>
+        <userPersonal id="2">
+            <first_name>Артур</first_name>
+            <last_name>Галиулин</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>king_arthur</login>
+        <password>archi</password>
+    </users>
+    <users id="3">
+        <id_personal>3</id_personal>
+        <userPersonal id="3">
+            <first_name>Динар</first_name>
+            <last_name>Балягеев</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>din</login>
+        <password>12345</password>
+    </users>
+    <users id="4">
+        <id_personal>4</id_personal>
+        <userPersonal id="4">
+            <first_name>Александр</first_name>
+            <last_name>Кретов</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>alex</login>
+        <password>fitness</password>
+    </users>
+    <users id="5">
+        <id_personal>5</id_personal>
+        <userPersonal id="5">
+            <first_name>Григорий</first_name>
+            <last_name>Жуганов</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>grigor</login>
+        <password>zenit</password>
+    </users>
+    <users id="6">
+        <id_personal>6</id_personal>
+        <userPersonal id="6">
+            <first_name>Ренат</first_name>
+            <last_name>Хабиров</last_name>
+            <sex>м</sex>
+        </userPersonal>
+        <login>gifka</login>
+        <password>memchik</password>
+    </users>
+    <users id="7">
+        <id_personal>7</id_personal>
+        <userPersonal id="7">
+            <first_name>Скарлет</first_name>
+            <last_name>Йохансон</last_name>
+            <sex>ж</sex>
+        </userPersonal>
+        <login>black_widow</login>
+        <password>marvel</password>
+    </users>
+    <users id="8">
+        <id_personal>8</id_personal>
+        <userPersonal id="8">
+            <first_name>Марго</first_name>
+            <last_name>Робби</last_name>
+            <sex>ж</sex>
+        </userPersonal>
+        <login>harly_quinn</login>
+        <password>dc</password>
+    </users>
+    <users id="9">
+        <id_personal>9</id_personal>
+        <userPersonal id="9">
+            <first_name>Джессика</first_name>
+            <last_name>Альба</last_name>
+            <sex>ж</sex>
+        </userPersonal>
+        <login>alba</login>
+        <password>qwerty</password>
+    </users>
+    <users id="10">
+        <id_personal>10</id_personal>
+        <userPersonal id="10">
+            <first_name>Николь</first_name>
+            <last_name>Кидман</last_name>
+            <sex>ж</sex>
+        </userPersonal>
+        <login>nicky</login>
+        <password>actor</password>
+    </users>
+</usersWrapper>

@@ -1,0 +1,2913 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<booksWrapper>
+    <booksList id="1">
+        <title>Аленький цветочек</title>
+        <author_id>1</author_id>
+        <authors>
+            <id>1</id>
+            <first_name>Сергей</first_name>
+            <last_name>Аксаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>1</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Аксаков Сергей Тимофеевич\Аленький цветочек.txt</book_ref>
+    </booksList>
+    <booksList id="2">
+        <title>Охотная страсть</title>
+        <author_id>1</author_id>
+        <authors>
+            <id>2</id>
+            <first_name>Сергей</first_name>
+            <last_name>Аксаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>2</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Аксаков Сергей Тимофеевич\Охотная страсть.txt</book_ref>
+    </booksList>
+    <booksList id="3">
+        <title>Кровь за кровь</title>
+        <author_id>2</author_id>
+        <authors>
+            <id>3</id>
+            <first_name>Александр</first_name>
+            <last_name>Бестужев-Марлинский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>3</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Бестужев-Марлинский Александр\Кровь за кровь.txt</book_ref>
+    </booksList>
+    <booksList id="4">
+        <title>Страшное гаданье</title>
+        <author_id>2</author_id>
+        <authors>
+            <id>4</id>
+            <first_name>Александр</first_name>
+            <last_name>Бестужев-Марлинский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>4</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Бестужев-Марлинский Александр\Страшное гаданье.txt</book_ref>
+    </booksList>
+    <booksList id="5">
+        <title>Возмездие</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>5</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>5</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Возмездие.txt</book_ref>
+    </booksList>
+    <booksList id="6">
+        <title>Двенадцать</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>6</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>6</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Двенадцать.txt</book_ref>
+    </booksList>
+    <booksList id="7">
+        <title>Пушкинскому Дому</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>7</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>7</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Пушкинскому Дому.txt</book_ref>
+    </booksList>
+    <booksList id="8">
+        <title>Соловьиный сад</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>8</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>8</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Соловьиный сад.txt</book_ref>
+    </booksList>
+    <booksList id="9">
+        <title>Стихотворения и поэмы (1907-1916)</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>9</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>9</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Стихотворения и поэмы (1907-1916).txt</book_ref>
+    </booksList>
+    <booksList id="10">
+        <title>Багровый остров</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>10</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>10</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Багровый остров.txt</book_ref>
+    </booksList>
+    <booksList id="11">
+        <title>Грядущие перспективы</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>11</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>11</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Грядущие перспективы.txt</book_ref>
+    </booksList>
+    <booksList id="12">
+        <title>Записки юного врача</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>12</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>12</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Записки юного врача.txt</book_ref>
+    </booksList>
+    <booksList id="13">
+        <title>Зойкина квартира</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>13</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>13</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Зойкина квартира.txt</book_ref>
+    </booksList>
+    <booksList id="14">
+        <title>Киев-город</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>14</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>14</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Киев-город.txt</book_ref>
+    </booksList>
+    <booksList id="15">
+        <title>Мастер и Маргарита</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>15</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>15</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Мастер и Маргарита.txt</book_ref>
+    </booksList>
+    <booksList id="16">
+        <title>Письмо Правительству СССР</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>16</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>16</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Письмо Правительству СССР.txt</book_ref>
+    </booksList>
+    <booksList id="17">
+        <title>Похождения Чичикова</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>17</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>17</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Похождения Чичикова.txt</book_ref>
+    </booksList>
+    <booksList id="18">
+        <title>Праздник с сифилисом</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>18</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>18</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Праздник с сифилисом.txt</book_ref>
+    </booksList>
+    <booksList id="19">
+        <title>Псалом</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>19</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>19</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Псалом.txt</book_ref>
+    </booksList>
+    <booksList id="20">
+        <title>Роковые яйца</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>20</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>20</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Роковые яйца.txt</book_ref>
+    </booksList>
+    <booksList id="21">
+        <title>Собачье сердце</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>21</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>21</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Собачье сердце.txt</book_ref>
+    </booksList>
+    <booksList id="22">
+        <title>Вечера на хуторе близ Диканьки</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>22</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>22</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Вечера на хуторе близ Диканьки.txt</book_ref>
+    </booksList>
+    <booksList id="23">
+        <title>Вий</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>23</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>23</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Вий.txt</book_ref>
+    </booksList>
+    <booksList id="24">
+        <title>Записки сумасшедшего</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>24</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>24</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Записки сумасшедшего.txt</book_ref>
+    </booksList>
+    <booksList id="25">
+        <title>Нос</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>25</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>25</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Нос.txt</book_ref>
+    </booksList>
+    <booksList id="26">
+        <title>Ревизор</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>26</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>26</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Ревизор.txt</book_ref>
+    </booksList>
+    <booksList id="27">
+        <title>Тарас Бульба</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>27</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>27</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Тарас Бульба.txt</book_ref>
+    </booksList>
+    <booksList id="28">
+        <title>Обломов</title>
+        <author_id>6</author_id>
+        <authors>
+            <id>28</id>
+            <first_name>Иван</first_name>
+            <last_name>Гончаров</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>28</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гончаров Иван Александрович\Обломов.txt</book_ref>
+    </booksList>
+    <booksList id="29">
+        <title>Алые паруса</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>29</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>29</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Грин Александр\Алые паруса.txt</book_ref>
+    </booksList>
+    <booksList id="30">
+        <title>Бегущая по волнам</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>30</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>30</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Грин Александр\Бегущая по волнам.txt</book_ref>
+    </booksList>
+    <booksList id="31">
+        <title>Бедные люди</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>31</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>31</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Бедные люди.txt</book_ref>
+    </booksList>
+    <booksList id="32">
+        <title>Игрок</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>32</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>32</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Игрок.txt</book_ref>
+    </booksList>
+    <booksList id="33">
+        <title>Преступление и наказание</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>33</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>33</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Преступление и наказание.txt</book_ref>
+    </booksList>
+    <booksList id="34">
+        <title>Унижённые и оскорблённые</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>34</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>34</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Унижённые и оскорблённые.txt</book_ref>
+    </booksList>
+    <booksList id="35">
+        <title>Герой нашего времени</title>
+        <author_id>9</author_id>
+        <authors>
+            <id>35</id>
+            <first_name>Михаил</first_name>
+            <last_name>Лермонтов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>35</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лермонтов Михаил Юрьевич\Герой нашего времени.txt</book_ref>
+    </booksList>
+    <booksList id="36">
+        <title>Мцыри</title>
+        <author_id>9</author_id>
+        <authors>
+            <id>36</id>
+            <first_name>Михаил</first_name>
+            <last_name>Лермонтов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>36</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лермонтов Михаил Юрьевич\Мцыри.txt</book_ref>
+    </booksList>
+    <booksList id="37">
+        <title>Левша</title>
+        <author_id>10</author_id>
+        <authors>
+            <id>37</id>
+            <first_name>Hиколай</first_name>
+            <last_name>Лесков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>37</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лесков Hиколай Семенович\Левша.txt</book_ref>
+    </booksList>
+    <booksList id="38">
+        <title>Очарованный странник</title>
+        <author_id>10</author_id>
+        <authors>
+            <id>38</id>
+            <first_name>Hиколай</first_name>
+            <last_name>Лесков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>38</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лесков Hиколай Семенович\Очарованный странник.txt</book_ref>
+    </booksList>
+    <booksList id="39">
+        <title>Импровизатор</title>
+        <author_id>11</author_id>
+        <authors>
+            <id>39</id>
+            <first_name>Владимир</first_name>
+            <last_name>Одоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>39</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Одоевский Владимир\Импровизатор.txt</book_ref>
+    </booksList>
+    <booksList id="40">
+        <title>Игоша</title>
+        <author_id>11</author_id>
+        <authors>
+            <id>40</id>
+            <first_name>Владимир</first_name>
+            <last_name>Одоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>40</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Одоевский Владимир\Игоша.txt</book_ref>
+    </booksList>
+    <booksList id="41">
+        <title>Взбаламученное море</title>
+        <author_id>12</author_id>
+        <authors>
+            <id>41</id>
+            <first_name>Алексей</first_name>
+            <last_name>Писемский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>41</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Писемский Алексей\Взбаламученное море.txt</book_ref>
+    </booksList>
+    <booksList id="42">
+        <title>Плоды раздумья - мысли и афоризмы</title>
+        <author_id>13</author_id>
+        <authors>
+            <id>42</id>
+            <first_name>Козьма</first_name>
+            <last_name>Прутков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>42</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Прутков Козьма\Плоды раздумья - мысли и афоризмы.txt</book_ref>
+    </booksList>
+    <booksList id="43">
+        <title>Барышня-крестьянка</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>43</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>43</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Барышня-крестьянка.txt</book_ref>
+    </booksList>
+    <booksList id="44">
+        <title>Борис Годунов</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>44</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>44</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Борис Годунов.txt</book_ref>
+    </booksList>
+    <booksList id="45">
+        <title>Дубровский</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>45</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>45</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Дубровский.txt</book_ref>
+    </booksList>
+    <booksList id="46">
+        <title>Пир во время чумы</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>46</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>46</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Пир во время чумы.txt</book_ref>
+    </booksList>
+    <booksList id="47">
+        <title>Сказка о мертвой царевне и о семи богатырях</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>47</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>47</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Сказка о мертвой царевне и о семи богатырях.txt</book_ref>
+    </booksList>
+    <booksList id="48">
+        <title>Либерал</title>
+        <author_id>15</author_id>
+        <authors>
+            <id>48</id>
+            <first_name>Михаил</first_name>
+            <last_name>Салтыков-Щедрин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>48</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Салтыков-Щедрин Михаил Евграфович\Либерал.txt</book_ref>
+    </booksList>
+    <booksList id="49">
+        <title>Как уничтожали вакцину против рака</title>
+        <author_id>16</author_id>
+        <authors>
+            <id>49</id>
+            <first_name>Владимир</first_name>
+            <last_name>Соловьев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>49</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Соловьев Владимир\Как уничтожали вакцину против рака.txt</book_ref>
+    </booksList>
+    <booksList id="50">
+        <title>Война и мир (Том 1, часть 2)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>50</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>50</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 1, часть 2).txt</book_ref>
+    </booksList>
+    <booksList id="51">
+        <title>Война и мир (Том 2, часть 2)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>51</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>51</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 2).txt</book_ref>
+    </booksList>
+    <booksList id="52">
+        <title>Война и мир (Том 2, часть 3)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>52</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>52</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 3).txt</book_ref>
+    </booksList>
+    <booksList id="53">
+        <title>Война и мир (Том 2, часть 4)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>53</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>53</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 4).txt</book_ref>
+    </booksList>
+    <booksList id="54">
+        <title>Война и мир (Том 2, часть 5)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>54</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>54</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 5).txt</book_ref>
+    </booksList>
+    <booksList id="55">
+        <title>Ася</title>
+        <author_id>18</author_id>
+        <authors>
+            <id>55</id>
+            <first_name>Иван</first_name>
+            <last_name>Тургенев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>55</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Тургенев Иван\Ася.txt</book_ref>
+    </booksList>
+    <booksList id="56">
+        <title>Рудин</title>
+        <author_id>18</author_id>
+        <authors>
+            <id>56</id>
+            <first_name>Иван</first_name>
+            <last_name>Тургенев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>56</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Тургенев Иван\Рудин.txt</book_ref>
+    </booksList>
+    <booksList id="57">
+        <title>Бригадир</title>
+        <author_id>19</author_id>
+        <authors>
+            <id>57</id>
+            <first_name>Денис</first_name>
+            <last_name>Фонвизин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>57</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Фонвизин Денис Иванович\Бригадир.txt</book_ref>
+    </booksList>
+    <booksList id="58">
+        <title>Недоросль</title>
+        <author_id>19</author_id>
+        <authors>
+            <id>58</id>
+            <first_name>Денис</first_name>
+            <last_name>Фонвизин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>58</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Фонвизин Денис Иванович\Недоросль.txt</book_ref>
+    </booksList>
+    <booksList id="59">
+        <title>Аптекарша</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>59</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>59</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Аптекарша.txt</book_ref>
+    </booksList>
+    <booksList id="60">
+        <title>Вишневый сад</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>60</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>60</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Вишневый сад.txt</book_ref>
+    </booksList>
+    <booksList id="61">
+        <title>Каштанка</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>61</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>61</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Каштанка.txt</book_ref>
+    </booksList>
+    <booksList id="62">
+        <title>Скрипка Ротшильда</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>62</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>62</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Скрипка Ротшильда.txt</book_ref>
+    </booksList>
+    <booksList id="63">
+        <title>Вокруг света за восемьдесят дней</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>63</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>63</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Вокруг света за восемьдесят дней.txt</book_ref>
+    </booksList>
+    <booksList id="64">
+        <title>Двадцать тысяч лье под водой</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>64</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>64</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Двадцать тысяч лье под водой.txt</book_ref>
+    </booksList>
+    <booksList id="65">
+        <title>Дети капитана Гранта</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>65</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>65</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Дети капитана Гранта.txt</book_ref>
+    </booksList>
+    <booksList id="66">
+        <title>Таинственный остров</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>66</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>66</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Таинственный остров.txt</book_ref>
+    </booksList>
+    <booksList id="67">
+        <title>Белый шар</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>67</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>67</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Белый шар.txt</book_ref>
+    </booksList>
+    <booksList id="68">
+        <title>В Италию</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>68</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>68</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Грин Александр\В Италию.txt</book_ref>
+    </booksList>
+    <booksList id="69">
+        <title>Девяносто третий год</title>
+        <author_id>22</author_id>
+        <authors>
+            <id>69</id>
+            <first_name>Виктор</first_name>
+            <last_name>Гюго</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>69</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Гюго Виктор\Девяносто третий год.txt</book_ref>
+    </booksList>
+    <booksList id="70">
+        <title>Труженики моря</title>
+        <author_id>22</author_id>
+        <authors>
+            <id>70</id>
+            <first_name>Виктор</first_name>
+            <last_name>Гюго</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>70</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Гюго Виктор\Труженики моря.txt</book_ref>
+    </booksList>
+    <booksList id="71">
+        <title>Вероника решает умереть</title>
+        <author_id>23</author_id>
+        <authors>
+            <id>71</id>
+            <first_name>Пауло</first_name>
+            <last_name>Коэльо</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>71</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Коэльо Пауло\Вероника решает умереть</book_ref>
+    </booksList>
+    <booksList id="72">
+        <title>Пятая гора</title>
+        <author_id>23</author_id>
+        <authors>
+            <id>72</id>
+            <first_name>Пауло</first_name>
+            <last_name>Коэльо</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>72</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Коэльо Пауло\Пятая гора</book_ref>
+    </booksList>
+    <booksList id="73">
+        <title>Моряк в седле</title>
+        <author_id>24</author_id>
+        <authors>
+            <id>73</id>
+            <first_name>Ирвинг</first_name>
+            <last_name>Стоун</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>73</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Стоун Ирвинг\Моряк в седле</book_ref>
+    </booksList>
+    <booksList id="74">
+        <title>Приключения Гекльберри Финна</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>74</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>74</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Приключения Гекльберри Финна</book_ref>
+    </booksList>
+    <booksList id="75">
+        <title>Приключения Тома Сойера</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>75</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>75</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Приключения Тома Сойера</book_ref>
+    </booksList>
+    <booksList id="76">
+        <title>Принц и нищий</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>76</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>76</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Принц и нищий</book_ref>
+    </booksList>
+    <booksList id="77">
+        <title>Князь Серебряный</title>
+        <author_id>26</author_id>
+        <authors>
+            <id>77</id>
+            <first_name>Алексей</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>77</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Толстой Алексей Константинович\Князь Серебряный</book_ref>
+    </booksList>
+    <booksList id="78">
+        <title>Смерть Иоанна Грозного</title>
+        <author_id>26</author_id>
+        <authors>
+            <id>78</id>
+            <first_name>Алексей</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>78</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Толстой Алексей Константинович\Смерть Иоанна Грозного</book_ref>
+    </booksList>
+    <booksList id="79">
+        <title>Подсознание может все !</title>
+        <author_id>27</author_id>
+        <authors>
+            <id>79</id>
+            <first_name>Джон</first_name>
+            <last_name>Кехо</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>79</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Кехо Джон\Подсознание может все !.txt</book_ref>
+    </booksList>
+    <booksList id="80">
+        <title>Мотивация и личность</title>
+        <author_id>28</author_id>
+        <authors>
+            <id>80</id>
+            <first_name>Абрахам</first_name>
+            <last_name>Маслоу</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>80</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Маслоу Абрахам\Мотивация и личность.txt</book_ref>
+    </booksList>
+    <booksList id="82">
+        <title>Толкование сновидений</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>82</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>82</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Толкование сновидений.txt</book_ref>
+    </booksList>
+    <booksList id="83">
+        <title>Я и Оно</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>83</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>83</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Я и Оно.txt</book_ref>
+    </booksList>
+    <booksList id="84">
+        <title>Бpак как психологическое отношение</title>
+        <author_id>30</author_id>
+        <authors>
+            <id>84</id>
+            <first_name>Карл</first_name>
+            <last_name>Юнг</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>84</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Юнг Карл Густав\Бpак как психологическое отношение.txt</book_ref>
+    </booksList>
+    <booksList id="85">
+        <title>Психологические типы</title>
+        <author_id>30</author_id>
+        <authors>
+            <id>85</id>
+            <first_name>Карл</first_name>
+            <last_name>Юнг</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>85</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Юнг Карл Густав\Психологические типы.txt</book_ref>
+    </booksList>
+    <booksList id="86">
+        <title>Инквизитор</title>
+        <author_id>31</author_id>
+        <authors>
+            <id>86</id>
+            <first_name>Сергей</first_name>
+            <last_name>Лукьяненко</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>86</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Лукьяненко Сергей\Инквизитор.txt</book_ref>
+    </booksList>
+    <booksList id="87">
+        <title>Ночной дозор</title>
+        <author_id>31</author_id>
+        <authors>
+            <id>87</id>
+            <first_name>Сергей</first_name>
+            <last_name>Лукьяненко</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>87</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Лукьяненко Сергей\Ночной дозор.txt</book_ref>
+    </booksList>
+    <booksList id="88">
+        <title>Generation П</title>
+        <author_id>32</author_id>
+        <authors>
+            <id>88</id>
+            <first_name>Виктор</first_name>
+            <last_name>Пелевин</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>88</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Пелевин Виктор\Generation П.txt</book_ref>
+    </booksList>
+    <booksList id="89">
+        <title>Зомбификация</title>
+        <author_id>32</author_id>
+        <authors>
+            <id>89</id>
+            <first_name>Виктор</first_name>
+            <last_name>Пелевин</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>89</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Пелевин Виктор\Зомбификация.txt</book_ref>
+    </booksList>
+    <booksList id="90">
+        <title>Хоббит или туда и обратно</title>
+        <author_id>33</author_id>
+        <authors>
+            <id>90</id>
+            <first_name>Руэл</first_name>
+            <last_name>Толкиен</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>90</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Толкиен Руэл\Хоббит или туда и обратно.txt</book_ref>
+    </booksList>
+    <booksList id="91">
+        <title>Так жить нельзя</title>
+        <author_id>34</author_id>
+        <authors>
+            <id>91</id>
+            <first_name>Михаил</first_name>
+            <last_name>Жванецкий</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>91</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Жванецкий Михаил\Так жить нельзя.txt</book_ref>
+    </booksList>
+    <booksList id="92">
+        <title>Утечка мозгов</title>
+        <author_id>34</author_id>
+        <authors>
+            <id>92</id>
+            <first_name>Михаил</first_name>
+            <last_name>Жванецкий</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>92</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Жванецкий Михаил\Утечка мозгов.txt</book_ref>
+    </booksList>
+    <booksList id="93">
+        <title>Великая сила</title>
+        <author_id>35</author_id>
+        <authors>
+            <id>93</id>
+            <first_name>Михаил</first_name>
+            <last_name>Задорнов</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>93</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Задорнов Михаил\Великая сила.txt</book_ref>
+    </booksList>
+    <booksList id="94">
+        <title>Эссе</title>
+        <author_id>35</author_id>
+        <authors>
+            <id>94</id>
+            <first_name>Михаил</first_name>
+            <last_name>Задорнов</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>94</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Задорнов Михаил\Эссе.txt</book_ref>
+    </booksList>
+    <booksList id="95">
+        <title>Избранное</title>
+        <author_id>36</author_id>
+        <authors>
+            <id>95</id>
+            <first_name>Михаил</first_name>
+            <last_name>Зощенко</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>95</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Зощенко Михаил\Избранное.txt</book_ref>
+    </booksList>
+    <booksList id="96">
+        <title>На краешке стола</title>
+        <author_id>36</author_id>
+        <authors>
+            <id>96</id>
+            <first_name>Михаил</first_name>
+            <last_name>Зощенко</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>96</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Зощенко Михаил\На краешке стола.txt</book_ref>
+    </booksList>
+    <booksList id="97">
+        <title>Избранное от автора</title>
+        <author_id>37</author_id>
+        <authors>
+            <id>97</id>
+            <first_name>Виктор</first_name>
+            <last_name>Коклюшкин</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>97</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Коклюшкин Виктор\Избранное от автора.txt</book_ref>
+    </booksList>
+    <booksList id="112">
+        <title>Бессознательное</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>112</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>112</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Бессознательное.txt</book_ref>
+    </booksList>
+    <books id="1">
+        <title>Аленький цветочек</title>
+        <author_id>1</author_id>
+        <authors>
+            <id>1</id>
+            <first_name>Сергей</first_name>
+            <last_name>Аксаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>1</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Аксаков Сергей Тимофеевич\Аленький цветочек.txt</book_ref>
+    </books>
+    <books id="2">
+        <title>Охотная страсть</title>
+        <author_id>1</author_id>
+        <authors>
+            <id>2</id>
+            <first_name>Сергей</first_name>
+            <last_name>Аксаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>2</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Аксаков Сергей Тимофеевич\Охотная страсть.txt</book_ref>
+    </books>
+    <books id="3">
+        <title>Кровь за кровь</title>
+        <author_id>2</author_id>
+        <authors>
+            <id>3</id>
+            <first_name>Александр</first_name>
+            <last_name>Бестужев-Марлинский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>3</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Бестужев-Марлинский Александр\Кровь за кровь.txt</book_ref>
+    </books>
+    <books id="4">
+        <title>Страшное гаданье</title>
+        <author_id>2</author_id>
+        <authors>
+            <id>4</id>
+            <first_name>Александр</first_name>
+            <last_name>Бестужев-Марлинский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>4</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Бестужев-Марлинский Александр\Страшное гаданье.txt</book_ref>
+    </books>
+    <books id="5">
+        <title>Возмездие</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>5</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>5</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Возмездие.txt</book_ref>
+    </books>
+    <books id="6">
+        <title>Двенадцать</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>6</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>6</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Двенадцать.txt</book_ref>
+    </books>
+    <books id="7">
+        <title>Пушкинскому Дому</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>7</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>7</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Пушкинскому Дому.txt</book_ref>
+    </books>
+    <books id="8">
+        <title>Соловьиный сад</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>8</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>8</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Соловьиный сад.txt</book_ref>
+    </books>
+    <books id="9">
+        <title>Стихотворения и поэмы (1907-1916)</title>
+        <author_id>3</author_id>
+        <authors>
+            <id>9</id>
+            <first_name>Александр</first_name>
+            <last_name>Блок</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>9</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Блок Александр\Стихотворения и поэмы (1907-1916).txt</book_ref>
+    </books>
+    <books id="10">
+        <title>Багровый остров</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>10</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>10</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Багровый остров.txt</book_ref>
+    </books>
+    <books id="11">
+        <title>Грядущие перспективы</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>11</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>11</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Грядущие перспективы.txt</book_ref>
+    </books>
+    <books id="12">
+        <title>Записки юного врача</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>12</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>12</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Записки юного врача.txt</book_ref>
+    </books>
+    <books id="13">
+        <title>Зойкина квартира</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>13</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>13</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Зойкина квартира.txt</book_ref>
+    </books>
+    <books id="14">
+        <title>Киев-город</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>14</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>14</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Киев-город.txt</book_ref>
+    </books>
+    <books id="15">
+        <title>Мастер и Маргарита</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>15</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>15</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Мастер и Маргарита.txt</book_ref>
+    </books>
+    <books id="16">
+        <title>Письмо Правительству СССР</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>16</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>16</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Письмо Правительству СССР.txt</book_ref>
+    </books>
+    <books id="17">
+        <title>Похождения Чичикова</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>17</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>17</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Похождения Чичикова.txt</book_ref>
+    </books>
+    <books id="18">
+        <title>Праздник с сифилисом</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>18</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>18</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Праздник с сифилисом.txt</book_ref>
+    </books>
+    <books id="19">
+        <title>Псалом</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>19</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>19</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Псалом.txt</book_ref>
+    </books>
+    <books id="20">
+        <title>Роковые яйца</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>20</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>20</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Роковые яйца.txt</book_ref>
+    </books>
+    <books id="21">
+        <title>Собачье сердце</title>
+        <author_id>4</author_id>
+        <authors>
+            <id>21</id>
+            <first_name>Михаил</first_name>
+            <last_name>Булгаков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>21</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Булгаков Михаил\Собачье сердце.txt</book_ref>
+    </books>
+    <books id="22">
+        <title>Вечера на хуторе близ Диканьки</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>22</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>22</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Вечера на хуторе близ Диканьки.txt</book_ref>
+    </books>
+    <books id="23">
+        <title>Вий</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>23</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>23</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Вий.txt</book_ref>
+    </books>
+    <books id="24">
+        <title>Записки сумасшедшего</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>24</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>24</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Записки сумасшедшего.txt</book_ref>
+    </books>
+    <books id="25">
+        <title>Нос</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>25</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>25</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Нос.txt</book_ref>
+    </books>
+    <books id="26">
+        <title>Ревизор</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>26</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>26</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Ревизор.txt</book_ref>
+    </books>
+    <books id="27">
+        <title>Тарас Бульба</title>
+        <author_id>5</author_id>
+        <authors>
+            <id>27</id>
+            <first_name>Николай</first_name>
+            <last_name>Гоголь</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>27</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гоголь Николай Васильевич\Тарас Бульба.txt</book_ref>
+    </books>
+    <books id="28">
+        <title>Обломов</title>
+        <author_id>6</author_id>
+        <authors>
+            <id>28</id>
+            <first_name>Иван</first_name>
+            <last_name>Гончаров</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>28</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Гончаров Иван Александрович\Обломов.txt</book_ref>
+    </books>
+    <books id="29">
+        <title>Алые паруса</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>29</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>29</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Грин Александр\Алые паруса.txt</book_ref>
+    </books>
+    <books id="30">
+        <title>Бегущая по волнам</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>30</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>30</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Грин Александр\Бегущая по волнам.txt</book_ref>
+    </books>
+    <books id="31">
+        <title>Бедные люди</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>31</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>31</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Бедные люди.txt</book_ref>
+    </books>
+    <books id="32">
+        <title>Игрок</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>32</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>32</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Игрок.txt</book_ref>
+    </books>
+    <books id="33">
+        <title>Преступление и наказание</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>33</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>33</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Преступление и наказание.txt</book_ref>
+    </books>
+    <books id="34">
+        <title>Унижённые и оскорблённые</title>
+        <author_id>8</author_id>
+        <authors>
+            <id>34</id>
+            <first_name>Федор</first_name>
+            <last_name>Достоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>34</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Достоевский Федор Михайлович\Унижённые и оскорблённые.txt</book_ref>
+    </books>
+    <books id="35">
+        <title>Герой нашего времени</title>
+        <author_id>9</author_id>
+        <authors>
+            <id>35</id>
+            <first_name>Михаил</first_name>
+            <last_name>Лермонтов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>35</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лермонтов Михаил Юрьевич\Герой нашего времени.txt</book_ref>
+    </books>
+    <books id="36">
+        <title>Мцыри</title>
+        <author_id>9</author_id>
+        <authors>
+            <id>36</id>
+            <first_name>Михаил</first_name>
+            <last_name>Лермонтов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>36</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лермонтов Михаил Юрьевич\Мцыри.txt</book_ref>
+    </books>
+    <books id="37">
+        <title>Левша</title>
+        <author_id>10</author_id>
+        <authors>
+            <id>37</id>
+            <first_name>Hиколай</first_name>
+            <last_name>Лесков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>37</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лесков Hиколай Семенович\Левша.txt</book_ref>
+    </books>
+    <books id="38">
+        <title>Очарованный странник</title>
+        <author_id>10</author_id>
+        <authors>
+            <id>38</id>
+            <first_name>Hиколай</first_name>
+            <last_name>Лесков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>38</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Лесков Hиколай Семенович\Очарованный странник.txt</book_ref>
+    </books>
+    <books id="39">
+        <title>Импровизатор</title>
+        <author_id>11</author_id>
+        <authors>
+            <id>39</id>
+            <first_name>Владимир</first_name>
+            <last_name>Одоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>39</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Одоевский Владимир\Импровизатор.txt</book_ref>
+    </books>
+    <books id="40">
+        <title>Игоша</title>
+        <author_id>11</author_id>
+        <authors>
+            <id>40</id>
+            <first_name>Владимир</first_name>
+            <last_name>Одоевский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>40</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Одоевский Владимир\Игоша.txt</book_ref>
+    </books>
+    <books id="41">
+        <title>Взбаламученное море</title>
+        <author_id>12</author_id>
+        <authors>
+            <id>41</id>
+            <first_name>Алексей</first_name>
+            <last_name>Писемский</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>41</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Писемский Алексей\Взбаламученное море.txt</book_ref>
+    </books>
+    <books id="42">
+        <title>Плоды раздумья - мысли и афоризмы</title>
+        <author_id>13</author_id>
+        <authors>
+            <id>42</id>
+            <first_name>Козьма</first_name>
+            <last_name>Прутков</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>42</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Прутков Козьма\Плоды раздумья - мысли и афоризмы.txt</book_ref>
+    </books>
+    <books id="43">
+        <title>Барышня-крестьянка</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>43</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>43</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Барышня-крестьянка.txt</book_ref>
+    </books>
+    <books id="44">
+        <title>Борис Годунов</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>44</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>44</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Борис Годунов.txt</book_ref>
+    </books>
+    <books id="45">
+        <title>Дубровский</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>45</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>45</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Дубровский.txt</book_ref>
+    </books>
+    <books id="46">
+        <title>Пир во время чумы</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>46</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>46</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Пир во время чумы.txt</book_ref>
+    </books>
+    <books id="47">
+        <title>Сказка о мертвой царевне и о семи богатырях</title>
+        <author_id>14</author_id>
+        <authors>
+            <id>47</id>
+            <first_name>Александр</first_name>
+            <last_name>Пушкин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>47</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Пушкин Александр Сергеевич\Сказка о мертвой царевне и о семи богатырях.txt</book_ref>
+    </books>
+    <books id="48">
+        <title>Либерал</title>
+        <author_id>15</author_id>
+        <authors>
+            <id>48</id>
+            <first_name>Михаил</first_name>
+            <last_name>Салтыков-Щедрин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>48</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Салтыков-Щедрин Михаил Евграфович\Либерал.txt</book_ref>
+    </books>
+    <books id="49">
+        <title>Как уничтожали вакцину против рака</title>
+        <author_id>16</author_id>
+        <authors>
+            <id>49</id>
+            <first_name>Владимир</first_name>
+            <last_name>Соловьев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>49</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Соловьев Владимир\Как уничтожали вакцину против рака.txt</book_ref>
+    </books>
+    <books id="50">
+        <title>Война и мир (Том 1, часть 2)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>50</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>50</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 1, часть 2).txt</book_ref>
+    </books>
+    <books id="51">
+        <title>Война и мир (Том 2, часть 2)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>51</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>51</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 2).txt</book_ref>
+    </books>
+    <books id="52">
+        <title>Война и мир (Том 2, часть 3)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>52</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>52</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 3).txt</book_ref>
+    </books>
+    <books id="53">
+        <title>Война и мир (Том 2, часть 4)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>53</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>53</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 4).txt</book_ref>
+    </books>
+    <books id="54">
+        <title>Война и мир (Том 2, часть 5)</title>
+        <author_id>17</author_id>
+        <authors>
+            <id>54</id>
+            <first_name>Лев</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>54</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Толстой Лев Николаевич\Война и мир (Том 2, часть 5).txt</book_ref>
+    </books>
+    <books id="55">
+        <title>Ася</title>
+        <author_id>18</author_id>
+        <authors>
+            <id>55</id>
+            <first_name>Иван</first_name>
+            <last_name>Тургенев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>55</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Тургенев Иван\Ася.txt</book_ref>
+    </books>
+    <books id="56">
+        <title>Рудин</title>
+        <author_id>18</author_id>
+        <authors>
+            <id>56</id>
+            <first_name>Иван</first_name>
+            <last_name>Тургенев</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>56</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Тургенев Иван\Рудин.txt</book_ref>
+    </books>
+    <books id="57">
+        <title>Бригадир</title>
+        <author_id>19</author_id>
+        <authors>
+            <id>57</id>
+            <first_name>Денис</first_name>
+            <last_name>Фонвизин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>57</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Фонвизин Денис Иванович\Бригадир.txt</book_ref>
+    </books>
+    <books id="58">
+        <title>Недоросль</title>
+        <author_id>19</author_id>
+        <authors>
+            <id>58</id>
+            <first_name>Денис</first_name>
+            <last_name>Фонвизин</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>58</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Фонвизин Денис Иванович\Недоросль.txt</book_ref>
+    </books>
+    <books id="59">
+        <title>Аптекарша</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>59</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>59</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Аптекарша.txt</book_ref>
+    </books>
+    <books id="60">
+        <title>Вишневый сад</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>60</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>60</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Вишневый сад.txt</book_ref>
+    </books>
+    <books id="61">
+        <title>Каштанка</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>61</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>61</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Каштанка.txt</book_ref>
+    </books>
+    <books id="62">
+        <title>Скрипка Ротшильда</title>
+        <author_id>20</author_id>
+        <authors>
+            <id>62</id>
+            <first_name>Антон</first_name>
+            <last_name>Чехов</last_name>
+        </authors>
+        <genre_id>1</genre_id>
+        <genres>
+            <id>62</id>
+            <name>Классика</name>
+        </genres>
+        <book_ref>C:\books\Классика\Чехов Антон Павлович\Скрипка Ротшильда.txt</book_ref>
+    </books>
+    <books id="63">
+        <title>Вокруг света за восемьдесят дней</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>63</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>63</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Вокруг света за восемьдесят дней.txt</book_ref>
+    </books>
+    <books id="64">
+        <title>Двадцать тысяч лье под водой</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>64</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>64</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Двадцать тысяч лье под водой.txt</book_ref>
+    </books>
+    <books id="65">
+        <title>Дети капитана Гранта</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>65</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>65</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Дети капитана Гранта.txt</book_ref>
+    </books>
+    <books id="66">
+        <title>Таинственный остров</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>66</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>66</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Таинственный остров.txt</book_ref>
+    </books>
+    <books id="67">
+        <title>Белый шар</title>
+        <author_id>21</author_id>
+        <authors>
+            <id>67</id>
+            <first_name>Жюль</first_name>
+            <last_name>Верн</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>67</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Верн Жюль\Белый шар.txt</book_ref>
+    </books>
+    <books id="68">
+        <title>В Италию</title>
+        <author_id>7</author_id>
+        <authors>
+            <id>68</id>
+            <first_name>Александр</first_name>
+            <last_name>Грин</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>68</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Грин Александр\В Италию.txt</book_ref>
+    </books>
+    <books id="69">
+        <title>Девяносто третий год</title>
+        <author_id>22</author_id>
+        <authors>
+            <id>69</id>
+            <first_name>Виктор</first_name>
+            <last_name>Гюго</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>69</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Гюго Виктор\Девяносто третий год.txt</book_ref>
+    </books>
+    <books id="70">
+        <title>Труженики моря</title>
+        <author_id>22</author_id>
+        <authors>
+            <id>70</id>
+            <first_name>Виктор</first_name>
+            <last_name>Гюго</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>70</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Гюго Виктор\Труженики моря.txt</book_ref>
+    </books>
+    <books id="71">
+        <title>Вероника решает умереть</title>
+        <author_id>23</author_id>
+        <authors>
+            <id>71</id>
+            <first_name>Пауло</first_name>
+            <last_name>Коэльо</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>71</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Коэльо Пауло\Вероника решает умереть</book_ref>
+    </books>
+    <books id="72">
+        <title>Пятая гора</title>
+        <author_id>23</author_id>
+        <authors>
+            <id>72</id>
+            <first_name>Пауло</first_name>
+            <last_name>Коэльо</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>72</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Коэльо Пауло\Пятая гора</book_ref>
+    </books>
+    <books id="73">
+        <title>Моряк в седле</title>
+        <author_id>24</author_id>
+        <authors>
+            <id>73</id>
+            <first_name>Ирвинг</first_name>
+            <last_name>Стоун</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>73</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Стоун Ирвинг\Моряк в седле</book_ref>
+    </books>
+    <books id="74">
+        <title>Приключения Гекльберри Финна</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>74</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>74</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Приключения Гекльберри Финна</book_ref>
+    </books>
+    <books id="75">
+        <title>Приключения Тома Сойера</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>75</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>75</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Приключения Тома Сойера</book_ref>
+    </books>
+    <books id="76">
+        <title>Принц и нищий</title>
+        <author_id>25</author_id>
+        <authors>
+            <id>76</id>
+            <first_name>Марк</first_name>
+            <last_name>Твен</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>76</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Твен Марк\Принц и нищий</book_ref>
+    </books>
+    <books id="77">
+        <title>Князь Серебряный</title>
+        <author_id>26</author_id>
+        <authors>
+            <id>77</id>
+            <first_name>Алексей</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>77</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Толстой Алексей Константинович\Князь Серебряный</book_ref>
+    </books>
+    <books id="78">
+        <title>Смерть Иоанна Грозного</title>
+        <author_id>26</author_id>
+        <authors>
+            <id>78</id>
+            <first_name>Алексей</first_name>
+            <last_name>Толстой</last_name>
+        </authors>
+        <genre_id>2</genre_id>
+        <genres>
+            <id>78</id>
+            <name>Приключения и история</name>
+        </genres>
+        <book_ref>C:\books\Приключения и история\Толстой Алексей Константинович\Смерть Иоанна Грозного</book_ref>
+    </books>
+    <books id="79">
+        <title>Подсознание может все !</title>
+        <author_id>27</author_id>
+        <authors>
+            <id>79</id>
+            <first_name>Джон</first_name>
+            <last_name>Кехо</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>79</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Кехо Джон\Подсознание может все !.txt</book_ref>
+    </books>
+    <books id="80">
+        <title>Мотивация и личность</title>
+        <author_id>28</author_id>
+        <authors>
+            <id>80</id>
+            <first_name>Абрахам</first_name>
+            <last_name>Маслоу</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>80</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Маслоу Абрахам\Мотивация и личность.txt</book_ref>
+    </books>
+    <books id="82">
+        <title>Толкование сновидений</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>82</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>82</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Толкование сновидений.txt</book_ref>
+    </books>
+    <books id="83">
+        <title>Я и Оно</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>83</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>83</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Я и Оно.txt</book_ref>
+    </books>
+    <books id="84">
+        <title>Бpак как психологическое отношение</title>
+        <author_id>30</author_id>
+        <authors>
+            <id>84</id>
+            <first_name>Карл</first_name>
+            <last_name>Юнг</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>84</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Юнг Карл Густав\Бpак как психологическое отношение.txt</book_ref>
+    </books>
+    <books id="85">
+        <title>Психологические типы</title>
+        <author_id>30</author_id>
+        <authors>
+            <id>85</id>
+            <first_name>Карл</first_name>
+            <last_name>Юнг</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>85</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Юнг Карл Густав\Психологические типы.txt</book_ref>
+    </books>
+    <books id="86">
+        <title>Инквизитор</title>
+        <author_id>31</author_id>
+        <authors>
+            <id>86</id>
+            <first_name>Сергей</first_name>
+            <last_name>Лукьяненко</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>86</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Лукьяненко Сергей\Инквизитор.txt</book_ref>
+    </books>
+    <books id="87">
+        <title>Ночной дозор</title>
+        <author_id>31</author_id>
+        <authors>
+            <id>87</id>
+            <first_name>Сергей</first_name>
+            <last_name>Лукьяненко</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>87</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Лукьяненко Сергей\Ночной дозор.txt</book_ref>
+    </books>
+    <books id="88">
+        <title>Generation П</title>
+        <author_id>32</author_id>
+        <authors>
+            <id>88</id>
+            <first_name>Виктор</first_name>
+            <last_name>Пелевин</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>88</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Пелевин Виктор\Generation П.txt</book_ref>
+    </books>
+    <books id="89">
+        <title>Зомбификация</title>
+        <author_id>32</author_id>
+        <authors>
+            <id>89</id>
+            <first_name>Виктор</first_name>
+            <last_name>Пелевин</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>89</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Пелевин Виктор\Зомбификация.txt</book_ref>
+    </books>
+    <books id="90">
+        <title>Хоббит или туда и обратно</title>
+        <author_id>33</author_id>
+        <authors>
+            <id>90</id>
+            <first_name>Руэл</first_name>
+            <last_name>Толкиен</last_name>
+        </authors>
+        <genre_id>4</genre_id>
+        <genres>
+            <id>90</id>
+            <name>Фантастика</name>
+        </genres>
+        <book_ref>C:\books\Фантастика\Толкиен Руэл\Хоббит или туда и обратно.txt</book_ref>
+    </books>
+    <books id="91">
+        <title>Так жить нельзя</title>
+        <author_id>34</author_id>
+        <authors>
+            <id>91</id>
+            <first_name>Михаил</first_name>
+            <last_name>Жванецкий</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>91</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Жванецкий Михаил\Так жить нельзя.txt</book_ref>
+    </books>
+    <books id="92">
+        <title>Утечка мозгов</title>
+        <author_id>34</author_id>
+        <authors>
+            <id>92</id>
+            <first_name>Михаил</first_name>
+            <last_name>Жванецкий</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>92</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Жванецкий Михаил\Утечка мозгов.txt</book_ref>
+    </books>
+    <books id="93">
+        <title>Великая сила</title>
+        <author_id>35</author_id>
+        <authors>
+            <id>93</id>
+            <first_name>Михаил</first_name>
+            <last_name>Задорнов</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>93</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Задорнов Михаил\Великая сила.txt</book_ref>
+    </books>
+    <books id="94">
+        <title>Эссе</title>
+        <author_id>35</author_id>
+        <authors>
+            <id>94</id>
+            <first_name>Михаил</first_name>
+            <last_name>Задорнов</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>94</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Задорнов Михаил\Эссе.txt</book_ref>
+    </books>
+    <books id="95">
+        <title>Избранное</title>
+        <author_id>36</author_id>
+        <authors>
+            <id>95</id>
+            <first_name>Михаил</first_name>
+            <last_name>Зощенко</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>95</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Зощенко Михаил\Избранное.txt</book_ref>
+    </books>
+    <books id="96">
+        <title>На краешке стола</title>
+        <author_id>36</author_id>
+        <authors>
+            <id>96</id>
+            <first_name>Михаил</first_name>
+            <last_name>Зощенко</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>96</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Зощенко Михаил\На краешке стола.txt</book_ref>
+    </books>
+    <books id="97">
+        <title>Избранное от автора</title>
+        <author_id>37</author_id>
+        <authors>
+            <id>97</id>
+            <first_name>Виктор</first_name>
+            <last_name>Коклюшкин</last_name>
+        </authors>
+        <genre_id>5</genre_id>
+        <genres>
+            <id>97</id>
+            <name>Юмор</name>
+        </genres>
+        <book_ref>C:\books\Юмор\Коклюшкин Виктор\Избранное от автора.txt</book_ref>
+    </books>
+    <books id="112">
+        <title>Бессознательное</title>
+        <author_id>29</author_id>
+        <authors>
+            <id>112</id>
+            <first_name>Зигмунд</first_name>
+            <last_name>Фрейд</last_name>
+        </authors>
+        <genre_id>3</genre_id>
+        <genres>
+            <id>112</id>
+            <name>Психология</name>
+        </genres>
+        <book_ref>C:\books\Психология\Фрейд Зигмунд\Бессознательное.txt</book_ref>
+    </books>
+</booksWrapper>
