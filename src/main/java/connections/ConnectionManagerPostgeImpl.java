@@ -25,18 +25,22 @@ public class ConnectionManagerPostgeImpl implements ConnectionManager {
     }
 
     private ConnectionManagerPostgeImpl() {
-        try (FileInputStream fin = new FileInputStream
-                (new File("src/main/resources/config_connection.property"))) {
-            properties = new Properties();
-            properties.load(fin);
-            URL = properties.getProperty("Connection_JDBC_URL");
-            USER = properties.getProperty("Connection_JDBC_User");
-            PASSWORD = properties.getProperty("Connection_JDBC_Password");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try (FileInputStream fin = new FileInputStream
+////                (new File("src/main/resources/config_connection.property"))) {
+//                (new File("property/config_connection.property"))) {
+//            properties = new Properties();
+//            properties.load(fin);
+            //URL = properties.getProperty("Connection_JDBC_URL");
+            URL = "jdbc:postgresql://localhost:5433/onlinelibrary";
+            //USER = properties.getProperty("Connection_JDBC_User");
+            USER = "postgres";
+            //PASSWORD = properties.getProperty("Connection_JDBC_Password");
+            PASSWORD = "postgres";
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override

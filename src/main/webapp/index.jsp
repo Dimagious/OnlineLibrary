@@ -7,10 +7,35 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
+    <meta charset="utf-8">
     <title>OnlineLibrary</title>
-  </head>
-  <body>
-  Добро пожаловать в онлайн-библиотеку!
-  </body>
+    <%--<style>--%>
+        <%--body {--%>
+            <%--background-opacity: 0.5;--%>
+            <%--background: url(http://sepimages.ru/uploads/images/f/o/t/foto_dlja_biblioteki_1.jpg) no-repeat center;--%>
+        <%--}--%>
+    <%--</style>--%>
+</head>
+<body>
+<h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
+<h3 align="center">Для скачивания книг необходимо быть зарегистрированным в библиотеке</h3>
+<form align="center" method="get" action="http://localhost:8080/login">
+    <div class = "center">
+        <button>Авторизация</button>
+    </div>
+</form>
+<form align="center" method="get" action="http://localhost:8080/registration">
+    <div class = "center">
+        <button>Регистрация</button>
+    </div>
+</form>
+<hr align="center" width="500" size="2" color="#ff0000" />
+<form align="center" method="get" action="http://localhost:8080/dashboard">
+    <div class = "center">
+        <h3 align="center">В читальном зале можно читать книги без регистрации</h3>
+        <button>Посетить читатльный зал в качестве гостя</button>
+    </div>
+</form>
+</body>
 </html>

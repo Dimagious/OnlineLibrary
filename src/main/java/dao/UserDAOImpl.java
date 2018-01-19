@@ -50,7 +50,6 @@ public class UserDAOImpl implements UserDAO {
                              String login, String password) throws SQLException {
         UserPersonal person = new UserPersonal(first_name, last_name, sex);
         UserData data = new UserData(login, password);
-        UserDAO loginChecker = new UserDAOImpl();
         saveUser(person, data);
     }
 
@@ -62,21 +61,11 @@ public class UserDAOImpl implements UserDAO {
      */
     @Override
     public void authorizeUser(String login, String password) throws SQLException {
-        UserData registeredUser = new UserData(login, password);
-        UserDAO loginPasswordChecker = new UserDAOImpl();
         Connector.executeQuery(con -> {
             PreparedStatement statement = con.prepareStatement(
                     "SELECT * FROM user_data WHERE login = ? AND password = ?");
-            statement.setString(1, registeredUser.getLogin());
-            statement.setString(2, registeredUser.getPassword());
-            UserData userDataFromDB = loginPasswordChecker.getUserDataByLogin(registeredUser.getLogin());
-            if (!userDataFromDB.getLogin().equals(registeredUser.getLogin()) ||
-                    !userDataFromDB.getPassword().equals(registeredUser.getPassword())) {
-                System.out.println("Неправильныый логин или пароль");
-            } else {
-                System.out.println("Авторизация прошла успешно");
-                return registeredUser;
-            }
+            statement.setString(1, login);
+            statement.setString(2, password);
             return true;
         });
     }

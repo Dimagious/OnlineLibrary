@@ -31,7 +31,7 @@ public class BooksDAOImpl implements BooksDAO {
                             "FROM books AS b LEFT JOIN authors a ON b.author_id = a.id " +
                             "LEFT JOIN genres AS g ON b.genre_id = g.id ORDER BY b.id"
             );
-            List<Books> AllBooks = new ArrayList<>();
+            List<Books> allBooks = new ArrayList<>();
             while (resultSet.next()) {
                 Books books = getFieldsFromBooks(resultSet);
                 Authors authors = getFieldsFromAuthors(resultSet);
@@ -39,9 +39,9 @@ public class BooksDAOImpl implements BooksDAO {
                 books.setAuthors(authors);
                 books.setGenres(genres);
                 System.out.println(books);
-                AllBooks.add(books);
+                allBooks.add(books);
             }
-            return AllBooks;
+            return allBooks;
         });
         return list;
     }

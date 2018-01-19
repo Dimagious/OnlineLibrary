@@ -1,0 +1,4 @@
+#Fri Jan 12 21:31:17 MSK 2018
+Connection_JDBC_URL=jdbc\:postgresql\://localhost\:5433/onlinelibrary
+Connection_JDBC_Password=postgres
+Connection_JDBC_User=postgres
