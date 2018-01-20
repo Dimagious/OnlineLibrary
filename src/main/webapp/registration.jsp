@@ -5,7 +5,7 @@
   Time: 20:21
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 
 <head>
@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Регистрация посетителей</h1>
-<form method="post" action="http://localhost:8080/login">
+<form method="post" action="http://localhost:8080/registration">
     <label for="firstname-field">Имя</label>
     <input type="text" name="firstname" id="firstname-field" placeholder="Введите имя">
     <br><br>

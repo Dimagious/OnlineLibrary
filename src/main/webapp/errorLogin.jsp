@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: admin
-  Date: 19.01.2018
-  Time: 10:10
+  Date: 20.01.2018
+  Time: 20:00
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,6 +13,7 @@
 <body>
 <h1>Авторизация</h1>
 <form method="get" action="http://localhost:8080/usermenu">
+    <h4>Неправильный логин или пароль</h4>
     <label for="login-field">Ваш логин</label>
     <input type="text" name="login" id="login-field" placeholder="Введите логин">
     <br><br>

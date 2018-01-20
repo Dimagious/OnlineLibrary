@@ -4,8 +4,11 @@ import dao.BooksDAO;
 import dao.BooksDAOImpl;
 import dao.UserDAO;
 import dao.UserDAOImpl;
+import org.apache.log4j.Logger;
 import pojo.Books;
 import pojo.UserData;
+import pojo.UserPersonal;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -16,6 +19,7 @@ import java.sql.SQLException;
  * Created by Dmitriy Yurkin on 12.01.2018.
  */
 public class DBWriter {
+    private static final Logger logger = Logger.getLogger(DBWriter.class);
     /**
      * Извлекает всю информацию о пользователях из XML-файла
      * и в нужном порядке добавляет её в базы UserPersonal и UserData
@@ -28,17 +32,17 @@ public class DBWriter {
             UserData.UsersWrapper userData = (UserData.UsersWrapper) unmarshaller1.unmarshal(file);
             UserDAO userDAO = new UserDAOImpl();
             for (UserData userList : userData.getusers()) {
-                System.out.println(userList);
-                userDAO.registerUser(
+                UserPersonal person = new UserPersonal(
                         userList.getUserPersonal().getFirst_name(),
                         userList.getUserPersonal().getLast_name(),
-                        userList.getUserPersonal().getSex(),
+                        userList.getUserPersonal().getSex());
+                UserData data = new UserData(
                         userList.getLogin(),
-                        userList.getPassword()
-                );
+                        userList.getPassword());
+                userDAO.saveUser(person,data);
             }
-        } catch (JAXBException e) {
-            e.printStackTrace();
+        } catch (JAXBException ex) {
+            logger.error(ex.getMessage());
         }
     }
 

@@ -1,5 +1,6 @@
 package servlets;
 
+import org.apache.log4j.Logger;
 import pojo.Books;
 import services.SearchBook;
 
@@ -15,14 +16,16 @@ import java.util.List;
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
 public class SearchBookByAuthor extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(SearchBookByAuthor.class);
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String authorLastName = req.getParameter("searchByAuthor");
         try {
             List<Books> list = SearchBook.getAllAuthorBooks(authorLastName);
             req.setAttribute("list", list);
             req.getRequestDispatcher("/searchBookByAuthor.jsp").forward(req, resp);
-        } catch (SQLException e) {
-            e.printStackTrace();
+            logger.debug("Пользователь выполнил поиск по автору");
+        } catch (SQLException ex) {
+            logger.error(ex.getMessage());
         }
     }
 }

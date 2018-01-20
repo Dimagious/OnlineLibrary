@@ -18,20 +18,24 @@
     <%--</style>--%>
 </head>
 <body>
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
 <h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
 <h3 align="center">Для скачивания книг необходимо быть зарегистрированным в библиотеке</h3>
-<form align="center" method="get" action="http://localhost:8080/login">
+<form method="get" action="http://localhost:8080/login">
     <div class = "center">
         <button>Авторизация</button>
     </div>
 </form>
-<form align="center" method="get" action="http://localhost:8080/registration">
+<form method="get" action="http://localhost:8080/registration">
     <div class = "center">
         <button>Регистрация</button>
     </div>
 </form>
-<hr align="center" width="500" size="2" color="#ff0000" />
-<form align="center" method="get" action="http://localhost:8080/dashboard">
+<form method="get" action="http://localhost:8080/usermenu">
     <div class = "center">
         <h3 align="center">В читальном зале можно читать книги без регистрации</h3>
         <button>Посетить читатльный зал в качестве гостя</button>

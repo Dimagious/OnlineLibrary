@@ -1,8 +1,10 @@
 package dao;
 
 import for_db.Connector;
+import org.apache.log4j.Logger;
 import pojo.UserData;
 import pojo.UserPersonal;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +13,8 @@ import java.util.List;
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
 public class UserDAOImpl implements UserDAO {
+    private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
+
     /**
      * Возвращает список всех пользователей с их данными
      * Метод доступен для администратора
@@ -37,103 +41,100 @@ public class UserDAOImpl implements UserDAO {
     }
 
     /**
-     * Регистрирует пользователя в системе.
-     *
-     * @param first_name имя
-     * @param last_name фамилия
-     * @param sex пол
-     * @param login логин
-     * @param password пароль
-     */
-    @Override
-    public void registerUser(String first_name, String last_name, String sex,
-                             String login, String password) throws SQLException {
-        UserPersonal person = new UserPersonal(first_name, last_name, sex);
-        UserData data = new UserData(login, password);
-        saveUser(person, data);
-    }
-
-    /**
      * Авторизует пользователя в системе.
      *
-     * @param login логин
+     * @param login    логин
      * @param password пароль
      */
     @Override
-    public void authorizeUser(String login, String password) throws SQLException {
-        Connector.executeQuery(con -> {
-            PreparedStatement statement = con.prepareStatement(
-                    "SELECT * FROM user_data WHERE login = ? AND password = ?");
-            statement.setString(1, login);
-            statement.setString(2, password);
+    public boolean authorizeUser(String login, String password) {
+        try {
+            Connector.executeQuery(con -> {
+                PreparedStatement statement = con.prepareStatement(
+                        "SELECT * FROM user_data WHERE login = ? AND password = ?");
+                statement.setString(1, login);
+                statement.setString(2, password);
+                return true;
+            });
             return true;
-        });
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
+
     /**
      * Сохраняет в базе данных информацию о логине и пароле пользователя.
      * Обновляет id в полученных объектах
      *
-     * @param data   - сохраняемый объект UserData
+     * @param data - сохраняемый объект UserData
      */
     @Override
-    public void saveUser(UserPersonal person, UserData data) throws SQLException {
-        Connector.executeQuery(con -> {
-            PreparedStatement statement = con.prepareStatement(
-                    "INSERT INTO user_personal (first_name, last_name, sex) " +
-                            "VALUES (?, ?, ?) RETURNING id, first_name, last_name, sex");
-            statement.setString(1, person.getFirst_name());
-            statement.setString(2, person.getLast_name());
-            statement.setString(3, person.getSex());
-            ResultSet resultSet = statement.executeQuery();
-//            if (resultSet.next()) {
-//                UserPersonal userPersonal = getFieldsFromUserPersonal(resultSet);
-//                userPersonal.setId(resultSet.getInt("id"));
-//                userPersonal.setFirst_name(resultSet.getString("first_name"));
-//                userPersonal.setLast_name(resultSet.getString("last_name"));
-//                userPersonal.setSex(resultSet.getString("sex"));
-//            }
-            return person;
-        });
+    public void saveUser(UserPersonal person, UserData data) {
+        try {
+            Connector.executeQuery(con -> {
+                PreparedStatement statement = con.prepareStatement(
+                        "INSERT INTO user_personal (first_name, last_name, sex) " +
+                                "VALUES (?, ?, ?) RETURNING id");
+                statement.setString(1, person.getFirst_name());
+                statement.setString(2, person.getLast_name());
+                statement.setString(3, person.getSex());
+                ResultSet resultSet = statement.executeQuery();
+                resultSet.next();
+                person.setId(resultSet.getInt("id"));
+                data.setId_personal(person.getId());
+                logger.debug("Данные нового пользователя: " + person);
+                return person;
+            });
+        } catch (SQLException ex) {
+            logger.error(ex.getMessage());
+        }
 
-        Connector.executeQuery(con -> {
-            PreparedStatement statement = con.prepareStatement(
-                    "INSERT INTO user_data (id_personal, login, password) " +
-                            "VALUES (?, ?, ?) RETURNING id, id_personal, login, password");
-            statement.setInt(1, getUserPersonalId(person.getFirst_name(), person.getLast_name(), person.getSex()));
-            statement.setString(2, data.getLogin());
-            statement.setString(3, data.getPassword());
-            ResultSet set = statement.executeQuery();
-//            if (set.next()) {
-//                UserData userData = getFieldsFromUserData(set);
-//                userData.setId(set.getInt("id"));
-//                userData.setId_personal(set.getInt("id_personal"));
-//                userData.setLogin(set.getString("login"));
-//                userData.setPassword(set.getString("password"));
-//            }
-            return data;
-        });
+        try {
+            Connector.executeQuery(con -> {
+                PreparedStatement statement = con.prepareStatement(
+                        "INSERT INTO user_data (id_personal, login, password) " +
+                                "VALUES (?, ?, ?) RETURNING id");
+                statement.setInt(1, person.getId());
+                statement.setString(2, data.getLogin());
+                statement.setString(3, data.getPassword());
+                ResultSet set = statement.executeQuery();
+                set.next();
+                data.setId(set.getInt("id"));
+                logger.debug("Логин и пароль нового пользователя: " + data);
+                return data;
+            });
+        } catch (SQLException ex) {
+            logger.error(ex.getMessage());
+        }
     }
+
     /**
      * Регистрирует пользователя в системе.
      *
      * @param first_name имя
-     * @param last_name фамилия
-     * @param sex пол
+     * @param last_name  фамилия
+     * @param sex        пол
      */
-    public int getUserPersonalId(String first_name, String last_name, String sex) throws SQLException{
-        return Connector.executeQuery(con -> {
-                    PreparedStatement statement = con.prepareStatement(
-                            "SELECT * FROM user_personal WHERE first_name = ? AND last_name = ? AND sex = ?");
-                    statement.setString(1, first_name);
-                    statement.setString(2, last_name);
-                    statement.setString(3, sex);
-                    ResultSet resultSet = statement.executeQuery();
-                    resultSet.next();
-                    int idFromDB = resultSet.getInt("id");
-                    UserData newUserData = new UserData();
-                    newUserData.setId_personal(idFromDB);
-                    return newUserData.getId();
-        });
+    public int getUserPersonalId(String first_name, String last_name, String sex) {
+        try {
+            return Connector.executeQuery(con -> {
+                PreparedStatement statement = con.prepareStatement(
+                        "SELECT * FROM user_personal WHERE first_name = ? AND last_name = ? AND sex = ?");
+                statement.setString(1, first_name);
+                statement.setString(2, last_name);
+                statement.setString(3, sex);
+                ResultSet resultSet = statement.executeQuery();
+                resultSet.next();
+                int idFromDB = resultSet.getInt("id");
+                UserData newUserData = new UserData();
+                newUserData.setId_personal(idFromDB);
+                return newUserData.getId();
+            });
+        } catch (SQLException ex) {
+            logger.error(ex.getMessage());
+        }
+        return 0;
     }
 
     /**

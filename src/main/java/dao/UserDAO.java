@@ -14,7 +14,5 @@ public interface UserDAO {
     UserData getUserDataByLogin(String login) throws SQLException;
     void saveUser(UserPersonal person, UserData data) throws SQLException;
     int getUserPersonalId(String first_name, String last_name, String sex) throws SQLException;
-    void registerUser(String first_name, String last_name,
-                      String sex, String login, String password) throws SQLException;
-    void authorizeUser(String login, String password)throws SQLException;
+    boolean authorizeUser(String login, String password)throws SQLException;
 }
