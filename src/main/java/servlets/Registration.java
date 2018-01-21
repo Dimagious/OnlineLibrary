@@ -38,6 +38,7 @@ public class Registration extends HttpServlet {
             logger.debug("Пользователь зарегистрирован");
         } catch (SQLException ex) {
             logger.error(ex.getMessage());
+            resp.sendRedirect("/errorLogin.jsp");
         }
         resp.sendRedirect("/login.jsp");
     }

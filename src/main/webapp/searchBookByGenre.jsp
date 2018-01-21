@@ -12,6 +12,11 @@
     <title>Поиск книг по жанру</title>
 </head>
 <body>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<form method="get" action="http://localhost:8080/usermenu">
+    <button type="submit">Назад</button>
+</form>
 <table class="table table-hover">
     <thead>
     <tr>

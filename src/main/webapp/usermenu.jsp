@@ -37,7 +37,7 @@
     </div>
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="http://localhost:8080/searchbooksbytitle">
+            <form method="get" action="http://localhost:8080/searchbooksbygenre">
                 <h5>Поиск по жанру</h5>
                 <input type="text" name="searchByGenre" placeholder="Введите название жанра">
                 <button type="submit">Поиск</button>

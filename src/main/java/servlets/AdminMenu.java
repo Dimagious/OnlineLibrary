@@ -15,6 +15,7 @@ public class AdminMenu extends HttpServlet {
     private static final Logger logger = Logger.getLogger(AdminMenu.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         req.getRequestDispatcher("/adminmenu.jsp").forward(req,resp);
         logger.debug("Адмнинистратор открыл читальный зал");
     }

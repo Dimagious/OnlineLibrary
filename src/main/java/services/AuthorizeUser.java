@@ -16,14 +16,15 @@ public class AuthorizeUser {
         UserData registeredUser = new UserData(login, password);
         UserDAO checker = new UserDAOImpl();
         UserData userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
-        if (userDataFromDB.getLogin().equals(registeredUser.getLogin() == null) ||
-                !userDataFromDB.getPassword().equals(registeredUser.getPassword())) {
-            logger.debug("Неправильный логин или пароль");
-            return false;
-        } else {
-            logger.debug("Авторизация прошла успешно");
-            return true;
+        if (userDataFromDB != null && registeredUser.getLogin() != null && registeredUser.getPassword() != null) {
+            if (userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
+                    userDataFromDB.getPassword().equals(registeredUser.getPassword())) {
+                logger.debug("Авторизация прошла успешно");
+                return true;
+            }
         }
+        logger.debug("Неправильный логин или пароль");
+        return false;
     }
 
     public static void main(String[] args) throws SQLException {

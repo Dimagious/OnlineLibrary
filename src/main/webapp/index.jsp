@@ -38,7 +38,7 @@
 <form method="get" action="http://localhost:8080/usermenu">
     <div class = "center">
         <h3 align="center">В читальном зале можно читать книги без регистрации</h3>
-        <button>Посетить читатльный зал в качестве гостя</button>
+        <button>Посетить читальный зал в качестве гостя</button>
     </div>
 </form>
 </body>

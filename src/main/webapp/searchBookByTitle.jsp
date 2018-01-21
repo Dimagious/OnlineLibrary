@@ -12,6 +12,11 @@
     <title>Поиск книг по названию</title>
 </head>
 <body>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<form method="get" action="http://localhost:8080/usermenu">
+    <button type="submit">Назад</button>
+</form>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -19,12 +24,11 @@
         </tr>
         </thead>
         <tbody>
-        <jsp:useBean id="foundedBook" scope="request" type="java.util.List"/>
-        <c:forEach var="bookTitle" items="${requestScope.foundedBook}">
+        <jsp:useBean id="foundedBook" class="servlets.SearchBookByTitle" />
+        <jsp:getProperty name="foundedBook" property="searchByTitle" />
             <tr>
-                <td>${bookTitle.title}</td>
+                <td><c:out value="${foundedBook.toString}"/></td>
             </tr>
-        </c:forEach>
         </tbody>
     </table>
 </body>

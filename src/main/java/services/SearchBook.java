@@ -37,4 +37,8 @@ public class SearchBook {
         BooksDAO booksDAO = new BooksDAOImpl();
         return booksDAO.getBooksByGenre(genreName);
     }
+
+    public static void main(String[] args) throws SQLException {
+        getBookByTitle("Каштанка");
+    }
 }

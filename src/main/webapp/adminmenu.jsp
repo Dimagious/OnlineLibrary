@@ -20,13 +20,6 @@
         text-align: center;
     }
 </style>
-<% String userName = null;
-if (session.getAttribute("user") == null) {
-    response.sendRedirect("/index.jsp");
-} else {
-    userName = (String) session.getAttribute("user");
-    if (!userName.equals("Admin")) response.sendRedirect("/index.jsp");
-}%>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
 <form method="get" action="http://localhost:8080/allbooks">
     <h5 align="center">Раздел, который отображается только у админа</h5>

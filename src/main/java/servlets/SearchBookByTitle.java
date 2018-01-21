@@ -20,7 +20,7 @@ public class SearchBookByTitle extends HttpServlet {
         String bookTitle = req.getParameter("searchByTitle");
         try {
             Books foundedBook = SearchBook.getBookByTitle(bookTitle);
-            req.setAttribute("bookTitle", foundedBook);
+            req.setAttribute("foundedBook", foundedBook);
             req.getRequestDispatcher("/searchbooksbytitle").forward(req, resp);
             logger.debug("Пользователь выполнил поиск по названию");
         } catch (SQLException ex) {

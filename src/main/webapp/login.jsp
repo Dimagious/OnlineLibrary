@@ -11,15 +11,25 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Авторизация</h1>
-<form method="get" action="http://localhost:8080/usermenu">
-    <label for="login-field">Ваш логин</label>
-    <input type="text" name="login" id="login-field" placeholder="Введите логин">
-    <br><br>
-    <label for="password-field">Ваш пароль</label>
-    <input type="text" name="password" id="password-field" placeholder="Введите пароль">
-    <br><br>
-    <button type="submit">Войти</button>
-</form>
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+<h1 align="center">Авторизация</h1>
+<div class="center">
+    <form method="post" action="http://localhost:8080/login">
+        <label for="login-field">Ваш логин</label>
+        <input type="text" name="login" id="login-field" placeholder="Введите логин">
+        <br><br>
+        <label for="password-field">Ваш пароль</label>
+        <input type="text" name="password" id="password-field" placeholder="Введите пароль">
+        <br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <form method="get" action="http://localhost:8080">
+        <button type="submit">Назад</button>
+    </form>
+</div>
 </body>
 </html>
