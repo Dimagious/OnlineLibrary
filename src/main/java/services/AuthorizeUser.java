@@ -12,10 +12,23 @@ import java.sql.SQLException;
  */
 public class AuthorizeUser {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
-    public static boolean authorizeUser(String login, String password) throws SQLException {
+
+    private static UserDAO checker = new UserDAOImpl();
+
+    /**
+     * Проверяет логин и пароль в БД. Если такое сочетание есть, то возвращает true, в обратном случае false
+     *
+     * @param login логин пользователя
+     * @param password пароль пользователя
+     */
+    public static boolean authorizeUser(String login, String password) {
         UserData registeredUser = new UserData(login, password);
-        UserDAO checker = new UserDAOImpl();
-        UserData userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
+        UserData userDataFromDB = null;
+        try {
+            userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
+        } catch (SQLException e) {
+            logger.debug(e.getMessage());
+        }
         if (userDataFromDB != null && registeredUser.getLogin() != null && registeredUser.getPassword() != null) {
             if (userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
                     userDataFromDB.getPassword().equals(registeredUser.getPassword())) {
@@ -25,10 +38,5 @@ public class AuthorizeUser {
         }
         logger.debug("Неправильный логин или пароль");
         return false;
-    }
-
-    public static void main(String[] args) throws SQLException {
-        authorizeUser("dimasta", "12345");
-        authorizeUser("asfvasfasfv", "12asd345");
     }
 }

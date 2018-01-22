@@ -10,12 +10,18 @@
 <head>
     <meta charset="utf-8">
     <title>OnlineLibrary</title>
-    <%--<style>--%>
-        <%--body {--%>
-            <%--background-opacity: 0.5;--%>
-            <%--background: url(http://sepimages.ru/uploads/images/f/o/t/foto_dlja_biblioteki_1.jpg) no-repeat center;--%>
-        <%--}--%>
-    <%--</style>--%>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <style>
@@ -25,18 +31,24 @@
 </style>
 <h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
 <h3 align="center">Для скачивания книг необходимо быть зарегистрированным в библиотеке</h3>
-<form method="get" action="http://localhost:8080/login">
-    <div class = "center">
-        <button>Авторизация</button>
-    </div>
-</form>
-<form method="get" action="http://localhost:8080/registration">
-    <div class = "center">
-        <button>Регистрация</button>
-    </div>
-</form>
+<table align="center">
+    <td>
+        <div class="center">
+            <form method="get" action="http://localhost:8080/login">
+                <button>Авторизация</button>
+            </form>
+        </div>
+    </td>
+    <td>
+        <div class="center">
+            <form method="get" action="http://localhost:8080/registration">
+                <button>Регистрация</button>
+            </form>
+        </div>
+    </td>
+</table>
 <form method="get" action="http://localhost:8080/usermenu">
-    <div class = "center">
+    <div class="center">
         <h3 align="center">В читальном зале можно читать книги без регистрации</h3>
         <button>Посетить читальный зал в качестве гостя</button>
     </div>

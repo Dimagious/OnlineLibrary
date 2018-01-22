@@ -4,9 +4,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import pojo.UserData;
-import pojo.UserPersonal;
-import java.sql.SQLException;
 
 class UserDAOImplTest {
     UserDAOImpl userDAO;

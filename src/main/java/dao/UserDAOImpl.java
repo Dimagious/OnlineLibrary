@@ -83,10 +83,10 @@ public class UserDAOImpl implements UserDAO {
                 resultSet.next();
                 person.setId(resultSet.getInt("id"));
                 data.setId_personal(person.getId());
-                logger.debug("Данные нового пользователя: " + person);
+                //logger.debug("Данные нового пользователя: " + person);
                 return person;
             });
-        } catch (SQLException ex) {
+        } catch (SQLException | IllegalArgumentException ex) {
             logger.error(ex.getMessage());
         }
 
@@ -101,7 +101,7 @@ public class UserDAOImpl implements UserDAO {
                 ResultSet set = statement.executeQuery();
                 set.next();
                 data.setId(set.getInt("id"));
-                logger.debug("Логин и пароль нового пользователя: " + data);
+                //logger.debug("Логин и пароль нового пользователя: " + data);
                 return data;
             });
         } catch (SQLException ex) {
@@ -145,21 +145,26 @@ public class UserDAOImpl implements UserDAO {
      * NULL если пользователь не был найден
      */
     @Override
-    public UserPersonal getUserPersonalByLogin(String login) throws SQLException {
-        UserPersonal user = Connector.executeQuery(connection -> {
-            UserPersonal result = null;
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM user_personal " +
-                            "WHERE id = " +
-                            "(SELECT user_data.id_personal FROM user_data " +
-                            "WHERE user_data.login = ?)");
-            statement.setString(1, login);
-            ResultSet set = statement.executeQuery();
-            if (set.next()) {
-                result = getFieldsFromUserPersonal(set);
-            }
-            return result;
-        });
+    public UserPersonal getUserPersonalByLogin(String login)  {
+        UserPersonal user = null;
+        try {
+            user = Connector.executeQuery(connection -> {
+                UserPersonal result = null;
+                PreparedStatement statement = connection.prepareStatement(
+                        "SELECT * FROM user_personal " +
+                                "WHERE id = " +
+                                "(SELECT user_data.id_personal FROM user_data " +
+                                "WHERE user_data.login = ?)");
+                statement.setString(1, login);
+                ResultSet set = statement.executeQuery();
+                if (set.next()) {
+                    result = getFieldsFromUserPersonal(set);
+                }
+                return result;
+            });
+        } catch (SQLException e) {
+            logger.debug(e.getMessage());
+        }
         return user;
     }
 
@@ -177,7 +182,6 @@ public class UserDAOImpl implements UserDAO {
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT * FROM user_data WHERE user_data.login = ?");
             statement.setString(1, login);
-
             ResultSet set = statement.executeQuery();
             if (set.next()) {
                 result = getFieldsFromUserData(set);

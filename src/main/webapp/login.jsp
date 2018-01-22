@@ -9,27 +9,37 @@
 <html>
 <head>
     <title>Login</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<style>
-    .center {
-        text-align: center;
-    }
-</style>
 <h1 align="center">Авторизация</h1>
-<div class="center">
-    <form method="post" action="http://localhost:8080/login">
-        <label for="login-field">Ваш логин</label>
-        <input type="text" name="login" id="login-field" placeholder="Введите логин">
-        <br><br>
-        <label for="password-field">Ваш пароль</label>
-        <input type="text" name="password" id="password-field" placeholder="Введите пароль">
-        <br><br>
-        <button type="submit">Войти</button>
-    </form>
-    <form method="get" action="http://localhost:8080">
-        <button type="submit">Назад</button>
-    </form>
-</div>
+<form method="get" action="http://localhost:8080/usermenu">
+    <table align="center">
+        <tr>
+            <td><label for="login-field">Ваш логин</label></td>
+            <td><input type="text" name="login" id="login-field" placeholder="Введите логин"></td>
+        </tr>
+        <tr>
+            <td><label for="password-field">Ваш пароль</label></td>
+            <td><input type="text" name="password" id="password-field" placeholder="Введите пароль"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Войти</button>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

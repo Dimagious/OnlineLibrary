@@ -62,3 +62,5 @@ SELECT * FROM books AS b LEFT JOIN authors a ON b.author_id = a.id JOIN genres A
 
 INSERT INTO user_data(id_personal, login, password) VALUES
   ((SELECT id FROM user_personal WHERE user_personal.last_name = 'Делевинь'), 'dimasta', '12345');
+
+SELECT * FROM books;

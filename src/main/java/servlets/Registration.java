@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
@@ -16,11 +15,12 @@ import java.sql.SQLException;
 
 public class Registration extends HttpServlet {
     private static final Logger logger = Logger.getLogger(Registration.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("CP1251");
         req.setCharacterEncoding("UTF-8");
-        req.getRequestDispatcher("/registration.jsp").forward(req,resp);
+        req.getRequestDispatcher("/registration.jsp").forward(req, resp);
         logger.debug("Пользователь открыл страницу регистрации");
     }
 
@@ -33,13 +33,15 @@ public class Registration extends HttpServlet {
         String sex = req.getParameter("sex");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        try {
-            RegisterUser.registerUser(firstname, lastname, sex, login, password);
-            logger.debug("Пользователь зарегистрирован");
-        } catch (SQLException ex) {
-            logger.error(ex.getMessage());
-            resp.sendRedirect("/errorLogin.jsp");
+        if (sex.length()>1) {
+            req.setAttribute("sexError", "В поле \"Пол\" ведите м или ж");
+            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
+        } else if (RegisterUser.registerUser(firstname, lastname, sex, login, password)) {
+            resp.sendRedirect("/login.jsp");
+            logger.debug("Пользователь зарегистрировался");
+        } else {
+            req.setAttribute("loginError", "Указанный логин уже используется");
+            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
         }
-        resp.sendRedirect("/login.jsp");
     }
 }

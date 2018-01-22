@@ -15,6 +15,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
+</nav>
 <br>
 <div class="row">
     <div class="col-md-4" style="text-align: center;">
