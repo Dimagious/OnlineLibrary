@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -21,7 +20,7 @@ public class ShowAllBooks extends HttpServlet {
             List<Books> list = GetAllBooks.getAllBooks();
             req.setAttribute("list", list);
             req.getRequestDispatcher("/showBooks.jsp").forward(req, resp);
-        } catch (SQLException | ServletException e) {
+        } catch (ServletException e) {
             e.printStackTrace();
         }
     }

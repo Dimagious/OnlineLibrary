@@ -38,10 +38,5 @@ class RegisterUserTest {
     void registerUser() {
         assertTrue(RegisterUser.registerUser("Дмитрий", "Юркин", "м", "dimagic", "12345"));
         assertFalse(RegisterUser.registerUser("Дмитрий", "Юркин", "м", "dimasta", "12345"));
-//        assertFalse(RegisterUser.registerUser(null, "Юркин", "м", "2", "12345"));
-//        assertFalse(RegisterUser.registerUser("Дмитрий", null, "м", "3", "12345"));
-//        assertFalse(RegisterUser.registerUser("Дмитрий", "Юркин", null, "4", "12345"));
-//        assertFalse(RegisterUser.registerUser("Дмитрий", "Юркин", "м", null, "12345"));
-//        assertFalse(RegisterUser.registerUser("Дмитрий", "Юркин", "м", "5", null));
     }
 }
