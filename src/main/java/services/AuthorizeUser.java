@@ -12,11 +12,11 @@ import java.sql.SQLException;
  */
 public class AuthorizeUser {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
-
     private static UserDAO checker = new UserDAOImpl();
 
     /**
-     * Проверяет логин и пароль в БД. Если такое сочетание есть, то возвращает true, в обратном случае false
+     * Проверяет логин и пароль в БД.
+     * Если такое сочетание есть, то возвращает true, в обратном случае false
      *
      * @param login логин пользователя
      * @param password пароль пользователя

@@ -5,11 +5,10 @@ import dao.BooksDAOImpl;
 import org.apache.log4j.Logger;
 import pojo.Books;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
@@ -19,21 +18,24 @@ public class ReadBook {
     private static final Logger logger = Logger.getLogger(GetAllBooks.class);
     private static BooksDAO booksDAO = new BooksDAOImpl();
 
-    public static String readBook(String bookTitle) {
+    /**
+     * Находит указанную книгу в БД и возвращает её текст
+     *
+     * @param bookTitle название книги
+     * @return text текст книги
+     */
+    public static String readBook(String bookTitle, int page) {
         Books book = booksDAO.findBookByTitle(bookTitle);
-        String text = "";
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(
-                        new FileInputStream(book.getBook_ref()), StandardCharsets.UTF_8))){
-            String line;
-            StringBuilder sb = new StringBuilder();
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-                text = sb.append(line).toString();
-            }
+        StringBuilder text = new StringBuilder();
+        List<String> stringList = null;
+        try {
+            stringList = Files.readAllLines(Paths.get(book.getBook_ref()));
         } catch (IOException e) {
-            logger.error(e.getMessage());
+            e.printStackTrace();
         }
-        return text;
+        for (int i = 100 * page; i < 100 * page + 100; i++) {
+            text.append(stringList.get(i));
+        }
+        return text.toString();
     }
 }

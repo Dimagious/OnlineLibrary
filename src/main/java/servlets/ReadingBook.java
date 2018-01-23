@@ -1,6 +1,7 @@
 package servlets;
 
 import org.apache.log4j.Logger;
+import services.ReadBook;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +17,9 @@ public class ReadingBook  extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("book", ReadBook.readBook(req.getParameter("title"), Integer.parseInt(req.getParameter("page"))));
+        req.setAttribute("page", Integer.parseInt(req.getParameter("page")));
+        req.setAttribute("title", req.getParameter("title"));
         req.getRequestDispatcher("/readbook.jsp").forward(req, resp);
         logger.debug("Пользователь открыл книгу");
     }
@@ -23,6 +27,5 @@ public class ReadingBook  extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        super.doPost(req, resp);
     }
 }

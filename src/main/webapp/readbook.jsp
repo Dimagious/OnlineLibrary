@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -27,15 +27,16 @@
 <form method="get" action="http://localhost:8080/usermenu">
     <button type="submit">Назад</button>
 </form>
-<table class="table table-hover">
-    <tbody>
-    <jsp:useBean id="list" scope="request" type="java.util.List"/>
-    <c:forEach var="list_" items="${requestScope.list}">
-        <tr>
-            <td>${list_.title}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
+<style>.center {
+    text-align: center;
+}</style>
+<c:out value="${requestScope.book}"/>
+<div class="center">
+    <div class="pages">
+        <a href="\readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <a href="\readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a>
+    </div>
+</div>
 </body>
 </html>

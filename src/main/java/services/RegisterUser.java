@@ -14,6 +14,17 @@ import java.sql.SQLException;
 public class RegisterUser {
     private static final Logger logger = Logger.getLogger(RegisterUser.class);
     private static UserDAO checker = new UserDAOImpl();
+
+    /**
+     * Сервис, который ррегистрирует пользователя в системе
+     *
+     * @param first_name имя пользователя
+     * @param last_name фамилия пользователя
+     * @param sex пол пользователя
+     * @param login логин пользователя
+     * @param password пароль пользователя
+     * @return true или false
+     */
     public static boolean registerUser(String first_name, String last_name, String sex,
                              String login, String password) {
         UserData registeredUser = new UserData(login, password);

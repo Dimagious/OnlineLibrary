@@ -20,23 +20,28 @@ public class UserDAOImpl implements UserDAO {
      * Метод доступен для администратора
      */
     @Override
-    public List<UserData> getAllUsers() throws SQLException {
-        List<UserData> list = Connector.executeQuery(con -> {
-            Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery(
-                    "SELECT up.first_name,up.last_name, up.sex, ud.id_personal, ud.id, " +
-                            "ud.login, ud.password FROM user_personal AS up " +
-                            "LEFT JOIN user_data AS ud ON up.id = ud.id ORDER BY ud.id"
-            );
-            List<UserData> users = new ArrayList<>();
-            while (resultSet.next()) {
-                UserPersonal userPersonal = getFieldsFromUserPersonal(resultSet);
-                UserData userData = getFieldsFromUserData(resultSet);
-                userData.setUserPersonal(userPersonal);
-                users.add(userData);
-            }
-            return users;
-        });
+    public List<UserData> getAllUsers() {
+        List<UserData> list = null;
+        try {
+            list = Connector.executeQuery(con -> {
+                Statement statement = con.createStatement();
+                ResultSet resultSet = statement.executeQuery(
+                        "SELECT up.first_name,up.last_name, up.sex, ud.id_personal, ud.id, " +
+                                "ud.login, ud.password FROM user_personal AS up " +
+                                "LEFT JOIN user_data AS ud ON up.id = ud.id ORDER BY ud.id"
+                );
+                List<UserData> users = new ArrayList<>();
+                while (resultSet.next()) {
+                    UserPersonal userPersonal = getFieldsFromUserPersonal(resultSet);
+                    UserData userData = getFieldsFromUserData(resultSet);
+                    userData.setUserPersonal(userPersonal);
+                    users.add(userData);
+                }
+                return users;
+            });
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
         return list;
     }
 
@@ -63,11 +68,13 @@ public class UserDAOImpl implements UserDAO {
         return false;
     }
 
+
     /**
      * Сохраняет в базе данных информацию о логине и пароле пользователя.
      * Обновляет id в полученных объектах
      *
-     * @param data - сохраняемый объект UserData
+     * @param person сохраняемый объект UserPersonal
+     * @param data сохраняемый объект UserData
      */
     @Override
     public void saveUser(UserPersonal person, UserData data) {
@@ -110,7 +117,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     /**
-     * Регистрирует пользователя в системе.
+     * Возвращает id ользователя из таблицы UserPersonal
      *
      * @param first_name имя
      * @param last_name  фамилия
@@ -169,51 +176,66 @@ public class UserDAOImpl implements UserDAO {
     }
 
     /**
-     * Извлекает из базы данных пароль по логину
+     * Извлекает из БД данные из таблицы UserData по логину
      *
      * @param login логин пользователя
      * @return найденного пользователя из таблицы UserData.
      * NULL если пользователь не был найден
      */
     @Override
-    public UserData getUserDataByLogin(String login) throws SQLException {
-        UserData userData = Connector.executeQuery(connection -> {
-            UserData result = null;
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT * FROM user_data WHERE user_data.login = ?");
-            statement.setString(1, login);
-            ResultSet set = statement.executeQuery();
-            if (set.next()) {
-                result = getFieldsFromUserData(set);
-            }
-            return result;
-        });
+    public UserData getUserDataByLogin(String login) {
+        UserData userData = null;
+        try {
+            userData = Connector.executeQuery(connection -> {
+                UserData result = null;
+                PreparedStatement statement = connection.prepareStatement(
+                        "SELECT * FROM user_data WHERE user_data.login = ?");
+                statement.setString(1, login);
+                ResultSet set = statement.executeQuery();
+                if (set.next()) {
+                    result = getFieldsFromUserData(set);
+                }
+                return result;
+            });
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
         return userData;
     }
 
     /**
      * Достаёт из БД информацию из таблицы UserData
      */
-    private UserData getFieldsFromUserData(ResultSet resultSet) throws SQLException {
-        UserData userData = new UserData(
-                resultSet.getInt("id"),
-                resultSet.getInt("id_personal"),
-                resultSet.getString("login"),
-                resultSet.getString("password")
-        );
+    private UserData getFieldsFromUserData(ResultSet resultSet) {
+        UserData userData = null;
+        try {
+            userData = new UserData(
+                    resultSet.getInt("id"),
+                    resultSet.getInt("id_personal"),
+                    resultSet.getString("login"),
+                    resultSet.getString("password")
+            );
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
         return userData;
     }
 
     /**
      * Достаёт из БД информацию из таблицы UserPersonal
      */
-    private UserPersonal getFieldsFromUserPersonal(ResultSet resultSet) throws SQLException {
-        UserPersonal userPersonal = new UserPersonal(
-                resultSet.getInt("id"),
-                resultSet.getString("first_name"),
-                resultSet.getString("last_name"),
-                resultSet.getString("sex")
-        );
+    private UserPersonal getFieldsFromUserPersonal(ResultSet resultSet) {
+        UserPersonal userPersonal = null;
+        try {
+            userPersonal = new UserPersonal(
+                    resultSet.getInt("id"),
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("sex")
+            );
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
         return userPersonal;
     }
 }

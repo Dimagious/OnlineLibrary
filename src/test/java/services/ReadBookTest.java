@@ -8,7 +8,7 @@ import pojo.Books;
 
 import java.lang.reflect.Field;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -35,6 +35,6 @@ class ReadBookTest {
 
     @Test
     void readBook() {
-        assertEquals("Дурное поведение", (ReadBook.readBook("Каштанка")).substring(111, 127));
+        assertEquals("тлойком", (ReadBook.readBook("Каштанка", 1)).substring(70, 77));
     }
 }

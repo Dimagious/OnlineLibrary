@@ -35,7 +35,11 @@
         </thead>
         <tbody>
             <tr>
-                <td><c:out value="${requestScope.foundedBook}"/></td>
+                <td>
+                    <a href="/readbook?title=${requestScope.foundedBook.title}&page=0">
+                        <c:out value="${requestScope.foundedBook.title}"/>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>

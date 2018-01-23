@@ -37,7 +37,14 @@
         </tr>
         <tr>
             <td><label for="sex-field">Пол</label></td>
-            <td><input required type="text" name="sex" id="sex-field" placeholder="Введите м или ж"></td>
+            <td>
+                <select name="sex" id="sex-field">
+                    <option disabled>Выберите пол</option>
+                    <option value="м">Мужской</option>
+                    <option value="ж">Женский</option>
+                </select>
+            </td>
+            <%--<td><input  type="s" name="sex" id="sex-field"></td>--%>
         </tr>
         <tr>
             <td><label for="login-field">Ваш логин</label></td>

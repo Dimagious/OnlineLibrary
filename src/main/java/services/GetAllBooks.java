@@ -14,6 +14,12 @@ import java.util.List;
 
 public class GetAllBooks {
     private static final Logger logger = Logger.getLogger(GetAllBooks.class);
+
+    /**
+     * Сервис, который берёт из БД все книги и возвращает лист из всех книг
+     *
+     * @return booklist список всех книг
+     */
     public static List<Books> getAllBooks() {
         try {
             BooksDAO booksDAO = new BooksDAOImpl();

@@ -40,6 +40,9 @@
         </div>
     </td>
     <td>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </td>
+    <td>
         <div class="center">
             <form method="get" action="http://localhost:8080/registration">
                 <button>Регистрация</button>
