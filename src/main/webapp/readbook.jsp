@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>${requestScope.title}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,9 +33,9 @@
 <c:out value="${requestScope.book}"/>
 <div class="center">
     <div class="pages">
-        <a href="\readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a>
+        <button><a href="\readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a></button>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <a href="\readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a>
+        <button><a href="\readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a></button>
     </div>
 </div>
 </body>

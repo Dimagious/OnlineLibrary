@@ -1,10 +1,10 @@
 package services;
 
-import dao.BooksDAO;
+import db.dao.BooksDAO;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pojo.Books;
+import db.pojo.Books;
 
 import java.lang.reflect.Field;
 
@@ -15,6 +15,7 @@ import static org.mockito.Mockito.when;
 /**
  * Created by Dmitriy Yurkin on 23.01.2018.
  */
+
 class ReadBookTest {
     private static final Logger logger = Logger.getLogger(ReadBookTest.class);
 
@@ -35,6 +36,6 @@ class ReadBookTest {
 
     @Test
     void readBook() {
-        assertEquals("тлойком", (ReadBook.readBook("Каштанка", 1)).substring(70, 77));
+        assertEquals("полчаса она уже сидела на", (ReadBook.readBook("Каштанка", 1)).substring(25, 50));
     }
 }

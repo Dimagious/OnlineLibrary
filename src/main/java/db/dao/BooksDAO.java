@@ -1,8 +1,8 @@
-package dao;
+package db.dao;
 
-import pojo.Authors;
-import pojo.Books;
-import pojo.Genres;
+import db.pojo.Authors;
+import db.pojo.Books;
+import db.pojo.Genres;
 import java.sql.SQLException;
 import java.util.List;
 /**

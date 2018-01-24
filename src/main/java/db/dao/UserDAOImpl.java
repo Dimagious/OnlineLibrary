@@ -1,9 +1,9 @@
-package dao;
+package db.dao;
 
-import for_db.Connector;
+import utils.Connector;
 import org.apache.log4j.Logger;
-import pojo.UserData;
-import pojo.UserPersonal;
+import db.pojo.UserData;
+import db.pojo.UserPersonal;
 
 import java.sql.*;
 import java.util.ArrayList;

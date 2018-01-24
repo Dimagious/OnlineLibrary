@@ -2,24 +2,35 @@ package servlets;
 
 import org.apache.log4j.Logger;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
  * Created by Dmitriy Yurkin on 23.01.2018.
  */
-public class AdminDetected extends HttpServlet {
+public class AdminDetected implements Filter {
     private static final Logger logger = Logger.getLogger(AdminDetected.class);
+    private FilterConfig filterConfig;
+
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+    public void init(FilterConfig filterConfig) throws ServletException {
+        this.filterConfig = filterConfig;
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        String login = filterConfig.getInitParameter("param-name");
+        if(login.equals("Admin")){
+            chain.doFilter(request, response);
+        } else {
+            HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+            httpServletResponse.sendRedirect("/login?access=noauth");
+        }
+    }
+
+    @Override
+    public void destroy() {
+
     }
 }

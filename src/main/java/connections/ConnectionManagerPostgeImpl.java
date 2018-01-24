@@ -1,9 +1,5 @@
 package connections;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,22 +21,9 @@ public class ConnectionManagerPostgeImpl implements ConnectionManager {
     }
 
     private ConnectionManagerPostgeImpl() {
-//        try (FileInputStream fin = new FileInputStream
-////                (new File("src/main/resources/config_connection.property"))) {
-//                (new File("property/config_connection.property"))) {
-//            properties = new Properties();
-//            properties.load(fin);
-            //URL = properties.getProperty("Connection_JDBC_URL");
             URL = "jdbc:postgresql://localhost:5433/onlinelibrary";
-            //USER = properties.getProperty("Connection_JDBC_User");
             USER = "postgres";
-            //PASSWORD = properties.getProperty("Connection_JDBC_Password");
             PASSWORD = "postgres";
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
     }
 
     @Override

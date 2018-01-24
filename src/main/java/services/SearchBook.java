@@ -1,8 +1,8 @@
 package services;
 
-import dao.BooksDAO;
-import dao.BooksDAOImpl;
-import pojo.Books;
+import db.dao.BooksDAO;
+import db.dao.BooksDAOImpl;
+import db.pojo.Books;
 import java.sql.SQLException;
 import java.util.List;
 

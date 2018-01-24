@@ -11,17 +11,35 @@
     <title>Читальный зал</title>
 </head>
 <body>
-<!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<style>
+    /*.background {*/
+    /*background: url("http://library.rsue.ru/ism/image/slides/_u/1486715705716_118604.jpg") no-repeat;*/
+    /*}*/
+</style>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
-</nav>
+<div style="position: fixed; top: 0%; right: 0;">
+    <form method="get" action="http://localhost:8080/logout">
+        <button type="submit">Выйти</button>
+    </form>
+</div>
 <br>
 <div class="row">
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
             <form method="get" action="http://localhost:8080/searchbooksbytitle">
-                <h5>Поиск по названию</h5>
+                <h4>Поиск по названию</h4>
                 <input type="text" name="searchByTitle" placeholder="Введите название книги">
                 <button type="submit">Поиск</button>
             </form>
@@ -30,7 +48,7 @@
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
             <form method="get" action="http://localhost:8080/searchbooksbyauthor">
-                <h5>Поиск по автору</h5>
+                <h4>Поиск по автору</h4>
                 <input type="text" name="searchByAuthor" placeholder="Введите фамилию автора">
                 <button type="submit">Поиск</button>
             </form>
@@ -39,7 +57,7 @@
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
             <form method="get" action="http://localhost:8080/searchbooksbygenre">
-                <h5>Поиск по жанру</h5>
+                <h4>Поиск по жанру</h4>
                 <input type="text" name="searchByGenre" placeholder="Введите название жанра">
                 <button type="submit">Поиск</button>
             </form>

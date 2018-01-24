@@ -1,7 +1,7 @@
-package dao;
+package db.dao;
 
-import pojo.UserData;
-import pojo.UserPersonal;
+import db.pojo.UserData;
+import db.pojo.UserPersonal;
 import java.sql.SQLException;
 import java.util.List;
 

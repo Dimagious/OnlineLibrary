@@ -1,13 +1,13 @@
 package xml;
 
-import dao.BooksDAO;
-import dao.BooksDAOImpl;
-import dao.UserDAO;
-import dao.UserDAOImpl;
+import db.dao.BooksDAO;
+import db.dao.BooksDAOImpl;
+import db.dao.UserDAO;
+import db.dao.UserDAOImpl;
 import org.apache.log4j.Logger;
-import pojo.Books;
-import pojo.UserData;
-import pojo.UserPersonal;
+import db.pojo.Books;
+import db.pojo.UserData;
+import db.pojo.UserPersonal;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

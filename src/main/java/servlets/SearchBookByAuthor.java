@@ -1,7 +1,7 @@
 package servlets;
 
 import org.apache.log4j.Logger;
-import pojo.Books;
+import db.pojo.Books;
 import services.SearchBook;
 
 import javax.servlet.ServletException;

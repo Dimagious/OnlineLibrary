@@ -1,4 +1,4 @@
-package pojo;
+package db.pojo;
 
 import javax.xml.bind.annotation.XmlElement;
 

@@ -37,7 +37,8 @@ public class Authorization extends HttpServlet {
             }
         }
         else {
-            req.setAttribute("loginError", "Логин или пароль некорректен");
+            logger.debug("Неправильный логин или пароль");
+            req.setAttribute("loginError", "Неправильный логин или пароль");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
     }

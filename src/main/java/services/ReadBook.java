@@ -1,9 +1,9 @@
 package services;
 
-import dao.BooksDAO;
-import dao.BooksDAOImpl;
+import db.dao.BooksDAO;
+import db.dao.BooksDAOImpl;
 import org.apache.log4j.Logger;
-import pojo.Books;
+import db.pojo.Books;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,7 +31,7 @@ public class ReadBook {
         try {
             stringList = Files.readAllLines(Paths.get(book.getBook_ref()));
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         for (int i = 100 * page; i < 100 * page + 100; i++) {
             text.append(stringList.get(i));

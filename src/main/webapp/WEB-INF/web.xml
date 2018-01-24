@@ -36,6 +36,20 @@
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
 
+    <!--<filter>-->
+        <!--<filter-name>Filter</filter-name>-->
+        <!--<filter-class>servlets.AdminDetected</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>Admin</param-name>-->
+            <!--<param-value>12345</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>Filter</filter-name>-->
+        <!--<url-pattern>/adminmenu</url-pattern>-->
+    <!--</filter-mapping>-->
+
     <servlet>
         <servlet-name>UserMenu</servlet-name>
         <servlet-class>servlets.UserMenu</servlet-class>

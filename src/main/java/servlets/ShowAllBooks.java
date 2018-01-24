@@ -1,6 +1,7 @@
 package servlets;
 
-import pojo.Books;
+import db.pojo.Books;
+import org.apache.log4j.Logger;
 import services.GetAllBooks;
 
 import javax.servlet.ServletException;
@@ -14,14 +15,14 @@ import java.util.List;
  * Created by Dmitriy Yurkin on 17.01.2018.
  */
 public class ShowAllBooks extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(ShowAllBooks.class);
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        GetAllBooks allBooks = new GetAllBooks();
         try {
             List<Books> list = GetAllBooks.getAllBooks();
             req.setAttribute("list", list);
             req.getRequestDispatcher("/showBooks.jsp").forward(req, resp);
         } catch (ServletException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 }

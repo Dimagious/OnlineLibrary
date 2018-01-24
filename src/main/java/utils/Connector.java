@@ -1,4 +1,4 @@
-package for_db;
+package utils;
 
 import connections.ConnectionManager;
 import connections.ConnectionManagerPostgeImpl;

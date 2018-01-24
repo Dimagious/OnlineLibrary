@@ -1,7 +1,7 @@
 package servlets;
 
 import org.apache.log4j.Logger;
-import pojo.Books;
+import db.pojo.Books;
 import services.SearchBook;
 
 import javax.servlet.ServletException;
@@ -26,6 +26,8 @@ public class SearchBookByGenre extends HttpServlet {
             logger.debug("Пользователь выполнил поиск по жанру");
         } catch (SQLException ex) {
             logger.error(ex.getMessage());
+            req.getRequestDispatcher("/errorpage.jsp").forward(req, resp);
+
         }
     }
 }

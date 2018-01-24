@@ -28,33 +28,30 @@
     .center {
         text-align: center;
     }
+    /*.background {*/
+        /*background: url("http://cldom.ru/user/images/poleznyie-stati/kak-uxazhivat-za-knigami.jpg") no-repeat;*/
+    /*}*/
 </style>
-<h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
-<h3 align="center">Для скачивания книг необходимо быть зарегистрированным в библиотеке</h3>
-<table align="center">
-    <td>
-        <div class="center">
-            <form method="get" action="http://localhost:8080/login">
-                <button>Авторизация</button>
-            </form>
-        </div>
-    </td>
-    <td>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </td>
-    <td>
-        <div class="center">
-            <form method="get" action="http://localhost:8080/registration">
-                <button>Регистрация</button>
-            </form>
-        </div>
-    </td>
-</table>
-<form method="get" action="http://localhost:8080/usermenu">
-    <div class="center">
-        <h3 align="center">В читальном зале можно читать книги без регистрации</h3>
-        <button>Посетить читальный зал в качестве гостя</button>
-    </div>
-</form>
+<div class="background">
+    <h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
+    <h3 align="center">Для чтения книг необходимо быть зарегистрированным в библиотеке</h3>
+    <table align="center">
+        <td>
+            <div class="center">
+                <form method="get" action="http://localhost:8080/login">
+                    <button>Авторизация</button>
+                </form>
+            </div>
+        </td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>
+            <div class="center">
+                <form method="get" action="http://localhost:8080/registration">
+                    <button>Регистрация</button>
+                </form>
+            </div>
+        </td>
+    </table>
+</div>
 </body>
 </html>

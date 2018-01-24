@@ -33,10 +33,7 @@ public class Registration extends HttpServlet {
         String sex = req.getParameter("sex");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        if (sex.length()>1) {
-            req.setAttribute("sexError", "В поле \"Пол\" ведите м или ж");
-            req.getRequestDispatcher("/registration.jsp").forward(req, resp);
-        } else if (RegisterUser.registerUser(firstname, lastname, sex, login, password)) {
+        if (RegisterUser.registerUser(firstname, lastname, sex, login, password)) {
             resp.sendRedirect("/login.jsp");
             logger.debug("Пользователь зарегистрировался");
         } else {

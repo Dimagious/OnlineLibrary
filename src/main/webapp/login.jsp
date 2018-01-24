@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Авторизация</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -28,11 +28,11 @@
     <table align="center">
         <tr>
             <td><label for="login-field">Ваш логин</label></td>
-            <td><input type="text" name="login" id="login-field" placeholder="Введите логин"></td>
+            <td><input required type="text" name="login" id="login-field" placeholder="Введите логин"></td>
         </tr>
         <tr>
             <td><label for="password-field">Ваш пароль</label></td>
-            <td><input type="text" name="password" id="password-field" placeholder="Введите пароль"></td>
+            <td><input required type="text" name="password" id="password-field" placeholder="Введите пароль"></td>
         </tr>
         <tr>
             <td>

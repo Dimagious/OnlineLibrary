@@ -1,10 +1,10 @@
 package services;
 
-import dao.UserDAO;
-import dao.UserDAOImpl;
+import db.dao.UserDAO;
+import db.dao.UserDAOImpl;
 import org.apache.log4j.Logger;
-import pojo.UserData;
-import pojo.UserPersonal;
+import db.pojo.UserData;
+import db.pojo.UserPersonal;
 
 import java.sql.SQLException;
 
