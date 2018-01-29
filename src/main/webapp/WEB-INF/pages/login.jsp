@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 19.01.2018
-  Time: 10:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -24,7 +17,7 @@
 </head>
 <body>
 <h1 align="center">Авторизация</h1>
-<form method="get" action="http://localhost:8080/usermenu">
+<form method="post" action="http://localhost:8080/login">
     <table align="center">
         <tr>
             <td><label for="login-field">Ваш логин</label></td>
@@ -33,6 +26,12 @@
         <tr>
             <td><label for="password-field">Ваш пароль</label></td>
             <td><input required type="text" name="password" id="password-field" placeholder="Введите пароль"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="hidden" name="loginError">
+                <span style="color: red;">${requestScope.loginError}</span>
+            </td>
         </tr>
         <tr>
             <td>
