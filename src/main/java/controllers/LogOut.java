@@ -1,4 +1,4 @@
-package servlets;
+package controllers;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +17,6 @@ public class LogOut extends HttpServlet {
         final HttpSession session = req.getSession();
         session.removeAttribute("password");
         session.removeAttribute("login");
-        resp.sendRedirect("/login");
+        resp.sendRedirect("WEB-INF/pages/login");
     }
 }

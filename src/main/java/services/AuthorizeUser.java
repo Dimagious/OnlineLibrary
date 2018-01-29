@@ -1,18 +1,22 @@
 package services;
 
 import db.dao.UserDAO;
-import db.dao.UserDAOImpl;
-import org.apache.log4j.Logger;
 import db.pojo.UserData;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
+@Service
 public class AuthorizeUser {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
-    private static UserDAO checker = new UserDAOImpl();
+
+    @Autowired
+    private static UserDAO checker;
 
     /**
      * Проверяет логин и пароль в БД.
@@ -30,13 +34,10 @@ public class AuthorizeUser {
             logger.debug(e.getMessage());
         }
         if (userDataFromDB != null && registeredUser.getLogin() != null && registeredUser.getPassword() != null) {
-            if (userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
-                    userDataFromDB.getPassword().equals(registeredUser.getPassword())) {
-                logger.debug("Авторизация прошла успешно");
-                return true;
-            }
+            return userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
+                    userDataFromDB.getPassword().equals(registeredUser.getPassword());
         }
-        logger.debug("Неправильный логин или пароль");
+//        logger.debug("Неправильный логин или пароль");
         return false;
     }
 }

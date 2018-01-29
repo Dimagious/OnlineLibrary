@@ -1,13 +1,13 @@
-package connections;
+package db.connections;
+
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 
+@Component
 public class ConnectionManagerPostgeImpl implements ConnectionManager {
-    private static Properties properties;
-
     private static ConnectionManager connectionManager;
     private static String URL;
     private static String USER;

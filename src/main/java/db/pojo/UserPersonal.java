@@ -1,13 +1,14 @@
 package db.pojo;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
-
 @XmlRootElement
 public class UserPersonal {
     private int id;

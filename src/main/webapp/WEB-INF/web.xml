@@ -6,9 +6,29 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
     <display-name>OnlineLibrary</display-name>
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/dispatcher-servlet.xml
+            WEB-INF/spring-database.xml
+        </param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>Authorization</servlet-name>
-        <servlet-class>servlets.Authorization</servlet-class>
+        <servlet-class>controllers.Authorization</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -18,7 +38,7 @@
 
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>servlets.LogOut</servlet-class>
+        <servlet-class>controllers.LogOut</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -28,7 +48,7 @@
 
     <servlet>
         <servlet-name>Registration</servlet-name>
-        <servlet-class>servlets.Registration</servlet-class>
+        <servlet-class>controllers.Registration</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -38,7 +58,7 @@
 
     <!--<filter>-->
         <!--<filter-name>Filter</filter-name>-->
-        <!--<filter-class>servlets.AdminDetected</filter-class>-->
+        <!--<filter-class>controllers.AdminDetected</filter-class>-->
         <!--<init-param>-->
             <!--<param-name>Admin</param-name>-->
             <!--<param-value>12345</param-value>-->
@@ -52,7 +72,7 @@
 
     <servlet>
         <servlet-name>UserMenu</servlet-name>
-        <servlet-class>servlets.UserMenu</servlet-class>
+        <servlet-class>controllers.UserMenu</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -62,7 +82,7 @@
 
     <servlet>
         <servlet-name>AdminMenu</servlet-name>
-        <servlet-class>servlets.AdminMenu</servlet-class>
+        <servlet-class>controllers.AdminMenu</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -72,7 +92,7 @@
 
     <servlet>
         <servlet-name>ShowAllBooks</servlet-name>
-        <servlet-class>servlets.ShowAllBooks</servlet-class>
+        <servlet-class>controllers.ShowAllBooks</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -82,7 +102,7 @@
 
     <servlet>
         <servlet-name>SearchBookByAuthor</servlet-name>
-        <servlet-class>servlets.SearchBookByAuthor</servlet-class>
+        <servlet-class>controllers.SearchBookByAuthor</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -92,7 +112,7 @@
 
     <servlet>
         <servlet-name>SearchBookByGenre</servlet-name>
-        <servlet-class>servlets.SearchBookByGenre</servlet-class>
+        <servlet-class>controllers.SearchBookByGenre</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -102,7 +122,7 @@
 
     <servlet>
         <servlet-name>SearchBookByTitle</servlet-name>
-        <servlet-class>servlets.SearchBookByTitle</servlet-class>
+        <servlet-class>controllers.SearchBookByTitle</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -112,7 +132,7 @@
 
     <servlet>
         <servlet-name>ReadingBook</servlet-name>
-        <servlet-class>servlets.ReadingBook</servlet-class>
+        <servlet-class>controllers.ReadingBook</servlet-class>
     </servlet>
 
     <servlet-mapping>

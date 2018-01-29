@@ -6,6 +6,7 @@ import java.util.Set;
 /**
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
+
 @XmlType(propOrder = { "id", "first_name", "last_name"}, name = "Authors")
 @XmlRootElement
 public class Authors {

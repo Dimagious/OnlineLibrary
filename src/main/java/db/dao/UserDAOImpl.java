@@ -1,5 +1,6 @@
 package db.dao;
 
+import org.springframework.stereotype.Component;
 import utils.Connector;
 import org.apache.log4j.Logger;
 import db.pojo.UserData;
@@ -12,6 +13,8 @@ import java.util.List;
 /**
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
+
+@Component
 public class UserDAOImpl implements UserDAO {
     private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
 

@@ -1,4 +1,4 @@
-package servlets;
+package controllers;
 
 import org.apache.log4j.Logger;
 

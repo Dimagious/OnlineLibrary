@@ -1,9 +1,10 @@
 package services;
 
 import db.dao.BooksDAO;
-import db.dao.BooksDAOImpl;
-import org.apache.log4j.Logger;
 import db.pojo.Books;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,10 +14,11 @@ import java.util.List;
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
-
+@Service
 public class ReadBook {
     private static final Logger logger = Logger.getLogger(GetAllBooks.class);
-    private static BooksDAO booksDAO = new BooksDAOImpl();
+    @Autowired
+    private static BooksDAO booksDAO;
 
     /**
      * Находит указанную книгу в БД и возвращает её текст
@@ -34,7 +36,13 @@ public class ReadBook {
             logger.error(e.getMessage());
         }
         for (int i = 100 * page; i < 100 * page + 100; i++) {
-            text.append(stringList.get(i));
+//            if (i<100) {
+//                text.append(stringList.get(100-(i-100)));
+//            } else if (page<0) {
+//
+//            } else {
+                text.append(stringList.get(i));
+//            }
         }
         return text.toString();
     }

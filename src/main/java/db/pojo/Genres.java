@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
+
 public class Genres {
     private int id;
     private String name;

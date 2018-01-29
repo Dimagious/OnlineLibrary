@@ -1,5 +1,6 @@
 package db.dao;
 
+import org.springframework.stereotype.Component;
 import utils.Connector;
 import org.apache.log4j.Logger;
 import db.pojo.Authors;
@@ -15,6 +16,8 @@ import java.util.List;
 /**
  * Created by Dmitriy Yurkin on 11.01.2018.
  */
+
+@Component
 public class BooksDAOImpl implements BooksDAO {
     private static final Logger logger = Logger.getLogger(BooksDAOImpl.class);
 
@@ -43,7 +46,6 @@ public class BooksDAOImpl implements BooksDAO {
                     Genres genres = getFieldsFromGenres(resultSet);
                     books.setAuthors(authors);
                     books.setGenres(genres);
-                    System.out.println(books);
                     allBooks.add(books);
                 }
                 return allBooks;

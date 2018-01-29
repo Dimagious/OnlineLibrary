@@ -1,19 +1,25 @@
 package services;
 
 import db.dao.UserDAO;
-import db.dao.UserDAOImpl;
-import org.apache.log4j.Logger;
 import db.pojo.UserData;
 import db.pojo.UserPersonal;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
+@Service
 public class RegisterUser {
     private static final Logger logger = Logger.getLogger(RegisterUser.class);
-    private static UserDAO checker = new UserDAOImpl();
+
+    @Autowired
+    private static UserDAO checker;
+
+
 
     /**
      * Сервис, который ррегистрирует пользователя в системе

@@ -1,7 +1,7 @@
 package utils;
 
-import connections.ConnectionManager;
-import connections.ConnectionManagerPostgeImpl;
+import db.connections.ConnectionManager;
+import db.connections.ConnectionManagerPostgeImpl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
