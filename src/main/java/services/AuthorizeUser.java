@@ -15,8 +15,16 @@ import java.sql.SQLException;
 public class AuthorizeUser {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
 
+    private UserDAO checker;
+
+    public UserDAO getChecker() {
+        return checker;
+    }
+
     @Autowired
-    private static UserDAO checker;
+    public void setChecker(UserDAO checker) {
+        this.checker = checker;
+    }
 
     /**
      * Проверяет логин и пароль в БД.
@@ -25,7 +33,7 @@ public class AuthorizeUser {
      * @param login логин пользователя
      * @param password пароль пользователя
      */
-    public static boolean authorizeUser(String login, String password) {
+    public boolean authorizeUser(String login, String password) {
         UserData registeredUser = new UserData(login, password);
         UserData userDataFromDB = null;
         try {

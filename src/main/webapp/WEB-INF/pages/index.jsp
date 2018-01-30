@@ -38,7 +38,7 @@
     <table align="center">
         <td>
             <div class="center">
-                <form method="get" action="http://localhost:8080/login">
+                <form method="get" action="${requestScope.contextPath}/login">
                     <button>Авторизация</button>
                 </form>
             </div>
@@ -46,7 +46,7 @@
         <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
         <td>
             <div class="center">
-                <form method="get" action="http://localhost:8080/registration">
+                <form method="get" action="${requestScope.contextPath}/registration">
                     <button>Регистрация</button>
                 </form>
             </div>

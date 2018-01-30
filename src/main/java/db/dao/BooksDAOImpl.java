@@ -1,11 +1,12 @@
 package db.dao;
 
-import org.springframework.stereotype.Component;
-import utils.Connector;
-import org.apache.log4j.Logger;
 import db.pojo.Authors;
 import db.pojo.Books;
 import db.pojo.Genres;
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Repository;
+import utils.Connector;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,7 +18,7 @@ import java.util.List;
  * Created by Dmitriy Yurkin on 11.01.2018.
  */
 
-@Component
+@Repository
 public class BooksDAOImpl implements BooksDAO {
     private static final Logger logger = Logger.getLogger(BooksDAOImpl.class);
 

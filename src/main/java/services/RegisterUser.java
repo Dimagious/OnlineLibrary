@@ -15,11 +15,15 @@ import java.sql.SQLException;
 @Service
 public class RegisterUser {
     private static final Logger logger = Logger.getLogger(RegisterUser.class);
+    private UserDAO checker;
 
+    public UserDAO getChecker() {
+        return checker;
+    }
     @Autowired
-    private static UserDAO checker;
-
-
+    public void setChecker(UserDAO checker) {
+        this.checker = checker;
+    }
 
     /**
      * Сервис, который ррегистрирует пользователя в системе
@@ -31,7 +35,7 @@ public class RegisterUser {
      * @param password пароль пользователя
      * @return true или false
      */
-    public static boolean registerUser(String first_name, String last_name, String sex,
+    public boolean registerUser(String first_name, String last_name, String sex,
                              String login, String password) {
         UserData registeredUser = new UserData(login, password);
         UserData userDataFromDB = null;

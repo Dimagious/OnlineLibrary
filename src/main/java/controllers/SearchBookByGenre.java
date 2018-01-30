@@ -1,37 +1,46 @@
 package controllers;
 
-import org.apache.log4j.Logger;
 import db.pojo.Books;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import services.SearchBook;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
 @Controller
-@RequestMapping("/searchBookByGenre")
-public class SearchBookByGenre extends HttpServlet {
+public class SearchBookByGenre {
     private static final Logger logger = Logger.getLogger(SearchBookByGenre.class);
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        String genreName = req.getParameter("searchByGenre");
-        try {
-            List<Books> list = SearchBook.getAllGenresBooks(genreName);
-            req.setAttribute("list", list);
-            req.getRequestDispatcher("WEB-INF/pages/searchBookByGenre.jsp").forward(req, resp);
-            logger.debug("Пользователь выполнил поиск по жанру");
-        } catch (SQLException ex) {
-            logger.error(ex.getMessage());
-            req.getRequestDispatcher("WEB-INF/pages/errorpage.jsp").forward(req, resp);
 
+    @Autowired
+    private SearchBook searchBook;
+
+    public SearchBook getSearchBook() {
+        return searchBook;
+    }
+
+    public void setSearchBook(SearchBook searchBook) {
+        this.searchBook = searchBook;
+    }
+
+    @RequestMapping(value = "/searchBookByGenre", method = RequestMethod.GET)
+    public ModelAndView getGenresBooks(@RequestParam(value = "searchByGenre", required = false) String genreName){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/searchBookByGenre");
+        logger.debug("Пользователь выполнил поиск по жанру");
+        List<Books> list = searchBook.getAllGenresBooks(genreName);
+        if (list != null) {
+            modelAndView.addObject("list", list);
+            return modelAndView;
         }
+        modelAndView.addObject("errorpage", "Ошибка при обращении к базе данных");
+        return modelAndView;
     }
 }

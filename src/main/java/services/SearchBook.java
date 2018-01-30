@@ -14,14 +14,23 @@ import java.util.List;
 @Service
 public class SearchBook {
 
+    private BooksDAO booksDAO;
+
+    public BooksDAO getBooksDAO() {
+        return booksDAO;
+    }
+
     @Autowired
-    private static BooksDAO booksDAO;
+    public void setBooksDAO(BooksDAO booksDAO) {
+        this.booksDAO = booksDAO;
+    }
+
     /**
      * Выполняет поиск указанной книги и возвращает её
      *
      * @param bookTitle название книги
      */
-    public static Books getBookByTitle(String bookTitle) {
+    public Books getBookByTitle(String bookTitle) {
         return booksDAO.findBookByTitle(bookTitle);
     }
 
@@ -30,8 +39,13 @@ public class SearchBook {
      *
      * @param authorLastName фамилия автора
      */
-    public static List<Books> getAllAuthorBooks(String authorLastName) throws SQLException {
-        return booksDAO.getBooksByAuthorsLastname(authorLastName);
+    public List<Books> getAllAuthorBooks(String authorLastName) {
+        try {
+            return booksDAO.getBooksByAuthorsLastname(authorLastName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     /**
@@ -39,7 +53,12 @@ public class SearchBook {
      *
      * @param genreName название жанра
      */
-    public static List<Books> getAllGenresBooks(String genreName) throws SQLException {
-        return booksDAO.getBooksByGenre(genreName);
+    public List<Books> getAllGenresBooks(String genreName){
+        try {
+            return booksDAO.getBooksByGenre(genreName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

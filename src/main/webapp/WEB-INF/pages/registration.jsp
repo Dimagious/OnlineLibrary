@@ -26,7 +26,7 @@
 </head>
 <body>
 <h1 align="center">Регистрация посетителей</h1>
-<form method="post" action="http://localhost:8080/registration">
+<form method="post" action="${requestScope.contextPath}/registration">
     <table align="center">
         <tr>
             <td><label for="firstname-field">Имя</label></td>
@@ -63,9 +63,6 @@
         </tr>
         <tr>
             <td align="center" colspan="2"><span style="color: red;">${requestScope.loginError}</span></td>
-        </tr>
-        <tr>
-            <td align="center" colspan="2"><span style="color: red;">${requestScope.sexError}</span></td>
         </tr>
     </table>
 </form>

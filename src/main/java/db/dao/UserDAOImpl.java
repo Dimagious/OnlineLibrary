@@ -1,12 +1,15 @@
 package db.dao;
 
-import org.springframework.stereotype.Component;
-import utils.Connector;
-import org.apache.log4j.Logger;
 import db.pojo.UserData;
 import db.pojo.UserPersonal;
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
+import utils.Connector;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

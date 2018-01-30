@@ -36,7 +36,7 @@
         <tbody>
             <tr>
                 <td>
-                    <a href="/readbook?title=${requestScope.foundedBook.title}&page=0">
+                    <a href="${pageContext.request.contextPath}/readbook?title=${requestScope.foundedBook.title}&page=0">
                         <c:out value="${requestScope.foundedBook.title}"/>
                     </a>
                 </td>

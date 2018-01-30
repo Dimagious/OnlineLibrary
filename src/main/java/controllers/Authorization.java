@@ -3,22 +3,19 @@ package controllers;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import services.AuthorizeUser;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.IOException;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
  */
 @Controller
-public class Authorization extends HttpServlet {
+public class Authorization {
     private static final Logger logger = Logger.getLogger(Authorization.class);
 
     @Autowired
@@ -32,32 +29,29 @@ public class Authorization extends HttpServlet {
         this.authorizeUser = authorizeUser;
     }
 
-
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/pages/login.jsp").forward(req, resp);
+    public void login() {
         logger.debug("Пользователь открыл страницу авторизации");
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String login = req.getParameter("login");
-        String password = req.getParameter("password");
-        if (AuthorizeUser.authorizeUser(login, password)) {
-            HttpSession session = req.getSession();
-            session.setAttribute("login", login);
+    public String auth(@RequestParam(value = "login") String login,
+                       @RequestParam(value = "password") String password,
+                       HttpServletRequest request,
+                       Model model) {
+        if (authorizeUser.authorizeUser(login, password)) {
+            request.getSession().setAttribute("login", login);
             if (login.equals("Admin")) {
-                resp.sendRedirect("WEB-INF/pages/adminmenu.jsp");
                 logger.debug("Администратор авторизовался");
+                return "redirect:/adminmenu";
             } else {
-                resp.sendRedirect("WEB-INF/pages/usermenu.jsp");
                 logger.debug("Пользователь авторизовался");
+                return "redirect:/usermenu";
             }
-        }
-        else {
+        } else {
             logger.debug("Неправильный логин или пароль");
-            req.setAttribute("loginError", "Неправильный логин или пароль");
-            req.getRequestDispatcher("WEB-INF/pages/login.jsp").forward(req, resp);
+            model.addAttribute("loginError", "Некорректный логин или пароль");
+            return "redirect:/login";
         }
     }
 }

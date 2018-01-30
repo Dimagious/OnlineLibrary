@@ -1,7 +1,8 @@
 package db.connections;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public interface ConnectionManager {
-    Connection getConnection();
+    Connection getConnection() throws ClassNotFoundException, SQLException;
 }

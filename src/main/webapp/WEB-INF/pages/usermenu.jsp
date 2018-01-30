@@ -30,7 +30,7 @@
 </style>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
 <div style="position: fixed; top: 0%; right: 0;">
-    <form method="get" action="http://localhost:8080/logout">
+    <form method="get" action="${requestScope.contextPath}/logout">
         <button type="submit">Выйти</button>
     </form>
 </div>
@@ -38,7 +38,7 @@
 <div class="row">
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="http://localhost:8080/searchbooksbytitle">
+            <form method="get" action="${requestScope.contextPath}/searchBookByTitle">
                 <h4>Поиск по названию</h4>
                 <input type="text" name="searchByTitle" placeholder="Введите название книги">
                 <button type="submit">Поиск</button>
@@ -47,7 +47,7 @@
     </div>
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="http://localhost:8080/searchbooksbyauthor">
+            <form method="get" action="${requestScope.contextPath}/searchBooksByAuthor">
                 <h4>Поиск по автору</h4>
                 <input type="text" name="searchByAuthor" placeholder="Введите фамилию автора">
                 <button type="submit">Поиск</button>
@@ -56,7 +56,7 @@
     </div>
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="http://localhost:8080/searchbooksbygenre">
+            <form method="get" action="${requestScope.contextPath}/searchBookByGenre">
                 <h4>Поиск по жанру</h4>
                 <input type="text" name="searchByGenre" placeholder="Введите название жанра">
                 <button type="submit">Поиск</button>

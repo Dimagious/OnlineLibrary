@@ -24,7 +24,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="get" action="http://localhost:8080/usermenu">
+<form method="get" action="${requestScope.contextPath}/usermenu">
     <button type="submit">Назад</button>
 </form>
 <style>.center {
@@ -33,9 +33,9 @@
 <c:out value="${requestScope.book}"/>
 <div class="center">
     <div class="pages">
-        <button><a href="\readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a></button>
+        <button><a href="http://localhost:8080/readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a></button>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <button><a href="\readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a></button>
+        <button><a href="http://localhost:8080/readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a></button>
     </div>
 </div>
 </body>

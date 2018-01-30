@@ -24,7 +24,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="get" action="http://localhost:8080/usermenu">
+<form method="get" action="${requestScope.contextPath}/usermenu">
     <button type="submit">Назад</button>
 </form>
 <table class="table table-hover">
@@ -37,7 +37,7 @@
     <jsp:useBean id="list" scope="request" type="java.util.List"/>
     <c:forEach var="list_" items="${requestScope.list}">
         <tr>
-            <td><a href="/readbook?title=${list_.title}&page=0"> ${list_.title}</a></td>
+            <td><a href="<c:url value="/readbook?title=${list_.title}&page=0"/>"> ${list_.title}</a></td>
         </tr>
     </c:forEach>
     </tbody>

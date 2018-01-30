@@ -37,7 +37,7 @@
     <jsp:useBean id="list" scope="request" type="java.util.List"/>
     <c:forEach var="list_" items="${requestScope.list}">
         <tr>
-            <td><a href="/readbook?title=${list_.title}&page=0"> ${list_.title}</a></td>
+            <td><a href="${pageContext.request.contextPath}/readbook?title=${list_.title}&page=0"> ${list_.title}</a></td>
         </tr>
     </c:forEach>
     </tbody>

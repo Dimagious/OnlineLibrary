@@ -9,134 +9,23 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/dispatcher-servlet.xml
-            WEB-INF/spring-database.xml
+        <param-value>
+            WEB-INF/beans.xml
+            WEB-INF/dispatcher-servlet.xml
         </param-value>
     </context-param>
 
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Authorization</servlet-name>
-        <servlet-class>controllers.Authorization</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Authorization</servlet-name>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Logout</servlet-name>
-        <servlet-class>controllers.LogOut</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Logout</servlet-name>
-        <url-pattern>/logout</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Registration</servlet-name>
-        <servlet-class>controllers.Registration</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Registration</servlet-name>
-        <url-pattern>/registration</url-pattern>
-    </servlet-mapping>
-
-    <!--<filter>-->
-        <!--<filter-name>Filter</filter-name>-->
-        <!--<filter-class>controllers.AdminDetected</filter-class>-->
-        <!--<init-param>-->
-            <!--<param-name>Admin</param-name>-->
-            <!--<param-value>12345</param-value>-->
-        <!--</init-param>-->
-    <!--</filter>-->
-
-    <!--<filter-mapping>-->
-        <!--<filter-name>Filter</filter-name>-->
-        <!--<url-pattern>/adminmenu</url-pattern>-->
-    <!--</filter-mapping>-->
-
-    <servlet>
-        <servlet-name>UserMenu</servlet-name>
-        <servlet-class>controllers.UserMenu</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>UserMenu</servlet-name>
-        <url-pattern>/usermenu</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>AdminMenu</servlet-name>
-        <servlet-class>controllers.AdminMenu</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AdminMenu</servlet-name>
-        <url-pattern>/adminmenu</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ShowAllBooks</servlet-name>
-        <servlet-class>controllers.ShowAllBooks</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ShowAllBooks</servlet-name>
-        <url-pattern>/allbooks</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>SearchBookByAuthor</servlet-name>
-        <servlet-class>controllers.SearchBookByAuthor</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>SearchBookByAuthor</servlet-name>
-        <url-pattern>/searchbooksbyauthor</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>SearchBookByGenre</servlet-name>
-        <servlet-class>controllers.SearchBookByGenre</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>SearchBookByGenre</servlet-name>
-        <url-pattern>/searchbooksbygenre</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>SearchBookByTitle</servlet-name>
-        <servlet-class>controllers.SearchBookByTitle</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>SearchBookByTitle</servlet-name>
-        <url-pattern>/searchbooksbytitle</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ReadingBook</servlet-name>
-        <servlet-class>controllers.ReadingBook</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ReadingBook</servlet-name>
-        <url-pattern>/readbook</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -17,8 +17,9 @@ import java.util.List;
 @Service
 public class ReadBook {
     private static final Logger logger = Logger.getLogger(GetAllBooks.class);
+
     @Autowired
-    private static BooksDAO booksDAO;
+    private BooksDAO booksDAO;
 
     /**
      * Находит указанную книгу в БД и возвращает её текст
@@ -26,7 +27,7 @@ public class ReadBook {
      * @param bookTitle название книги
      * @return text текст книги
      */
-    public static String readBook(String bookTitle, int page) {
+    public String readBook(String bookTitle, int page) {
         Books book = booksDAO.findBookByTitle(bookTitle);
         StringBuilder text = new StringBuilder();
         List<String> stringList = null;
@@ -41,7 +42,7 @@ public class ReadBook {
 //            } else if (page<0) {
 //
 //            } else {
-                text.append(stringList.get(i));
+            text.append(stringList.get(i));
 //            }
         }
         return text.toString();
