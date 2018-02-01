@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServlet;
 public class UserMenu extends HttpServlet {
     private static final Logger logger = Logger.getLogger(UserMenu.class);
 
-    @RequestMapping(value = "/usermenu", method = RequestMethod.GET)
+    @RequestMapping(value = "inner/usermenu", method = RequestMethod.GET)
     public ModelAndView getUserMenu() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/usermenu");
+        modelAndView.setViewName("inner/usermenu");
         logger.debug("Пользователь открыл читальный зал");
         return modelAndView;
     }

@@ -36,7 +36,8 @@ class RegisterUserTest {
 
     @Test
     void registerUser() {
-        assertTrue(RegisterUser.registerUser("Дмитрий", "Юркин", "м", "dimagic", "12345"));
-        assertFalse(RegisterUser.registerUser("Дмитрий", "Юркин", "м", "dimasta", "12345"));
+        RegisterUser registerUser = new RegisterUser();
+        assertTrue(registerUser.registerUser("Дмитрий", "Юркин", "м", "dimagic", "12345"));
+        assertFalse(registerUser.registerUser("Дмитрий", "Юркин", "м", "dimasta", "12345"));
     }
 }

@@ -36,6 +36,7 @@ class ReadBookTest {
 
     @Test
     void readBook() {
-        assertEquals("полчаса она уже сидела на", (ReadBook.readBook("Каштанка", 1)).substring(25, 50));
+        ReadBook rb = new ReadBook();
+        assertEquals("полчаса она уже сидела на", (rb.readBook("Каштанка", 1)).substring(25, 50));
     }
 }

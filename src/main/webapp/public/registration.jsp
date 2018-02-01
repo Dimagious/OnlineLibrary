@@ -26,7 +26,7 @@
 </head>
 <body>
 <h1 align="center">Регистрация посетителей</h1>
-<form method="post" action="${requestScope.contextPath}/registration">
+<form method="post" action="${requestScope.contextPath}/public/registration">
     <table align="center">
         <tr>
             <td><label for="firstname-field">Имя</label></td>

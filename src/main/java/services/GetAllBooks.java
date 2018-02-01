@@ -16,15 +16,23 @@ import java.util.List;
 @Service
 public class GetAllBooks {
     private static final Logger logger = Logger.getLogger(GetAllBooks.class);
+    private BooksDAO booksDAO;
+
+    public BooksDAO getBooksDAO() {
+        return booksDAO;
+    }
 
     @Autowired
-    private static BooksDAO booksDAO;
+    public void setBooksDAO(BooksDAO booksDAO) {
+        this.booksDAO = booksDAO;
+    }
+
     /**
      * Сервис, который берёт из БД все книги и возвращает лист из всех книг
      *
      * @return booklist список всех книг
      */
-    public static List<Books> getAllBooks() {
+    public List<Books> getAllBooks() {
         try {
             List<Books> bookList = new ArrayList<>(booksDAO.getAllBooks());
             return bookList;

@@ -29,7 +29,11 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <div class="center">
-    <h1>Не делай так больше!</h1>
+    <h1>Товарищ!</h1>
+    <h2>Возникла какая-то ошибка!</h2>
+    <h3>Скорее всего из-за введенных тобой данных.</h3>
+    <h3>Разработчик точно не виноват.</h3>
+    <h3>Попробуй поискать другую книгу(автора или жанр)</h3>
 </div>
 
 </body>

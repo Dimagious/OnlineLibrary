@@ -1,5 +1,6 @@
 package controllers;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,8 @@ import services.ReadBook;
 @Controller
 public class ReadingBook {
 
+    private static final Logger logger = Logger.getLogger(ReadingBook.class);
+
     @Autowired
     private ReadBook readBook;
 
@@ -25,11 +28,12 @@ public class ReadingBook {
         this.readBook = readBook;
     }
 
-    @RequestMapping(value = "/readbook", method = RequestMethod.GET)
+    @RequestMapping(value = "inner/readbook", method = RequestMethod.GET)
     public ModelAndView readBook(@RequestParam(value = "title", required = false) String title,
                                  @RequestParam(value = "page", required = false) int page) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/readbook");
+        modelAndView.setViewName("inner/readbook");
+        logger.debug("Пользователь открыл книгу \"" + title + "\"");
         modelAndView.addObject("book", readBook.readBook(title, page));
         modelAndView.addObject("title", title);
         modelAndView.addObject("page", page);

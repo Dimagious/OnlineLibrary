@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1 align="center">Авторизация</h1>
-<form method="post" action="${requestScope.contextPath}/login">
+<form method="post" action="${requestScope.contextPath}/public/login">
     <table align="center">
         <tr>
             <td><label for="login-field">Ваш логин</label></td>

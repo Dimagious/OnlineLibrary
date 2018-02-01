@@ -38,12 +38,13 @@ class AuthorizeUserTest {
 
     @Test
     void authorizeUser() {
-        assertTrue(AuthorizeUser.authorizeUser("admin", "adminpass"));
-        assertFalse(AuthorizeUser.authorizeUser("admin", "asdfasdf"));
-        assertFalse(AuthorizeUser.authorizeUser(null, "asdfasdf"));
-        assertFalse(AuthorizeUser.authorizeUser("admin", null));
-        assertFalse(AuthorizeUser.authorizeUser(null, null));
-        assertFalse(AuthorizeUser.authorizeUser("qwerty", "adminpass"));
-        assertFalse(AuthorizeUser.authorizeUser("qwerty", null));
+        AuthorizeUser auth = new AuthorizeUser();
+        assertTrue(auth.authorizeUser("admin", "adminpass"));
+        assertFalse(auth.authorizeUser("admin", "asdfasdf"));
+        assertFalse(auth.authorizeUser(null, "asdfasdf"));
+        assertFalse(auth.authorizeUser("admin", null));
+        assertFalse(auth.authorizeUser(null, null));
+        assertFalse(auth.authorizeUser("qwerty", "adminpass"));
+        assertFalse(auth.authorizeUser("qwerty", null));
     }
 }

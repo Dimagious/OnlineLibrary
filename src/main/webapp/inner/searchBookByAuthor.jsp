@@ -1,15 +1,15 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: admin
-  Date: 23.01.2018
-  Time: 12:36
+  Date: 18.01.2018
+  Time: 20:04
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>${requestScope.title}</title>
+    <title>Поиск книг по автору</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -24,19 +24,23 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="get" action="${requestScope.contextPath}/usermenu">
+<form method="get" action="${requestScope.contextPath}/inner/usermenu">
     <button type="submit">Назад</button>
 </form>
-<style>.center {
-    text-align: center;
-}</style>
-<c:out value="${requestScope.book}"/>
-<div class="center">
-    <div class="pages">
-        <button><a href="http://localhost:8080/readbook?title=${requestScope.title}&page=${requestScope.page - 1}">Предыдущая страница</a></button>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <button><a href="http://localhost:8080/readbook?title=${requestScope.title}&page=${requestScope.page + 1}">Следующая страница</a></button>
-    </div>
-</div>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Список книг автора</th>
+    </tr>
+    </thead>
+    <tbody>
+    <jsp:useBean id="list" scope="request" type="java.util.List"/>
+    <c:forEach var="list_" items="${requestScope.list}">
+        <tr>
+            <td><a href="${pageContext.request.contextPath}/inner/readbook?title=${list_.title}&page=0"> ${list_.title}</a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 </body>
 </html>

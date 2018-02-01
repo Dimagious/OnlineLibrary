@@ -38,7 +38,7 @@
     <table align="center">
         <td>
             <div class="center">
-                <form method="get" action="${requestScope.contextPath}/login">
+                <form method="get" action="${requestScope.contextPath}/public/login">
                     <button>Авторизация</button>
                 </form>
             </div>
@@ -46,7 +46,7 @@
         <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
         <td>
             <div class="center">
-                <form method="get" action="${requestScope.contextPath}/registration">
+                <form method="get" action="${requestScope.contextPath}/public/registration">
                     <button>Регистрация</button>
                 </form>
             </div>

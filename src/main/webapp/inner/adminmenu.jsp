@@ -35,7 +35,7 @@
     </form>
 </div>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
-<form method="get" action="${requestScope.contextPath}/showBooks">
+<form method="get" action="${requestScope.contextPath}/pages/showBooks">
     <h4 align="center">Раздел, который отображается только у админа</h4>
     <div class = "center">
         <button>Список всех книг</button>
@@ -45,7 +45,7 @@
 <div class="row">
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="${requestScope.contextPath}/searchBookByTitle">
+            <form method="get" action="${requestScope.contextPath}/inner/searchBookByTitle">
                 <h4>Поиск по названию</h4>
                 <input type="text" name="searchByTitle" placeholder="Введите название книги">
                 <button type="submit">Поиск</button>
@@ -54,7 +54,7 @@
     </div>
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="${requestScope.contextPath}/searchBooksByAuthor">
+            <form method="get" action="${requestScope.contextPath}/inner/searchBooksByAuthor">
                 <h4>Поиск по автору</h4>
                 <input type="text" name="searchByAuthor" placeholder="Введите фамилию автора">
                 <button type="submit">Поиск</button>
@@ -63,7 +63,7 @@
     </div>
     <div class="col-md-4" style="text-align: center;">
         <div style="display: inline-block;">
-            <form method="get" action="${requestScope.contextPath}/searchBookByGenre">
+            <form method="get" action="${requestScope.contextPath}/inner/searchBookByGenre">
                 <h4>Поиск по жанру</h4>
                 <input type="text" name="searchByGenre" placeholder="Введите название жанра">
                 <button type="submit">Поиск</button>

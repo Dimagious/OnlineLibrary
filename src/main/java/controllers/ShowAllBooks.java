@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 import services.GetAllBooks;
 
 import javax.servlet.http.HttpServlet;
-import java.awt.print.Book;
 
 /**
  * Created by Dmitriy Yurkin on 17.01.2018.
@@ -21,11 +20,19 @@ public class ShowAllBooks extends HttpServlet {
     @Autowired
     private GetAllBooks getAllBooks;
 
-    @RequestMapping (value = "/showBooks", method = RequestMethod.GET)
-    public ModelAndView getAllBooks() {
+    public GetAllBooks getGetAllBooks() {
+        return getAllBooks;
+    }
+
+    public void setGetAllBooks(GetAllBooks getAllBooks) {
+        this.getAllBooks = getAllBooks;
+    }
+
+    @RequestMapping (value = "inner/showBooks", method = RequestMethod.GET)
+    public ModelAndView getBooks() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("list", new Book());
-        modelAndView.setViewName("showBooks");
+        modelAndView.addObject("list", getAllBooks.getAllBooks());
+        modelAndView.setViewName("inner/showBooks");
         return modelAndView;
     }
 }

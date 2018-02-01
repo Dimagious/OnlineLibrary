@@ -27,15 +27,15 @@ public class Registration {
         this.registerUser = registerUser;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @RequestMapping(value = "public/registration", method = RequestMethod.GET)
     public ModelAndView getRegister() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/registration");
+        modelAndView.setViewName("public/registration");
         logger.debug("Пользователь открыл страницу регистрации");
         return modelAndView;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "public/registration", method = RequestMethod.POST)
     public ModelAndView register(@RequestParam(value = "firstname", required = false) String firstname,
                                  @RequestParam(value = "lastname", required = false) String lastname,
                                  @RequestParam(value = "sex", required = false) String sex,
@@ -44,12 +44,12 @@ public class Registration {
         boolean result = registerUser.registerUser(firstname, lastname, sex, login, password);
         ModelAndView modelAndView = new ModelAndView();
         if (result) {
-            modelAndView.setViewName("/login");
+            modelAndView.setViewName("public/login");
             logger.debug("Пользователь зарегистрировался");
             return modelAndView;
         } else {
             modelAndView.addObject("loginError", "Указанный логин уже используется");
-            modelAndView.setViewName("/registration");
+            modelAndView.setViewName("public/registration");
             return modelAndView;
         }
     }

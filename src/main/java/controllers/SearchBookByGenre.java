@@ -30,17 +30,17 @@ public class SearchBookByGenre {
         this.searchBook = searchBook;
     }
 
-    @RequestMapping(value = "/searchBookByGenre", method = RequestMethod.GET)
+    @RequestMapping(value = "inner/searchBookByGenre", method = RequestMethod.GET)
     public ModelAndView getGenresBooks(@RequestParam(value = "searchByGenre", required = false) String genreName){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/searchBookByGenre");
+        modelAndView.setViewName("inner/searchBookByGenre");
         logger.debug("Пользователь выполнил поиск по жанру");
         List<Books> list = searchBook.getAllGenresBooks(genreName);
         if (list != null) {
             modelAndView.addObject("list", list);
             return modelAndView;
         }
-        modelAndView.addObject("errorpage", "Ошибка при обращении к базе данных");
+        modelAndView.setViewName("inner/errorpage");
         return modelAndView;
     }
 }
