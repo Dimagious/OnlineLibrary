@@ -15,6 +15,7 @@
         <param-value>
             WEB-INF/beans.xml
             WEB-INF/dispatcher-servlet.xml
+            WEB-INF/database.xml
         </param-value>
     </context-param>
 
