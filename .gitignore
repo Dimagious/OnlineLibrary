@@ -6,8 +6,3 @@ online_library.iml
 src/main/java/trash/
 src/main/resources/config_connection.property
 target/
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
-build.gradle
