@@ -1,5 +1,6 @@
 package db.dao;
 
+import db.exceptions.DAOException;
 import db.pojo.UserData;
 import db.pojo.UserPersonal;
 import org.apache.log4j.Logger;
@@ -26,7 +27,7 @@ public class UserDAOImpl implements UserDAO {
      * Метод доступен для администратора
      */
     @Override
-    public List<UserData> getAllUsers() {
+    public List<UserData> getAllUsers() throws DAOException {
         List<UserData> list = null;
         try {
             list = Connector.executeQuery(con -> {
@@ -46,34 +47,10 @@ public class UserDAOImpl implements UserDAO {
                 return users;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getAllUsers()", e);
         }
         return list;
     }
-
-    /**
-     * Авторизует пользователя в системе.
-     *
-     * @param login    логин
-     * @param password пароль
-     */
-    @Override
-    public boolean authorizeUser(String login, String password) {
-        try {
-            Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT * FROM user_data WHERE login = ? AND password = ?");
-                statement.setString(1, login);
-                statement.setString(2, password);
-                return true;
-            });
-            return true;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
 
     /**
      * Сохраняет в базе данных информацию о логине и пароле пользователя.
@@ -83,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
      * @param data сохраняемый объект UserData
      */
     @Override
-    public void saveUser(UserPersonal person, UserData data) {
+    public void saveUser(UserPersonal person, UserData data) throws DAOException {
         try {
             Connector.executeQuery(con -> {
                 PreparedStatement statement = con.prepareStatement(
@@ -96,11 +73,10 @@ public class UserDAOImpl implements UserDAO {
                 resultSet.next();
                 person.setId(resultSet.getInt("id"));
                 data.setId_personal(person.getId());
-                //logger.debug("Данные нового пользователя: " + person);
                 return person;
             });
-        } catch (SQLException | IllegalArgumentException ex) {
-            logger.error(ex.getMessage());
+        } catch (SQLException e) {
+            throw new DAOException("saveUser()", e);
         }
 
         try {
@@ -117,8 +93,8 @@ public class UserDAOImpl implements UserDAO {
                 //logger.debug("Логин и пароль нового пользователя: " + data);
                 return data;
             });
-        } catch (SQLException ex) {
-            logger.error(ex.getMessage());
+        } catch (SQLException e) {
+            throw new DAOException("saveUser()", e);
         }
     }
 
@@ -129,7 +105,7 @@ public class UserDAOImpl implements UserDAO {
      * @param last_name  фамилия
      * @param sex        пол
      */
-    public int getUserPersonalId(String first_name, String last_name, String sex) {
+    public int getUserPersonalId(String first_name, String last_name, String sex) throws DAOException {
         try {
             return Connector.executeQuery(con -> {
                 PreparedStatement statement = con.prepareStatement(
@@ -144,10 +120,9 @@ public class UserDAOImpl implements UserDAO {
                 newUserData.setId_personal(idFromDB);
                 return newUserData.getId();
             });
-        } catch (SQLException ex) {
-            logger.error(ex.getMessage());
+        } catch (SQLException e) {
+            throw new DAOException("getUserPersonalId()", e);
         }
-        return 0;
     }
 
     /**
@@ -158,7 +133,7 @@ public class UserDAOImpl implements UserDAO {
      * NULL если пользователь не был найден
      */
     @Override
-    public UserPersonal getUserPersonalByLogin(String login)  {
+    public UserPersonal getUserPersonalByLogin(String login) throws DAOException {
         UserPersonal user = null;
         try {
             user = Connector.executeQuery(connection -> {
@@ -176,7 +151,7 @@ public class UserDAOImpl implements UserDAO {
                 return result;
             });
         } catch (SQLException e) {
-            logger.debug(e.getMessage());
+            throw new DAOException("getUserPersonalByLogin()", e);
         }
         return user;
     }
@@ -189,7 +164,7 @@ public class UserDAOImpl implements UserDAO {
      * NULL если пользователь не был найден
      */
     @Override
-    public UserData getUserDataByLogin(String login) {
+    public UserData getUserDataByLogin(String login) throws DAOException {
         UserData userData = null;
         try {
             userData = Connector.executeQuery(connection -> {
@@ -204,7 +179,7 @@ public class UserDAOImpl implements UserDAO {
                 return result;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getUserDataByLogin()", e);
         }
         return userData;
     }
@@ -212,7 +187,7 @@ public class UserDAOImpl implements UserDAO {
     /**
      * Достаёт из БД информацию из таблицы UserData
      */
-    private UserData getFieldsFromUserData(ResultSet resultSet) {
+    private UserData getFieldsFromUserData(ResultSet resultSet) throws DAOException {
         UserData userData = null;
         try {
             userData = new UserData(
@@ -222,7 +197,7 @@ public class UserDAOImpl implements UserDAO {
                     resultSet.getString("password")
             );
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getFieldsFromUserData()", e);
         }
         return userData;
     }
@@ -230,7 +205,7 @@ public class UserDAOImpl implements UserDAO {
     /**
      * Достаёт из БД информацию из таблицы UserPersonal
      */
-    private UserPersonal getFieldsFromUserPersonal(ResultSet resultSet) {
+    private UserPersonal getFieldsFromUserPersonal(ResultSet resultSet) throws DAOException {
         UserPersonal userPersonal = null;
         try {
             userPersonal = new UserPersonal(
@@ -240,7 +215,7 @@ public class UserDAOImpl implements UserDAO {
                     resultSet.getString("sex")
             );
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getFieldsFromUserPersonal()", e);
         }
         return userPersonal;
     }

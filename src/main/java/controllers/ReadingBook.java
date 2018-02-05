@@ -1,5 +1,6 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import services.ReadBook;
+
+import java.io.IOException;
 
 /**
  * Created by Dmitriy Yurkin on 18.01.2018.
@@ -30,7 +33,7 @@ public class ReadingBook {
 
     @RequestMapping(value = "inner/readbook", method = RequestMethod.GET)
     public ModelAndView readBook(@RequestParam(value = "title", required = false) String title,
-                                 @RequestParam(value = "page", required = false) int page) {
+                                 @RequestParam(value = "page", required = false) int page) throws IOException, DAOException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("inner/readbook");
         logger.debug("Пользователь открыл книгу \"" + title + "\"");

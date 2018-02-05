@@ -1,6 +1,7 @@
 package services;
 
 import db.dao.BooksDAO;
+import db.exceptions.DAOException;
 import db.pojo.Books;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +33,8 @@ public class GetAllBooks {
      *
      * @return booklist список всех книг
      */
-    public List<Books> getAllBooks() {
-        try {
-            List<Books> bookList = new ArrayList<>(booksDAO.getAllBooks());
-            return bookList;
-        } catch (SQLException e) {
-            logger.debug(e.getMessage());
-            return null;
-        }
+    public List<Books> getAllBooks() throws DAOException {
+        List<Books> bookList = new ArrayList<>(booksDAO.getAllBooks());
+        return bookList;
     }
 }

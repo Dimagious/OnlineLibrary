@@ -4,6 +4,7 @@ import db.dao.BooksDAO;
 import db.dao.BooksDAOImpl;
 import db.dao.UserDAO;
 import db.dao.UserDAOImpl;
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import db.pojo.Books;
 import db.pojo.UserData;
@@ -24,7 +25,7 @@ public class DBWriter {
      * Извлекает всю информацию о пользователях из XML-файла
      * и в нужном порядке добавляет её в базы UserPersonal и UserData
      */
-    private static void UsersWriterToDB() throws SQLException {
+    private static void UsersWriterToDB() throws SQLException, DAOException {
         try {
             File file = new File("all_users.xml");
             JAXBContext context1 = JAXBContext.newInstance(UserData.UsersWrapper.class);
@@ -50,7 +51,7 @@ public class DBWriter {
      * Извлекает всю информацию о пользователях из XML-файла
      * и в нужном порядке добавляет её в базы UserPersonal и UserData
      */
-    private static void BooksWriterToDB() throws SQLException {
+    private static void BooksWriterToDB() throws SQLException, DAOException {
         try {
             File file = new File("all_books.xml");
             JAXBContext context2 = JAXBContext.newInstance(Books.BooksWrapper.class);
@@ -69,12 +70,5 @@ public class DBWriter {
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) throws SQLException {
-        //From XML to UserPersonal and UserData tables
-        UsersWriterToDB();
-        //From XML to Books, Authors and Genres tables
-        //BooksWriterToDB();
     }
 }

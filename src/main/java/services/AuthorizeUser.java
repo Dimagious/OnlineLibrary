@@ -1,6 +1,7 @@
 package services;
 
 import db.dao.UserDAO;
+import db.exceptions.DAOException;
 import db.pojo.UserData;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,17 +31,13 @@ public class AuthorizeUser {
      * Проверяет логин и пароль в БД.
      * Если такое сочетание есть, то возвращает true, в обратном случае false
      *
-     * @param login логин пользователя
+     * @param login    логин пользователя
      * @param password пароль пользователя
      */
-    public boolean authorizeUser(String login, String password) {
+    public boolean authorizeUser(String login, String password) throws DAOException {
         UserData registeredUser = new UserData(login, password);
         UserData userDataFromDB = null;
-        try {
-            userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
-        } catch (SQLException e) {
-            logger.debug(e.getMessage());
-        }
+        userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
         if (userDataFromDB != null && registeredUser.getLogin() != null && registeredUser.getPassword() != null) {
             return userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
                     userDataFromDB.getPassword().equals(registeredUser.getPassword());

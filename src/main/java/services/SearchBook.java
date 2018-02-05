@@ -1,6 +1,7 @@
 package services;
 
 import db.dao.BooksDAO;
+import db.exceptions.DAOException;
 import db.pojo.Books;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,7 +31,7 @@ public class SearchBook {
      *
      * @param bookTitle название книги
      */
-    public Books getBookByTitle(String bookTitle) {
+    public Books getBookByTitle(String bookTitle) throws DAOException {
         return booksDAO.findBookByTitle(bookTitle);
     }
 
@@ -39,13 +40,8 @@ public class SearchBook {
      *
      * @param authorLastName фамилия автора
      */
-    public List<Books> getAllAuthorBooks(String authorLastName) {
-        try {
-            return booksDAO.getBooksByAuthorsLastname(authorLastName);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public List<Books> getAllAuthorBooks(String authorLastName) throws DAOException {
+        return booksDAO.getBooksByAuthorsLastname(authorLastName);
     }
 
     /**
@@ -53,12 +49,7 @@ public class SearchBook {
      *
      * @param genreName название жанра
      */
-    public List<Books> getAllGenresBooks(String genreName){
-        try {
-            return booksDAO.getBooksByGenre(genreName);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public List<Books> getAllGenresBooks(String genreName) throws DAOException {
+        return booksDAO.getBooksByGenre(genreName);
     }
 }

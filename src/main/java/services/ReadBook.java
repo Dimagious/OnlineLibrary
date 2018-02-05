@@ -1,6 +1,7 @@
 package services;
 
 import db.dao.BooksDAO;
+import db.exceptions.DAOException;
 import db.pojo.Books;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,23 +28,13 @@ public class ReadBook {
      * @param bookTitle название книги
      * @return text текст книги
      */
-    public String readBook(String bookTitle, int page) {
+    public String readBook(String bookTitle, int page) throws DAOException, IOException {
         Books book = booksDAO.findBookByTitle(bookTitle);
         StringBuilder text = new StringBuilder();
         List<String> stringList = null;
-        try {
-            stringList = Files.readAllLines(Paths.get(book.getBook_ref()));
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-        }
+        stringList = Files.readAllLines(Paths.get(book.getBook_ref()));
         for (int i = 100 * page; i < 100 * page + 100; i++) {
-//            if (i<100) {
-//                text.append(stringList.get(100-(i-100)));
-//            } else if (page<0) {
-//
-//            } else {
             text.append(stringList.get(i));
-//            }
         }
         return text.toString();
     }

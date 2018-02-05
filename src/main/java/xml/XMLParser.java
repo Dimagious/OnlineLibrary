@@ -4,6 +4,7 @@ import db.dao.BooksDAO;
 import db.dao.BooksDAOImpl;
 import db.dao.UserDAO;
 import db.dao.UserDAOImpl;
+import db.exceptions.DAOException;
 import db.pojo.Books;
 import db.pojo.UserData;
 import java.io.File;
@@ -19,7 +20,7 @@ public class XMLParser {
      * Извлекает всю информацию о пользователях из баз
      * UserPersonal и UserData и конвертирует в XML-файл
      */
-    protected static void UsersParserToXML() throws SQLException, JAXBException {
+    protected static void UsersParserToXML() throws SQLException, JAXBException, DAOException {
         //XML Parser для всех пользователей
         UserDAO userDAO = new UserDAOImpl();
         File file1 = new File("all_users.xml");
@@ -39,7 +40,7 @@ public class XMLParser {
      * Извлекает всю информацию о пользователях из баз
      * Books, Authors и Genres и конвертирует в XML-файл
      */
-    protected static void BooksParserToXML() throws SQLException, JAXBException {
+    protected static void BooksParserToXML() throws SQLException, JAXBException, DAOException {
         BooksDAO booksDAO = new BooksDAOImpl();
         File file2 = new File("all_books.xml");
         JAXBContext context2 = JAXBContext.newInstance(Books.BooksWrapper.class);

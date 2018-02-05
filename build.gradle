@@ -11,17 +11,17 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.2.1.RELEASE', ext: 'pom'
-
-    compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.9.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.9.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.2.1.RELEASE', ext: 'pom'
+//
+//    compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.9.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.9.RELEASE'
 
     compile group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '8.5.23'
 
-    compile group: 'org.springframework.security', name: 'spring-security-web', version: '4.2.3.RELEASE'
-    compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.2.3.RELEASE'
-    compile group: 'org.springframework.security', name: 'spring-security-core', version: '4.2.3.RELEASE'
+    compile group: 'org.springframework.trash.security', name: 'spring-trash.security-core', version: '4.2.3.RELEASE'
+    compile group: 'org.springframework.trash.security', name: 'spring-trash.security-web', version: '4.2.3.RELEASE'
+    compile group: 'org.springframework.trash.security', name: 'spring-trash.security-config', version: '4.2.3.RELEASE'
     compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.12.RELEASE'
 
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'

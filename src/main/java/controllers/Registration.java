@@ -1,5 +1,6 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,7 +41,7 @@ public class Registration {
                                  @RequestParam(value = "lastname", required = false) String lastname,
                                  @RequestParam(value = "sex", required = false) String sex,
                                  @RequestParam(value = "login", required = false) String login,
-                                 @RequestParam(value = "password", required = false) String password) {
+                                 @RequestParam(value = "password", required = false) String password) throws DAOException {
         boolean result = registerUser.registerUser(firstname, lastname, sex, login, password);
         ModelAndView modelAndView = new ModelAndView();
         if (result) {

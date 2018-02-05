@@ -1,5 +1,6 @@
 package db.dao;
 
+import db.exceptions.DAOException;
 import db.pojo.Authors;
 import db.pojo.Books;
 import db.pojo.Genres;
@@ -29,7 +30,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @return list список всех книг
      */
     @Override
-    public List<Books> getAllBooks() {
+    public List<Books> getAllBooks() throws DAOException {
         List<Books> list = null;
         try {
             list = Connector.executeQuery(con -> {
@@ -52,7 +53,7 @@ public class BooksDAOImpl implements BooksDAO {
                 return allBooks;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getAllBooks()", e);
         }
         return list;
     }
@@ -63,7 +64,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param authorslastname фамилия автора книги
      */
     @Override
-    public List<Books> getBooksByAuthorsLastname(String authorslastname) {
+    public List<Books> getBooksByAuthorsLastname(String authorslastname) throws DAOException {
         List<Books> list = null;
         try {
             list = Connector.executeQuery(con -> {
@@ -85,7 +86,7 @@ public class BooksDAOImpl implements BooksDAO {
                 return authors_books;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getBooksByAuthorsLastname()", e);
         }
         return list;
     }
@@ -96,7 +97,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param genre жанр книги
      */
     @Override
-    public List<Books> getBooksByGenre(String genre) {
+    public List<Books> getBooksByGenre(String genre) throws DAOException {
         List<Books> list = null;
         try {
             list = Connector.executeQuery(con -> {
@@ -117,7 +118,7 @@ public class BooksDAOImpl implements BooksDAO {
                 return authors_books;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getBooksByGenre()", e);
         }
         return list;
     }
@@ -129,7 +130,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param title название книги
      */
     @Override
-    public void deleteBookByTitle(String title) {
+    public void deleteBookByTitle(String title) throws DAOException {
         BooksDAO booksDAO = new BooksDAOImpl();
         Books books = booksDAO.findBookByTitle(title);
         if (books != null) {
@@ -144,7 +145,7 @@ public class BooksDAOImpl implements BooksDAO {
                     return true;
                 });
             } catch (SQLException e) {
-                logger.error(e.getMessage());
+                throw new DAOException("deleteBookByTitle()", e);
             }
         } else {
             logger.debug("Указанной книги в библиотеке нет");
@@ -159,7 +160,7 @@ public class BooksDAOImpl implements BooksDAO {
      * NULL если книги нет в БД
      */
     @Override
-    public Books findBookByTitle(String title) {
+    public Books findBookByTitle(String title) throws DAOException {
         Books book = null;
         try {
             book = Connector.executeQuery(con -> {
@@ -174,8 +175,8 @@ public class BooksDAOImpl implements BooksDAO {
                 }
                 return books;
             });
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            throw new DAOException("findBookByTitle()", e);
         }
         return book;
     }
@@ -188,7 +189,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param last_name  фамилия автора
      */
     @Override
-    public Authors saveAuthor(String first_name, String last_name) {
+    public Authors saveAuthor(String first_name, String last_name) throws DAOException {
         Authors authors = null;
         try {
             getAuthorId(first_name, last_name);
@@ -210,10 +211,9 @@ public class BooksDAOImpl implements BooksDAO {
                 System.out.println(newAuthor);
                 return newAuthor;
             });
-        } catch (SQLException e1) {
-            logger.error(e1.getMessage());
+        } catch (SQLException e) {
+            throw new DAOException("saveAuthor()", e);
         }
-
         return authors;
     }
 
@@ -224,7 +224,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param last_name  фамилия автора
      */
     @Override
-    public int getAuthorId(String first_name, String last_name) {
+    public int getAuthorId(String first_name, String last_name) throws DAOException {
         try {
             return Connector.executeQuery(con -> {
                 PreparedStatement statement = con.prepareStatement(
@@ -239,9 +239,8 @@ public class BooksDAOImpl implements BooksDAO {
                 return idfromDB;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getAuthorId()", e);
         }
-        return 0;
     }
 
     /**
@@ -251,7 +250,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param name название жанра
      */
     @Override
-    public Genres saveGenre(String name) {
+    public Genres saveGenre(String name) throws DAOException {
         Genres genres = null;
         try {
             getGenreId(name);
@@ -269,10 +268,9 @@ public class BooksDAOImpl implements BooksDAO {
                 System.out.println(newGenre);
                 return newGenre;
             });
-        } catch (SQLException e1) {
-            logger.error(e1.getMessage());
+        } catch (SQLException e) {
+            throw new DAOException("saveGenre()", e);
         }
-
         return genres;
     }
 
@@ -282,7 +280,7 @@ public class BooksDAOImpl implements BooksDAO {
      * @param name название жанра
      */
     @Override
-    public int getGenreId(String name) {
+    public int getGenreId(String name) throws DAOException {
         try {
             return Connector.executeQuery(con -> {
                 PreparedStatement statement = con.prepareStatement(
@@ -296,9 +294,8 @@ public class BooksDAOImpl implements BooksDAO {
                 return idfromDB;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getGenreId()", e);
         }
-        return 0;
     }
 
     /**
@@ -313,7 +310,7 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public Books saveBook(String title, String first_name, String last_name,
-                          String name, String book_ref) {
+                          String name, String book_ref) throws DAOException {
         Authors newAuthor = saveAuthor(first_name, last_name);
         Genres newGenre = saveGenre(name);
         Books books = null;
@@ -341,7 +338,7 @@ public class BooksDAOImpl implements BooksDAO {
                 return newBook;
             });
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("saveBook()", e);
         }
         return books;
     }
@@ -349,7 +346,7 @@ public class BooksDAOImpl implements BooksDAO {
     /**
      * Достаёт из БД информацию из таблицы Books
      */
-    private Books getFieldsFromBooks(ResultSet resultSet) {
+    private Books getFieldsFromBooks(ResultSet resultSet) throws DAOException {
         Books books = null;
         try {
             books = new Books(
@@ -359,7 +356,7 @@ public class BooksDAOImpl implements BooksDAO {
                     resultSet.getInt("genre_id"),
                     resultSet.getString("book_ref"));
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getFieldsFromBooks()", e);
         }
         return books;
     }
@@ -367,7 +364,7 @@ public class BooksDAOImpl implements BooksDAO {
     /**
      * Достаёт из БД информацию из таблицы Authors
      */
-    private Authors getFieldsFromAuthors(ResultSet resultSet) {
+    private Authors getFieldsFromAuthors(ResultSet resultSet) throws DAOException {
         Authors authors = null;
         try {
             authors = new Authors(
@@ -375,7 +372,7 @@ public class BooksDAOImpl implements BooksDAO {
                     resultSet.getString("first_name"),
                     resultSet.getString("last_name"));
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getFieldsFromAuthors()", e);
         }
         return authors;
     }
@@ -383,14 +380,14 @@ public class BooksDAOImpl implements BooksDAO {
     /**
      * Достаёт из БД информацию из таблицы Genres
      */
-    private Genres getFieldsFromGenres(ResultSet resultSet) {
+    private Genres getFieldsFromGenres(ResultSet resultSet) throws DAOException {
         Genres genres = null;
         try {
             genres = new Genres(
                     resultSet.getInt("id"),
                     resultSet.getString("name"));
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            throw new DAOException("getFieldsFromGenres()", e);
         }
         return genres;
     }

@@ -1,11 +1,13 @@
 package services;
 
 import db.dao.BooksDAO;
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import db.pojo.Books;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +22,7 @@ class ReadBookTest {
     private static final Logger logger = Logger.getLogger(ReadBookTest.class);
 
     @BeforeAll
-    static void setUp() {
+    static void setUp() throws DAOException {
         try {
             BooksDAO mock = mock(BooksDAO.class);
             Books book = new Books("Каштанка", 1, 2, "C:\\books\\Классика\\Чехов Антон Павлович\\Каштанка.txt");
@@ -35,7 +37,7 @@ class ReadBookTest {
     }
 
     @Test
-    void readBook() {
+    void readBook() throws IOException, DAOException {
         ReadBook rb = new ReadBook();
         assertEquals("полчаса она уже сидела на", (rb.readBook("Каштанка", 1)).substring(25, 50));
     }

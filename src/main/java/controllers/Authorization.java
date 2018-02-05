@@ -1,5 +1,6 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,7 @@ public class Authorization {
     @RequestMapping(value = "public/login", method = RequestMethod.POST)
     public ModelAndView auth(@RequestParam(value = "login") String login,
                              @RequestParam(value = "password") String password,
-                             HttpServletRequest request) {
+                             HttpServletRequest request) throws DAOException {
         ModelAndView modelAndView = new ModelAndView();
         boolean result = authorizeUser.authorizeUser(login, password);
         if (result) {

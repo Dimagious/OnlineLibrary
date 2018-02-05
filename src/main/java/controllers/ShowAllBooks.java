@@ -1,5 +1,6 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ public class ShowAllBooks extends HttpServlet {
     }
 
     @RequestMapping (value = "inner/showBooks", method = RequestMethod.GET)
-    public ModelAndView getBooks() {
+    public ModelAndView getBooks() throws DAOException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("list", getAllBooks.getAllBooks());
         modelAndView.setViewName("inner/showBooks");

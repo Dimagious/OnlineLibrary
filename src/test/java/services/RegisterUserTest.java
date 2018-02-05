@@ -1,6 +1,7 @@
 package services;
 
 import db.dao.UserDAO;
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ class RegisterUserTest {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
 
     @BeforeAll
-    static void setUp() {
+    static void setUp() throws DAOException {
         try {
             UserDAO mock = mock(UserDAO.class);
             UserPersonal userPersonal = new UserPersonal("Дмитрий", "Юркин", "м");
@@ -29,13 +30,13 @@ class RegisterUserTest {
             Field field = RegisterUser.class.getDeclaredField("checker");
             field.setAccessible(true);
             field.set(RegisterUser.class, mock);
-        } catch (NoSuchFieldException | IllegalAccessException | SQLException e) {
+        } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
     }
 
     @Test
-    void registerUser() {
+    void registerUser() throws DAOException {
         RegisterUser registerUser = new RegisterUser();
         assertTrue(registerUser.registerUser("Дмитрий", "Юркин", "м", "dimagic", "12345"));
         assertFalse(registerUser.registerUser("Дмитрий", "Юркин", "м", "dimasta", "12345"));

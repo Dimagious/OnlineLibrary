@@ -2,12 +2,13 @@ package utils;
 
 import db.connections.ConnectionManager;
 import db.connections.ConnectionManagerImpl;
+import db.exceptions.DAOException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Connector {
-    public static <R> R executeQuery(FunctionSQL<Connection, R> func) throws SQLException {
+    public static <R> R executeQuery(FunctionSQL<Connection, R> func) throws SQLException, DAOException {
         R obj = null;
         Connection connection = null;
         try {

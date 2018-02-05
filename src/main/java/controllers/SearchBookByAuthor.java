@@ -1,5 +1,6 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import db.pojo.Books;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class SearchBookByAuthor {
     }
 
     @RequestMapping(value = "inner/searchBooksByAuthor", method = RequestMethod.GET)
-    public ModelAndView getAuthorsBooks(@RequestParam(value = "searchByAuthor", required = false) String authorlastname){
+    public ModelAndView getAuthorsBooks(@RequestParam(value = "searchByAuthor", required = false) String authorlastname) throws DAOException {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("inner/searchBookByAuthor");
         logger.debug("Пользователь выполнил поиск по автору");
