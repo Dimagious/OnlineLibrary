@@ -20,6 +20,7 @@ public class UserData {
     private UserPersonal userPersonal;
     private String login;
     private String password;
+    private String role;
     private ArrayList<UserData> users = new ArrayList<>();
 
     public UserData(String login, String password) {
@@ -29,6 +30,7 @@ public class UserData {
 
     public UserData(int id, int id_personal, UserPersonal userPersonal, String login, String password) {
         this.id = id;
+
         this.id_personal = id_personal;
         this.userPersonal = userPersonal;
         this.login = login;
@@ -40,6 +42,21 @@ public class UserData {
         this.id_personal = id_personal;
         this.login = login;
         this.password = password;
+    }
+
+
+    public UserData(String login, String password, String role) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+
+    public UserData(int id, UserPersonal userPersonal, String login, String password, String role) {
+        this.id = id;
+        this.userPersonal = userPersonal;
+        this.login = login;
+        this.password = password;
+        this.role = role;
     }
 
     public UserData() {
@@ -106,6 +123,23 @@ public class UserData {
     @XmlElement
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    @XmlElement
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public ArrayList<UserData> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<UserData> users) {
+        this.users = users;
     }
 
     public ArrayList<UserData> getUserData() {

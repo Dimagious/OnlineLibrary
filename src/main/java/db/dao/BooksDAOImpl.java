@@ -1,17 +1,15 @@
 package db.dao;
 
+import db.connections.ConnectionManager;
+import db.connections.CustomConnectionManager;
 import db.exceptions.DAOException;
 import db.pojo.Authors;
 import db.pojo.Books;
 import db.pojo.Genres;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
-import utils.Connector;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +20,7 @@ import java.util.List;
 @Repository
 public class BooksDAOImpl implements BooksDAO {
     private static final Logger logger = Logger.getLogger(BooksDAOImpl.class);
+    private static ConnectionManager connectionManager;
 
     /**
      * Возвращает список всех книг с их данными
@@ -31,32 +30,30 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public List<Books> getAllBooks() throws DAOException {
-        List<Books> list = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            list = Connector.executeQuery(con -> {
-                Statement statement = con.createStatement();
-                ResultSet resultSet = statement.executeQuery(
-                        "SELECT b.id, b.title, b.author_id, genre_id, " +
-                                "b.book_ref, a.first_name, a.last_name, g.name " +
-                                "FROM books AS b LEFT JOIN authors a ON b.author_id = a.id " +
-                                "LEFT JOIN genres AS g ON b.genre_id = g.id ORDER BY b.id"
-                );
-                List<Books> allBooks = new ArrayList<>();
-                while (resultSet.next()) {
-                    Books books = getFieldsFromBooks(resultSet);
-                    Authors authors = getFieldsFromAuthors(resultSet);
-                    Genres genres = getFieldsFromGenres(resultSet);
-                    books.setAuthors(authors);
-                    books.setGenres(genres);
-                    allBooks.add(books);
-                }
-                return allBooks;
-            });
-        } catch (SQLException e) {
-            throw new DAOException("getAllBooks()", e);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT b.id, b.title, b.author_id, genre_id, " +
+                            "b.book_ref, a.first_name, a.last_name, g.name " +
+                            "FROM books AS b LEFT JOIN authors a ON b.author_id = a.id " +
+                            "LEFT JOIN genres AS g ON b.genre_id = g.id ORDER BY b.id");
+            List<Books> allBooks = new ArrayList<>();
+            while (resultSet.next()) {
+                Books books = getFieldsFromBooks(resultSet);
+                Authors authors = getFieldsFromAuthors(resultSet);
+                Genres genres = getFieldsFromGenres(resultSet);
+                books.setAuthors(authors);
+                books.setGenres(genres);
+                allBooks.add(books);
+            }
+            return allBooks;
+        } catch (SQLException e1) {
+            throw new DAOException("getAllBooks()" + e1);
         }
-        return list;
     }
+
 
     /**
      * Достаёт из БД список книг указанного автора
@@ -65,30 +62,28 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public List<Books> getBooksByAuthorsLastname(String authorslastname) throws DAOException {
-        List<Books> list = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            list = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT b.id, b.title, b.author_id, b.genre_id, b.book_ref," +
-                                "a.id, a.first_name, a.last_name " +
-                                "FROM books b LEFT JOIN authors a ON b.author_id = a.id " +
-                                "WHERE a.last_name = ?;"
-                );
-                statement.setString(1, authorslastname);
-                List<Books> authors_books = new ArrayList<>();
-                ResultSet resultSet = statement.executeQuery();
-                while (resultSet.next()) {
-                    Authors authors = getFieldsFromAuthors(resultSet);
-                    Books books = getFieldsFromBooks(resultSet);
-                    books.setAuthor_id(authors.getId());
-                    authors_books.add(books);
-                }
-                return authors_books;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT b.id, b.title, b.author_id, b.genre_id, b.book_ref," +
+                            "a.id, a.first_name, a.last_name " +
+                            "FROM books b LEFT JOIN authors a ON b.author_id = a.id " +
+                            "WHERE a.last_name = ?;"
+            );
+            statement.setString(1, authorslastname);
+            List<Books> authors_books = new ArrayList<>();
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Authors authors = getFieldsFromAuthors(resultSet);
+                Books books = getFieldsFromBooks(resultSet);
+                books.setAuthor_id(authors.getId());
+                authors_books.add(books);
+            }
+            return authors_books;
         } catch (SQLException e) {
             throw new DAOException("getBooksByAuthorsLastname()", e);
         }
-        return list;
     }
 
     /**
@@ -98,29 +93,27 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public List<Books> getBooksByGenre(String genre) throws DAOException {
-        List<Books> list = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            list = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT b.id, b.title, b.author_id, b.genre_id, b.book_ref," +
-                                "g.id, g.name " +
-                                "FROM books b LEFT JOIN genres g ON b.genre_id = g.id " +
-                                "WHERE g.name = ?;"
-                );
-                statement.setString(1, genre);
-                List<Books> authors_books = new ArrayList<>();
-                ResultSet resultSet = statement.executeQuery();
-                while (resultSet.next()) {
-                    Books books = getFieldsFromBooks(resultSet);
-                    books.setAuthor_id(books.getGenre_id());
-                    authors_books.add(books);
-                }
-                return authors_books;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT b.id, b.title, b.author_id, b.genre_id, b.book_ref," +
+                            "g.id, g.name " +
+                            "FROM books b LEFT JOIN genres g ON b.genre_id = g.id " +
+                            "WHERE g.name = ?;"
+            );
+            statement.setString(1, genre);
+            List<Books> authors_books = new ArrayList<>();
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Books books = getFieldsFromBooks(resultSet);
+                books.setAuthor_id(books.getGenre_id());
+                authors_books.add(books);
+            }
+            return authors_books;
         } catch (SQLException e) {
             throw new DAOException("getBooksByGenre()", e);
         }
-        return list;
     }
 
     /**
@@ -133,17 +126,16 @@ public class BooksDAOImpl implements BooksDAO {
     public void deleteBookByTitle(String title) throws DAOException {
         BooksDAO booksDAO = new BooksDAOImpl();
         Books books = booksDAO.findBookByTitle(title);
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         if (books != null) {
             try {
-                Connector.executeQuery(con -> {
-                    PreparedStatement statement = con.prepareStatement(
-                            "DELETE FROM books WHERE title = ?;"
-                    );
-                    statement.setString(1, title);
-                    statement.executeUpdate();
-                    logger.debug("Указанная книга удалена из библиотеки");
-                    return true;
-                });
+                PreparedStatement statement = connection.prepareStatement(
+                        "DELETE FROM books WHERE title = ?;"
+                );
+                statement.setString(1, title);
+                statement.executeUpdate();
+                logger.debug("Указанная книга удалена из библиотеки");
             } catch (SQLException e) {
                 throw new DAOException("deleteBookByTitle()", e);
             }
@@ -161,24 +153,24 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public Books findBookByTitle(String title) throws DAOException {
-        Books book = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            book = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT * FROM books WHERE title = ?"
-                );
-                statement.setString(1, title);
-                ResultSet resultSet = statement.executeQuery();
-                Books books = null;
-                if (resultSet.next()) {
-                    books = getFieldsFromBooks(resultSet);
-                }
-                return books;
-            });
+
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT * FROM books WHERE title = ?"
+            );
+            statement.setString(1, title);
+            ResultSet resultSet = statement.executeQuery();
+            Books books = null;
+            if (resultSet.next()) {
+                books = getFieldsFromBooks(resultSet);
+            }
+            return books;
+
         } catch (SQLException e) {
             throw new DAOException("findBookByTitle()", e);
         }
-        return book;
     }
 
     /**
@@ -190,31 +182,29 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public Authors saveAuthor(String first_name, String last_name) throws DAOException {
-        Authors authors = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
             getAuthorId(first_name, last_name);
-            authors = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "INSERT INTO authors (first_name, last_name)" +
-                                "VALUES (?, ?) RETURNING id, first_name, last_name");
-                statement.setString(1, first_name);
-                statement.setString(2, last_name);
-                ResultSet resultSet = statement.executeQuery();
-                resultSet.next();
-                int idfromDB = resultSet.getInt("id");
-                String firstNameFromDB = resultSet.getString("first_name");
-                String lastNameFromDB = resultSet.getString("last_name");
-                Authors newAuthor = new Authors();
-                newAuthor.setId(idfromDB);
-                newAuthor.setFirst_name(firstNameFromDB);
-                newAuthor.setLast_name(lastNameFromDB);
-                System.out.println(newAuthor);
-                return newAuthor;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO authors (first_name, last_name)" +
+                            "VALUES (?, ?) RETURNING id, first_name, last_name");
+            statement.setString(1, first_name);
+            statement.setString(2, last_name);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int idfromDB = resultSet.getInt("id");
+            String firstNameFromDB = resultSet.getString("first_name");
+            String lastNameFromDB = resultSet.getString("last_name");
+            Authors newAuthor = new Authors();
+            newAuthor.setId(idfromDB);
+            newAuthor.setFirst_name(firstNameFromDB);
+            newAuthor.setLast_name(lastNameFromDB);
+            System.out.println(newAuthor);
+            return newAuthor;
         } catch (SQLException e) {
             throw new DAOException("saveAuthor()", e);
         }
-        return authors;
     }
 
     /**
@@ -225,19 +215,19 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public int getAuthorId(String first_name, String last_name) throws DAOException {
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            return Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT id FROM authors WHERE first_name = ? AND last_name = ?");
-                statement.setString(1, first_name);
-                statement.setString(2, last_name);
-                ResultSet resultSet = statement.executeQuery();
-                resultSet.next();
-                int idfromDB = resultSet.getInt("id");
-                Authors newAuthor = new Authors();
-                newAuthor.setId(idfromDB);
-                return idfromDB;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT id FROM authors WHERE first_name = ? AND last_name = ?");
+            statement.setString(1, first_name);
+            statement.setString(2, last_name);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int idfromDB = resultSet.getInt("id");
+            Authors newAuthor = new Authors();
+            newAuthor.setId(idfromDB);
+            return idfromDB;
         } catch (SQLException e) {
             throw new DAOException("getAuthorId()", e);
         }
@@ -251,27 +241,25 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public Genres saveGenre(String name) throws DAOException {
-        Genres genres = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
             getGenreId(name);
-            genres = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "INSERT INTO genres (name) VALUES (?) RETURNING id, name");
-                statement.setString(1, name);
-                ResultSet resultSet = statement.executeQuery();
-                resultSet.next();
-                int idfromDB = resultSet.getInt("id");
-                String nameFromDB = resultSet.getString("name");
-                Genres newGenre = new Genres();
-                newGenre.setId(idfromDB);
-                newGenre.setName(nameFromDB);
-                System.out.println(newGenre);
-                return newGenre;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO genres (name) VALUES (?) RETURNING id, name");
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int idfromDB = resultSet.getInt("id");
+            String nameFromDB = resultSet.getString("name");
+            Genres newGenre = new Genres();
+            newGenre.setId(idfromDB);
+            newGenre.setName(nameFromDB);
+            System.out.println(newGenre);
+            return newGenre;
         } catch (SQLException e) {
             throw new DAOException("saveGenre()", e);
         }
-        return genres;
     }
 
     /**
@@ -281,18 +269,18 @@ public class BooksDAOImpl implements BooksDAO {
      */
     @Override
     public int getGenreId(String name) throws DAOException {
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            return Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "SELECT id FROM genres WHERE name = ?");
-                statement.setString(1, name);
-                ResultSet resultSet = statement.executeQuery();
-                resultSet.next();
-                int idfromDB = resultSet.getInt("id");
-                Genres newGenre = new Genres();
-                newGenre.setId(idfromDB);
-                return idfromDB;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT id FROM genres WHERE name = ?");
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            int idfromDB = resultSet.getInt("id");
+            Genres newGenre = new Genres();
+            newGenre.setId(idfromDB);
+            return idfromDB;
         } catch (SQLException e) {
             throw new DAOException("getGenreId()", e);
         }
@@ -314,34 +302,34 @@ public class BooksDAOImpl implements BooksDAO {
         Authors newAuthor = saveAuthor(first_name, last_name);
         Genres newGenre = saveGenre(name);
         Books books = null;
+        connectionManager = CustomConnectionManager.getInstance();
+        Connection connection = connectionManager.getConnection();
         try {
-            books = Connector.executeQuery(con -> {
-                PreparedStatement statement = con.prepareStatement(
-                        "INSERT INTO books (title, author_id, genre_id, book_ref)" +
-                                "VALUES (?, ?, ?, ?) RETURNING id, title, author_id, genre_id, book_ref");
-                statement.setString(1, title);
-                statement.setInt(2, getAuthorId(first_name, last_name));
-                statement.setInt(3, getGenreId(name));
-                statement.setString(4, book_ref);
-                ResultSet resultSet = statement.executeQuery();
-                resultSet.next();
-                String bookRefFromDB = resultSet.getString("book_ref");
-                Books newBook = new Books();
-                newBook.setId(resultSet.getInt("id"));
-                newBook.setTitle(resultSet.getString("title"));
-                newBook.setAuthor_id(resultSet.getInt("author_id"));
-                newBook.setAuthors(newAuthor);
-                newBook.setGenre_id(resultSet.getInt("genre_id"));
-                newBook.setGenres(newGenre);
-                newBook.setBook_ref(bookRefFromDB);
-                System.out.println(newBook);
-                return newBook;
-            });
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO books (title, author_id, genre_id, book_ref)" +
+                            "VALUES (?, ?, ?, ?) RETURNING id, title, author_id, genre_id, book_ref");
+            statement.setString(1, title);
+            statement.setInt(2, getAuthorId(first_name, last_name));
+            statement.setInt(3, getGenreId(name));
+            statement.setString(4, book_ref);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            String bookRefFromDB = resultSet.getString("book_ref");
+            Books newBook = new Books();
+            newBook.setId(resultSet.getInt("id"));
+            newBook.setTitle(resultSet.getString("title"));
+            newBook.setAuthor_id(resultSet.getInt("author_id"));
+            newBook.setAuthors(newAuthor);
+            newBook.setGenre_id(resultSet.getInt("genre_id"));
+            newBook.setGenres(newGenre);
+            newBook.setBook_ref(bookRefFromDB);
+            System.out.println(newBook);
+            return newBook;
         } catch (SQLException e) {
             throw new DAOException("saveBook()", e);
         }
-        return books;
     }
+
 
     /**
      * Достаёт из БД информацию из таблицы Books
