@@ -16,29 +16,39 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<h1 align="center">Авторизация</h1>
-<form method="post" action="${requestScope.contextPath}/public/login">
-    <table align="center">
-        <tr>
-            <td><label for="login-field">Ваш логин</label></td>
-            <td><input required type="text" name="login" id="login-field" placeholder="Введите логин"></td>
-        </tr>
-        <tr>
-            <td><label for="password-field">Ваш пароль</label></td>
-            <td><input required type="text" name="password" id="password-field" placeholder="Введите пароль"></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="hidden" name="loginError">
-                <span style="color: red;">${requestScope.loginError}</span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button type="submit">Войти</button>
-            </td>
-        </tr>
-    </table>
-</form>
+<h1 align="center">Добро Пожаловать в онлайн библиотеку</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default" style="margin-top:45px">
+                <div class="panel-heading">
+                    <h3 align="center">Авторизация</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="${requestScope.contextPath}/public/login">
+                        <div class="form-group">
+                            <label for="username">Логин</label>
+                            <input required type="text" class="form-control" id="username" placeholder="Введите Ваш логин"
+                                   name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль</label>
+                            <input required type="password" class="form-control" id="password" placeholder="Введите Ваш пароль"
+                                   name="password">
+                        </div>
+                        <div>
+                            <input type="hidden" name="loginError">
+                            <span style="color: red;">${requestScope.loginError}</span>
+                        </div>
+                        <button type="submit" class="btn btn-default">Войти</button>
+                    </form>
+                    <form method="get" action="${requestScope.contextPath}/public/registration">
+                        <button type="submit" class="btn btn-default">Регистрация</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

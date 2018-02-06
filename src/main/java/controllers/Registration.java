@@ -40,7 +40,7 @@ public class Registration {
     public ModelAndView register(@RequestParam(value = "firstname", required = false) String firstname,
                                  @RequestParam(value = "lastname", required = false) String lastname,
                                  @RequestParam(value = "sex", required = false) String sex,
-                                 @RequestParam(value = "login", required = false) String login,
+                                 @RequestParam(value = "username", required = false) String login,
                                  @RequestParam(value = "password", required = false) String password) throws DAOException {
         boolean result = registerUser.registerUser(firstname, lastname, sex, login, password);
         ModelAndView modelAndView = new ModelAndView();

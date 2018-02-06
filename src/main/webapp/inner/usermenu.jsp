@@ -30,8 +30,9 @@
 </style>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
 <div style="position: fixed; top: 0%; right: 0;">
+    <h5>Здравствуй, ${requestScope.login}</h5>
     <form method="get" action="${requestScope.contextPath}/inner/logout">
-        <button type="submit">Выйти</button>
+        <button type="submit" class="btn btn-default">Выйти</button>
     </form>
 </div>
 <br>
@@ -41,7 +42,7 @@
             <form method="get" action="${requestScope.contextPath}/inner/searchBookByTitle">
                 <h4>Поиск по названию</h4>
                 <input type="text" name="searchByTitle" placeholder="Введите название книги">
-                <button type="submit">Поиск</button>
+                <button type="submit" class="btn btn-default">Поиск</button>
             </form>
         </div>
     </div>
@@ -50,7 +51,7 @@
             <form method="get" action="${requestScope.contextPath}/inner/searchBooksByAuthor">
                 <h4>Поиск по автору</h4>
                 <input type="text" name="searchByAuthor" placeholder="Введите фамилию автора">
-                <button type="submit">Поиск</button>
+                <button type="submit" class="btn btn-default">Поиск</button>
             </form>
         </div>
     </div>
@@ -59,7 +60,7 @@
             <form method="get" action="${requestScope.contextPath}/inner/searchBookByGenre">
                 <h4>Поиск по жанру</h4>
                 <input type="text" name="searchByGenre" placeholder="Введите название жанра">
-                <button type="submit">Поиск</button>
+                <button type="submit" class="btn btn-default">Поиск</button>
             </form>
         </div>
     </div>

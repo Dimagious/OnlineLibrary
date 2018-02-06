@@ -36,13 +36,13 @@ public class Authorization {
     }
 
     @RequestMapping(value = "public/login", method = RequestMethod.POST)
-    public ModelAndView auth(@RequestParam(value = "login") String login,
+    public ModelAndView auth(@RequestParam(value = "username") String login,
                              @RequestParam(value = "password") String password,
                              HttpServletRequest request) throws DAOException {
         ModelAndView modelAndView = new ModelAndView();
         boolean result = authorizeUser.authorizeUser(login, password);
         if (result) {
-            request.getSession().setAttribute("login", login);
+            request.getSession().setAttribute("username", login);
             if (login.equals("Admin")) {
                 modelAndView.setViewName("/inner/adminmenu");
                 logger.debug("Администратор авторизовался");
