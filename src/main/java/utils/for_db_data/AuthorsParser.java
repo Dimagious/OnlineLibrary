@@ -8,7 +8,6 @@ import java.util.Collections;
  * Created by Dmitriy Yurkin on 10.01.2018.
  */
 public class AuthorsParser {
-
     /**
      * Получаем список всех авторов книг в папке
      * @param folderPath
