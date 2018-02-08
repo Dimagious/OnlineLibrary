@@ -30,7 +30,6 @@ public class UserData {
 
     public UserData(int id, int id_personal, UserPersonal userPersonal, String login, String password) {
         this.id = id;
-
         this.id_personal = id_personal;
         this.userPersonal = userPersonal;
         this.login = login;
@@ -67,6 +66,14 @@ public class UserData {
         this.userPersonal = userPersonal;
         this.login = login;
         this.password = password;
+    }
+
+    public UserData(int id, int id_personal, String login, String password, String role) {
+        this.id = id;
+        this.id_personal = id_personal;
+        this.login = login;
+        this.password = password;
+        this.role = role;
     }
 
     @Override

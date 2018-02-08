@@ -9,15 +9,15 @@ import java.util.Collection;
 /**
  * Created by Dmitriy Yurkin on 05.02.2018.
  */
-public class UserInside extends User{
-    private UserData user;
+public class UserInside extends User {
+    private int user_id;
 
-    public UserData getUser() {
-        return user;
+    public UserInside(String username, String password, Collection<? extends GrantedAuthority> authorities, int user_id) {
+        super(username, password, authorities);
+        this.user_id = user_id;
     }
 
-    public UserInside(String username, String password, Collection<? extends GrantedAuthority> authorities, UserData user) {
-        super(username, password, authorities);
-        this.user = user;
+    public int getUser_id() {
+        return user_id;
     }
 }

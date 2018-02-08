@@ -30,7 +30,6 @@
 </style>
 <h3 align="center">Находите книги и читайте их прямо на сайте</h3>
 <div style="position: fixed; top: 0%; right: 0;">
-    <h5>Здравствуй, ${requestScope.login}</h5>
     <form method="get" action="${requestScope.contextPath}/inner/logout">
         <button type="submit" class="btn btn-default">Выйти</button>
     </form>

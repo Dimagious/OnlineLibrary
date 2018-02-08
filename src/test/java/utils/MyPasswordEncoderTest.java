@@ -1,6 +1,8 @@
 package utils;
 
 import org.junit.jupiter.api.Test;
+import security.MyPasswordEncoder;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**

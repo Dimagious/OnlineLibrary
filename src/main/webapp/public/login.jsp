@@ -40,11 +40,14 @@
                             <input type="hidden" name="loginError">
                             <span style="color: red;">${requestScope.loginError}</span>
                         </div>
-                        <button type="submit" class="btn btn-default">Войти</button>
+                        <div>
+                            <button type="submit" class="btn btn-default">Войти</button>
+                            <a href="./public/registration"><input type="button" class="btn btn-default" value="Регистрация"></a>
+                        </div>
                     </form>
-                    <form method="get" action="${requestScope.contextPath}/public/registration">
-                        <button type="submit" class="btn btn-default">Регистрация</button>
-                    </form>
+                    <%--<form method="get" action="${requestScope.contextPath}/public/registration">--%>
+                        <%----%>
+                    <%--</form>--%>
                 </div>
             </div>
         </div>

@@ -1,7 +1,9 @@
 package controllers;
 
+import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +23,12 @@ public class UserMenu extends HttpServlet {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("inner/usermenu");
         logger.debug("Пользователь открыл читальный зал");
+        return modelAndView;
+    }
+
+    @ExceptionHandler(DAOException.class)
+    public ModelAndView handleDBException(){
+        ModelAndView modelAndView = new ModelAndView("inner/errorpage");
         return modelAndView;
     }
 }

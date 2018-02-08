@@ -88,7 +88,7 @@
                         </div>
                         <div class="form-group">
                             <label for="sex-field">Пол</label>
-                            <select name="sex" id="sex-field">
+                            <select class="form-control" name="sex" id="sex-field">
                             <option disabled>Выберите пол</option>
                             <option selected value="м">Мужской</option>
                             <option value="ж">Женский</option>

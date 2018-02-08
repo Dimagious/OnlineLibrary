@@ -11,11 +11,6 @@ repositories {
 }
 
 dependencies {
-//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.2.1.RELEASE', ext: 'pom'
-//    compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.9.RELEASE'
-//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'
-//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.9.RELEASE'
-
     compile group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '8.5.23'
 
     compile 'org.springframework.security:spring-security-config:4.2.3.RELEASE'

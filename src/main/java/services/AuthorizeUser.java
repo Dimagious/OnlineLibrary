@@ -42,7 +42,6 @@ public class AuthorizeUser {
             return userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
                     userDataFromDB.getPassword().equals(registeredUser.getPassword());
         }
-//        logger.debug("Неправильный логин или пароль");
         return false;
     }
 }

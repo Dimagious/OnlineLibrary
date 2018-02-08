@@ -5,6 +5,7 @@ import db.pojo.Books;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,11 +38,13 @@ public class SearchBookByGenre {
         modelAndView.setViewName("inner/searchBookByGenre");
         logger.debug("Пользователь выполнил поиск по жанру");
         List<Books> list = searchBook.getAllGenresBooks(genreName);
-        if (list != null) {
-            modelAndView.addObject("list", list);
-            return modelAndView;
-        }
-        modelAndView.setViewName("inner/errorpage");
+        modelAndView.addObject("list", list);
+        return modelAndView;
+    }
+
+    @ExceptionHandler(DAOException.class)
+    public ModelAndView handleDBException() {
+        ModelAndView modelAndView = new ModelAndView("inner/errorpage");
         return modelAndView;
     }
 }

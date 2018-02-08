@@ -1,5 +1,6 @@
 package security;
 
+import db.dao.UserDAO;
 import db.dao.UserDAOImpl;
 import db.exceptions.DAOException;
 import db.pojo.UserData;
@@ -11,31 +12,38 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
-@Service
+@Component
 public class CustomUserService implements UserDetailsService {
-    private static final Logger logger = Logger.getLogger(CustomUserService.class);
+
     @Autowired
-    UserDAOImpl userDAO;
+    private UserDAO userDAO;
+
+    private UserInside userInside;
+
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        UserInside userInside = null;
+    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
         try {
-            UserData user = userDAO.getUserDataByLogin(s);
-            if (user==null){
-                throw new UsernameNotFoundException(s);
-            }
-            GrantedAuthority[] grantedAuthorities = new GrantedAuthority[1];
-            grantedAuthorities[0] = new SimpleGrantedAuthority(user.getRole());
-            userInside = new UserInside(user.getLogin(), user.getPassword(),
-                    Arrays.asList(grantedAuthorities), user);
+            UserData userData = userDAO.getUserDataByLogin(login);
+
+            Set<GrantedAuthority> grantedAuthoritySet = new HashSet<>();
+            grantedAuthoritySet.add(new SimpleGrantedAuthority(userData.getRole()));
+
+            userInside = new UserInside(userData.getLogin(), userData.getPassword(), grantedAuthoritySet, userData.getId());
+
         } catch (DAOException e) {
-            logger.error(e.getMessage());
+            throw new UsernameNotFoundException("Пользователь не найден", e);
         }
         return userInside;
     }
 
+    public UserInside getUserInside() {
+        return userInside;
+    }
 }

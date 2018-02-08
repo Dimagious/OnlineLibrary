@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-4.2.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <global-method-security secured-annotations="enabled"/>
+
+    <http auto-config="true">
+        <intercept-url pattern="/public/**" access="permitAll()"/>
+        <intercept-url pattern="/inner/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/inner/usermenu" access="isAuthenticated()"/>
+
+        <form-login login-page="/public/login"
+                    username-parameter="username"
+                    password-parameter="password"
+                    default-target-url="/inner/usermenu"
+                    always-use-default-target="true"
+                    authentication-failure-url="/public/login?loginerror=nerror"/>
+        <csrf disabled="true"/>
+    </http>
+
+    <beans:bean id="myCustomUserService" class="security.CustomUserService"/>
+    <beans:bean id="myCustomAuthProvider" class="security.CustomAuthProvider"/>
+    <authentication-manager>
+        <authentication-provider ref="myCustomAuthProvider">
+        </authentication-provider>
+    </authentication-manager>
+    <beans:bean id="encoder" class="security.MyPasswordEncoder"/>
+</beans:beans>

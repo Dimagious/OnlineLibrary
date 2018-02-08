@@ -34,7 +34,7 @@ public class UserDAOImpl implements UserDAO {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
                     "SELECT up.first_name,up.last_name, up.sex, ud.id_personal, ud.id, " +
-                            "ud.login, ud.password FROM user_personal AS up " +
+                            "ud.login, ud.password, ud.role FROM user_personal AS up " +
                             "LEFT JOIN user_data AS ud ON up.id = ud.id ORDER BY ud.id"
             );
             List<UserData> users = new ArrayList<>();
@@ -187,7 +187,8 @@ public class UserDAOImpl implements UserDAO {
                     resultSet.getInt("id"),
                     resultSet.getInt("id_personal"),
                     resultSet.getString("login"),
-                    resultSet.getString("password")
+                    resultSet.getString("password"),
+                    resultSet.getString("role")
             );
         } catch (SQLException e) {
             throw new DAOException("getFieldsFromUserData()", e);
