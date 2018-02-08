@@ -15,12 +15,12 @@ import javax.xml.bind.*;
  * Created by Dmitriy Yurkin on 15.01.2018.
  */
 
-public class XMLParser {
+class XMLParser {
     /**
      * Извлекает всю информацию о пользователях из баз
      * UserPersonal и UserData и конвертирует в XML-файл
      */
-    protected static void UsersParserToXML() throws SQLException, JAXBException, DAOException {
+    protected static void UsersParserToXML() throws JAXBException, DAOException {
         //XML Parser для всех пользователей
         UserDAO userDAO = new UserDAOImpl();
         File file1 = new File("all_users.xml");
@@ -54,11 +54,10 @@ public class XMLParser {
         marshaller2.marshal(books, file2);
     }
 
-    public static void main(String[] args) throws SQLException, JAXBException {
-        //From UserPersonal and UserData to XML
-        //UsersParserToXML();
-        //From Books, Authors and Genres to XML
-        //BooksParserToXML();
-
+    public static void main(String[] args) throws JAXBException, DAOException {
+//        //From UserPersonal and UserData to XML
+//        UsersParserToXML();
+//        //From Books, Authors and Genres to XML
+//        BooksParserToXML();
     }
 }

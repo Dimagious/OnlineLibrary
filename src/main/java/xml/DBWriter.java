@@ -14,18 +14,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
-import java.sql.SQLException;
 
 /**
  * Created by Dmitriy Yurkin on 12.01.2018.
  */
-public class DBWriter {
+class DBWriter {
     private static final Logger logger = Logger.getLogger(DBWriter.class);
     /**
      * Извлекает всю информацию о пользователях из XML-файла
      * и в нужном порядке добавляет её в базы UserPersonal и UserData
      */
-    private static void UsersWriterToDB() throws SQLException, DAOException {
+    private static void UsersWriterToDB() throws DAOException {
         try {
             File file = new File("all_users.xml");
             JAXBContext context1 = JAXBContext.newInstance(UserData.UsersWrapper.class);
@@ -51,7 +50,7 @@ public class DBWriter {
      * Извлекает всю информацию о пользователях из XML-файла
      * и в нужном порядке добавляет её в базы UserPersonal и UserData
      */
-    private static void BooksWriterToDB() throws SQLException, DAOException {
+    private static void BooksWriterToDB() throws DAOException {
         try {
             File file = new File("all_books.xml");
             JAXBContext context2 = JAXBContext.newInstance(Books.BooksWrapper.class);

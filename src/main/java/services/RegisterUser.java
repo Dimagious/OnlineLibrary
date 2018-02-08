@@ -40,8 +40,7 @@ public class RegisterUser {
     public boolean registerUser(String first_name, String last_name, String sex,
                                 String login, String password) throws DAOException {
         UserData registeredUser = new UserData(login, password);
-        UserData userDataFromDB = null;
-        userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
+        UserData userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
         if (userDataFromDB != null && registeredUser.getLogin() != null) {
             logger.debug("Пользователь с указанным логином уже зарегистрирован в системе");
             return false;
@@ -50,7 +49,6 @@ public class RegisterUser {
             UserData data = new UserData(login, password);
             checker.saveUser(person, data);
             logger.debug("Пользователь успешно зарегистрирован");
-
             return true;
         }
     }

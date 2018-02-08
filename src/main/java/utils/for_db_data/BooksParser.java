@@ -47,8 +47,4 @@ public class BooksParser {
             addFiles(collection, dir);
         }
     }
-
-    public static void main(String[] args) {
-        getFilesInFolder("C:\\books\\Юмор");
-    }
 }

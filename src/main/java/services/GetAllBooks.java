@@ -30,7 +30,6 @@ public class GetAllBooks {
 
     /**
      * Сервис, который берёт из БД все книги и возвращает лист из всех книг
-     *
      * @return booklist список всех книг
      */
     public List<Books> getAllBooks() throws DAOException {

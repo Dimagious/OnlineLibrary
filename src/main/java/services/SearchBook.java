@@ -28,7 +28,6 @@ public class SearchBook {
 
     /**
      * Выполняет поиск указанной книги и возвращает её
-     *
      * @param bookTitle название книги
      */
     public Books getBookByTitle(String bookTitle) throws DAOException {
@@ -37,7 +36,6 @@ public class SearchBook {
 
     /**
      * Выполняет поиск книг указанного автора и возвращает список
-     *
      * @param authorLastName фамилия автора
      */
     public List<Books> getAllAuthorBooks(String authorLastName) throws DAOException {
@@ -46,7 +44,6 @@ public class SearchBook {
 
     /**
      * Выполняет поиск книг по указанному жанру и возвращает список
-     *
      * @param genreName название жанра
      */
     public List<Books> getAllGenresBooks(String genreName) throws DAOException {

@@ -15,7 +15,6 @@ import java.sql.SQLException;
 @Service
 public class AuthorizeUser {
     private static final Logger logger = Logger.getLogger(AuthorizeUser.class);
-
     private UserDAO checker;
 
     public UserDAO getChecker() {
