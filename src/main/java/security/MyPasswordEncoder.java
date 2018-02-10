@@ -6,6 +6,7 @@ import db.exceptions.DAOException;
 import org.apache.log4j.Logger;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -17,6 +18,8 @@ import java.sql.Statement;
 /**
  * Created by Dmitriy Yurkin on 31.01.2018.
  */
+
+@Component
 public class MyPasswordEncoder implements PasswordEncoder {
 
     private static final Logger logger = Logger.getLogger(MyPasswordEncoder.class);
@@ -24,7 +27,7 @@ public class MyPasswordEncoder implements PasswordEncoder {
 
     @Override
     public String encode(CharSequence rawPassword) {
-        return BCrypt.hashpw(rawPassword.toString(), BCrypt.gensalt(7));
+        return BCrypt.hashpw(rawPassword.toString(), BCrypt.gensalt(12));
     }
 
     @Override

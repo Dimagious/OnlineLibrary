@@ -1,7 +1,10 @@
 package controllers;
 
 import db.exceptions.DAOException;
+import db.pojo.UserData;
 import org.apache.log4j.Logger;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +24,14 @@ public class UserMenu extends HttpServlet {
     @RequestMapping(value = "inner/usermenu", method = RequestMethod.GET)
     public ModelAndView getUserMenu() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("inner/usermenu");
+        SimpleGrantedAuthority roleAdmin =
+                new SimpleGrantedAuthority("ROLE_ADMIN");
+        //((UserData)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getLogin();
+        if (SecurityContextHolder.getContext().getAuthentication().getAuthorities().contains(roleAdmin)) {
+            modelAndView.setViewName("admin/adminmenu");
+        } else {
+            modelAndView.setViewName("inner/usermenu");
+        }
         logger.debug("Пользователь открыл читальный зал");
         return modelAndView;
     }

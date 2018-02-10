@@ -9,32 +9,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import services.GetAllBooks;
+import services.GetAllUsers;
 
 import javax.servlet.http.HttpServlet;
 
 /**
- * Created by Dmitriy Yurkin on 17.01.2018.
+ * Created by Dmitriy Yurkin on 10.02.2018.
  */
 @Controller
-public class ShowAllBooks extends HttpServlet {
+public class ShowAllUsers extends HttpServlet {
     private static final Logger logger = Logger.getLogger(ShowAllBooks.class);
+    private GetAllUsers getAllUsers;
 
+    public GetAllUsers getGetAllUsers() {
+        return getAllUsers;
+    }
     @Autowired
-    private GetAllBooks getAllBooks;
-
-    public GetAllBooks getGetAllBooks() {
-        return getAllBooks;
+    public void setGetAllUsers(GetAllUsers getAllUsers) {
+        this.getAllUsers = getAllUsers;
     }
 
-    public void setGetAllBooks(GetAllBooks getAllBooks) {
-        this.getAllBooks = getAllBooks;
-    }
-
-    @RequestMapping (value = "admin/showBooks", method = RequestMethod.GET)
-    public ModelAndView getBooks() throws DAOException {
+    @RequestMapping(value = "admin/showUsers", method = RequestMethod.GET)
+    public ModelAndView getUsers() throws DAOException {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("list", getAllBooks.getAllBooks());
-        modelAndView.setViewName("admin/showBooks");
+        modelAndView.addObject("list", getAllUsers.getAllUsers());
+        modelAndView.setViewName("admin/showUsers");
         return modelAndView;
     }
 

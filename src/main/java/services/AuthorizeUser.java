@@ -35,8 +35,7 @@ public class AuthorizeUser {
      */
     public boolean authorizeUser(String login, String password) throws DAOException {
         UserData registeredUser = new UserData(login, password);
-        UserData userDataFromDB = null;
-        userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
+        UserData userDataFromDB = checker.getUserDataByLogin(registeredUser.getLogin());
         if (userDataFromDB != null && registeredUser.getLogin() != null && registeredUser.getPassword() != null) {
             return userDataFromDB.getLogin().equals(registeredUser.getLogin()) &&
                     userDataFromDB.getPassword().equals(registeredUser.getPassword());

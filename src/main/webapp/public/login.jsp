@@ -25,7 +25,7 @@
                     <h3 align="center">Авторизация</h3>
                 </div>
                 <div class="panel-body">
-                    <form method="post" action="${requestScope.contextPath}/public/login">
+                    <form method="post" action="${requestScope.contextPath}/login">
                         <div class="form-group">
                             <label for="username">Логин</label>
                             <input required type="text" class="form-control" id="username" placeholder="Введите Ваш логин"

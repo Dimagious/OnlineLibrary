@@ -13,15 +13,16 @@
 
     <http auto-config="true">
         <intercept-url pattern="/public/**" access="permitAll()"/>
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/inner/**" access="isAuthenticated()"/>
-        <intercept-url pattern="/inner/usermenu" access="isAuthenticated()"/>
 
-        <form-login login-page="/public/login"
+        <form-login login-page="/auth"
                     username-parameter="username"
                     password-parameter="password"
                     default-target-url="/inner/usermenu"
-                    always-use-default-target="true"
-                    authentication-failure-url="/public/login?loginerror=nerror"/>
+                    always-use-default-target="false"
+                    authentication-failure-url="/auth?loginerror=nerror"/>
+        <logout/>
         <csrf disabled="true"/>
     </http>
 

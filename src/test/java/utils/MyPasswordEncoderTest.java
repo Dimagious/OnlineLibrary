@@ -26,5 +26,6 @@ class MyPasswordEncoderTest {
         assertFalse(passwordEncoder.matches("passwor", result));
         assertFalse(passwordEncoder.matches("pasword", result));
         assertFalse(passwordEncoder.matches("pssword", result));
+        System.out.println(passwordEncoder.encode("12345"));
     }
 }

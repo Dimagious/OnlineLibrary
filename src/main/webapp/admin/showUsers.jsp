@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: admin
-  Date: 18.01.2018
-  Time: 23:39
+  Date: 10.02.2018
+  Time: 12:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -27,18 +27,22 @@
 <table class="table table-hover">
     <thead>
     <tr>
-        <th>Название книги</th>
-        <th>Автор</th>
-        <th>Жанр</th>
+        <th>Пользователь</th>
+        <th>Пол</th>
+        <th>Логин</th>
+        <th>Пароль</th>
+        <th>Роль</th>
     </tr>
     </thead>
     <tbody>
     <jsp:useBean id="list" scope="request" type="java.util.List"/>
     <c:forEach var="list" items="${requestScope.list}">
         <tr>
-            <td><a href="${pageContext.request.contextPath}/readbook?title=${list.title}&page=0">${list.title}</a></td>
-            <td>${list.authors.first_name} ${list.authors.last_name} </td>
-            <td>${list.genres.name}</td>
+            <td>${list.userPersonal.first_name} ${list.userPersonal.last_name}</td>
+            <td>${list.userPersonal.sex}</td>
+            <td>${list.login}</td>
+            <td>${list.password}</td>
+            <td>${list.role}</td>
         </tr>
     </c:forEach>
     </tbody>

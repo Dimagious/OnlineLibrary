@@ -38,8 +38,9 @@ public class CustomAuthProvider implements AuthenticationProvider {
                 ArrayList list = new ArrayList();
                 String pass = userData == null ? null : userData.getPassword();
                 list.add(new SimpleGrantedAuthority(userData.getRole()));
+                list.add(new SimpleGrantedAuthority("ROLE_USER"));
                 if (myPasswordEncoder.matches(password, pass)) {
-                    return new UsernamePasswordAuthenticationToken(login, pass, list);
+                    return new UsernamePasswordAuthenticationToken(userData, pass, list);
                 }
             }
         } catch (DAOException e) {

@@ -15,10 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdminMenu {
     private static final Logger logger = Logger.getLogger(AdminMenu.class);
 
-    @RequestMapping(value = "inner/adminmenu", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/adminmenu", method = RequestMethod.GET)
     public ModelAndView getAdminMenu() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("inner/adminmenu");
+        modelAndView.setViewName("admin/adminmenu");
         logger.debug("Адмнинистратор открыл читальный зал");
         return modelAndView;
     }

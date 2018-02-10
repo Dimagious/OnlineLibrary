@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String mainPage(){
-        return "public/login";
+        return "redirect:/auth";
     }
 }
 

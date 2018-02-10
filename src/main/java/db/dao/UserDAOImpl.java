@@ -27,7 +27,6 @@ public class UserDAOImpl implements UserDAO {
      */
     @Override
     public List<UserData> getAllUsers() throws DAOException {
-        List<UserData> list = null;
         connectionManager = CustomConnectionManager.getInstance();
         Connection connection = connectionManager.getConnection();
         try {
